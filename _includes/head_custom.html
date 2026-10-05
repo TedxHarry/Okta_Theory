@@ -1,27 +1,31 @@
 <!-- Render Mermaid diagrams inside lessons -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
+  window.__renderMermaid = function () {
+    if (!window.mermaid) return false;
+    document.querySelectorAll('.language-mermaid').forEach(function (w) {
+      var d = document.createElement('div');
+      d.className = 'mermaid';
+      d.textContent = w.textContent.replace(/\n$/, '');
+      w.parentNode.replaceChild(d, w);
+    });
+    try { window.mermaid.initialize({ startOnLoad: false }); } catch (e) {}
+    try { window.mermaid.run(); } catch (e) {}
+    return true;
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" onload="window.__renderMermaid()"></script>
+<script>
+  // Fallback poll in case the library was already cached (onload may not fire) or the theme
+  // injected this block after load. Runs until the diagrams are rendered, up to ~30s.
   (function () {
-    function render() {
-      document.querySelectorAll('.language-mermaid').forEach(function (w) {
-        var d = document.createElement('div');
-        d.className = 'mermaid';
-        d.textContent = w.textContent.replace(/\n$/, '');
-        w.parentNode.replaceChild(d, w);
-      });
-      try { window.mermaid.initialize({ startOnLoad: false }); } catch (e) {}
-      try { window.mermaid.run(); } catch (e) {}
-    }
-    // The theme may inject this script after load, and the mermaid library may still be
-    // loading, so poll until both the library and the diagram blocks are ready.
-    var tries = 0;
+    var n = 0;
     var timer = setInterval(function () {
-      tries++;
+      n++;
       if (window.mermaid && document.querySelector('.language-mermaid')) {
+        window.__renderMermaid();
+      }
+      if (n > 150 || !document.querySelector('.language-mermaid')) {
         clearInterval(timer);
-        render();
-      } else if (tries > 50) {
-        clearInterval(timer); // give up after ~10s (e.g. pages with no diagrams)
       }
     }, 200);
   })();
