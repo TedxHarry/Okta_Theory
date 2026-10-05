@@ -120,7 +120,7 @@
       var d = document.createElement('div');
       d.className = 'mermaid';
       d.textContent = w.textContent.replace(/\n$/, '');
-      // Replace the preformatted wrapper too, so diagram help text can wrap.
+      /* Replace the preformatted wrapper too, so diagram help text can wrap. */
       var host = w.parentElement && w.parentElement.tagName === 'PRE' ? w.parentElement : w;
       host.parentNode.replaceChild(d, host);
     });
