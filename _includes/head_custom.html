@@ -1,4 +1,85 @@
-<!-- Render Mermaid diagrams inside lessons -->
+<!-- ===== Readability + layout enhancements ===== -->
+<style>
+  /* Comfortable reading: contrast, size, line-height, and line length */
+  .main-content {
+    max-width: 820px;
+    font-size: 17px;
+    line-height: 1.65;
+    color: #1b2733;
+  }
+  .main-content h1, .main-content h2, .main-content h3,
+  .main-content h4, .main-content h5 { color: #0b2545; }
+  .main-content h2 { margin-top: 2rem; padding-top: 0.5rem; border-top: 1px solid #eef0f3; }
+  .main-content a:not(.btn) { color: #0a56c2; }
+  .main-content a:not(.btn):hover { text-decoration: underline; }
+  .main-content strong { color: #0b2545; }
+
+  /* Quotes / callouts: gold accent to match the course identity */
+  .main-content blockquote {
+    border-left: 4px solid #c9a23f;
+    background: #faf7ef;
+    padding: 0.6rem 1rem;
+    margin: 1rem 0;
+    color: #33404d;
+  }
+
+  /* Tables: navy header, zebra rows, clear borders */
+  .main-content table th { background: #0b2545; color: #fff; }
+  .main-content table td, .main-content table th { border: 1px solid #e3e6ea; }
+  .main-content table tbody tr:nth-child(even) { background: #f6f8fa; }
+
+  /* Code */
+  .main-content code { background: #eef1f4; color: #b5370f; padding: .12em .35em; border-radius: 4px; }
+  .main-content pre { background: #f6f8fa; border: 1px solid #e3e6ea; border-radius: 6px; }
+  .main-content pre code { background: transparent; color: #24292f; }
+
+  .mermaid { margin: 1.25rem 0; }
+
+  /* ===== Collapsible sidebar (desktop) ===== */
+  #nav-toggle {
+    position: fixed; top: 0.5rem; left: 0.5rem; z-index: 1000;
+    display: none;
+    background: #0b2545; color: #fff; border: 0; border-radius: 6px;
+    padding: 0.4rem 0.7rem; font-size: 0.85rem; cursor: pointer; line-height: 1;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  }
+  #nav-toggle:hover { background: #123a6b; }
+
+  @media (min-width: 50rem) {
+    #nav-toggle { display: block; }
+    body.nav-collapsed .side-bar { display: none; }
+    body.nav-collapsed .main { margin-left: 0 !important; }
+    body.nav-collapsed .main-content-wrap { padding-top: 2.25rem; }
+    body.nav-collapsed .main-content { margin-left: auto; margin-right: auto; }
+  }
+</style>
+<script>
+  (function () {
+    function initToggle() {
+      if (!document.body || document.getElementById('nav-toggle')) return;
+      var btn = document.createElement('button');
+      btn.id = 'nav-toggle';
+      btn.type = 'button';
+      function label() {
+        btn.textContent = document.body.classList.contains('nav-collapsed') ? '☰  Menu' : '⟨  Hide menu';
+      }
+      try { if (localStorage.getItem('nbNavCollapsed') === '1') document.body.classList.add('nav-collapsed'); } catch (e) {}
+      label();
+      btn.addEventListener('click', function () {
+        document.body.classList.toggle('nav-collapsed');
+        try { localStorage.setItem('nbNavCollapsed', document.body.classList.contains('nav-collapsed') ? '1' : '0'); } catch (e) {}
+        label();
+      });
+      document.body.appendChild(btn);
+    }
+    if (document.body) initToggle();
+    document.addEventListener('DOMContentLoaded', initToggle);
+    var t = setInterval(function () { if (document.body) { initToggle(); clearInterval(t); } }, 200);
+    setTimeout(function () { clearInterval(t); }, 10000);
+  })();
+</script>
+
+<!-- ===== Render Mermaid diagrams inside lessons ===== -->
 <script>
   window.__renderMermaid = function () {
     if (!window.mermaid) return false;
@@ -15,8 +96,6 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" onload="window.__renderMermaid()"></script>
 <script>
-  // Fallback poll in case the library was already cached (onload may not fire) or the theme
-  // injected this block after load. Runs until the diagrams are rendered, up to ~30s.
   (function () {
     var n = 0;
     var timer = setInterval(function () {
