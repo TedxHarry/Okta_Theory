@@ -8,7 +8,7 @@ nav_order: 3
 
 Use these short reminders alongside the examples. The linked lessons explain the relationships and limits.
 
-## People and access — Day 1
+## People and access (Day 1)
 
 | Term | Meaning |
 |---|---|
@@ -31,7 +31,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 1 explanations](../lessons/day-01-people-identities-access.md)
 
-## Messages and evidence — Day 2
+## Messages and evidence (Day 2)
 
 | Term | Meaning |
 |---|---|
@@ -52,7 +52,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 2 explanations](../lessons/day-02-requests-and-evidence.md)
 
-## Data and ownership — Days 3–4
+## Data and ownership (Days 3 and 4)
 
 | Term | Meaning |
 |---|---|
@@ -71,7 +71,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 3 explanations](../lessons/day-03-profiles-and-mappings.md) · [Day 4 explanations](../lessons/day-04-sources-and-ownership.md)
 
-## From attributes to access — Day 5
+## From attributes to access (Day 5)
 
 | Term | Meaning |
 |---|---|
@@ -87,7 +87,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 5 explanations](../lessons/day-05-groups-and-assignments.md) · [Course home](../README.md)
 
-## Directory operations — Day 6
+## Directory operations (Day 6)
 
 | Term | Meaning |
 |---|---|
@@ -102,7 +102,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 6 explanations](../lessons/day-06-active-directory.md) · [Course home](../README.md)
 
-## Authentication evidence — Day 7
+## Authentication evidence (Day 7)
 
 | Term | Meaning |
 |---|---|
@@ -119,7 +119,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 7 explanations](../lessons/day-07-authenticators-enrollment-mfa.md) · [Course home](../README.md)
 
-## Federation — Day 8
+## Federation (Day 8)
 
 | Term | Meaning |
 |---|---|
@@ -136,7 +136,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 8 explanations](../lessons/day-08-saml.md) · [Course home](../README.md)
 
-## Application sign-in — Day 9
+## Application sign-in (Day 9)
 
 | Term | Meaning |
 |---|---|
@@ -155,7 +155,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 9 explanations](../lessons/day-09-oidc.md) · [Course home](../README.md)
 
-## Application account management — Day 10
+## Application account management (Day 10)
 
 | Term | Meaning |
 |---|---|
@@ -172,7 +172,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 10 explanations](../lessons/day-10-scim.md) · [Course home](../README.md)
 
-## Record matching — Day 11
+## Record matching (Day 11)
 
 | Term | Meaning |
 |---|---|
@@ -187,7 +187,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 11 explanations](../lessons/day-11-imports-and-matching.md) · [Course home](../README.md)
 
-## Lifecycle changes — Day 12
+## Lifecycle changes (Day 12)
 
 | Term | Meaning |
 |---|---|
@@ -202,7 +202,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 12 explanations](../lessons/day-12-joiners-movers-leavers.md) · [Course home](../README.md)
 
-## Authentication decisions and sessions — Day 13
+## Authentication decisions and sessions (Day 13)
 
 | Term | Meaning |
 |---|---|
@@ -219,7 +219,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 
 [Day 13 explanations](../lessons/day-13-policies-and-sessions.md) · [Course home](../README.md)
 
-## Access decisions and responsibility — Day 14
+## Access decisions and responsibility (Day 14)
 
 | Term | Meaning |
 |---|---|

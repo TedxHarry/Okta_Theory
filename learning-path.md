@@ -1,6 +1,6 @@
 ---
 title: "Learning Path"
-nav_order: 2
+nav_order: 3
 ---
 
 # Learning path
