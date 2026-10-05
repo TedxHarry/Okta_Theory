@@ -1,17 +1,26 @@
 <!-- Render Mermaid diagrams inside lessons -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Jekyll (rouge) renders ```mermaid as a .language-mermaid wrapper; convert each to a Mermaid div.
-    document.querySelectorAll('.language-mermaid').forEach(function (wrap) {
-      var div = document.createElement('div');
-      div.className = 'mermaid';
-      div.textContent = wrap.textContent.replace(/\n$/, '');
-      wrap.parentNode.replaceChild(div, wrap);
-    });
-    if (window.mermaid) {
-      mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'strict' });
-      mermaid.run();
+  (function () {
+    function renderMermaid() {
+      if (!window.mermaid) return;
+      var wraps = document.querySelectorAll('.language-mermaid');
+      if (!wraps.length) return;
+      wraps.forEach(function (w) {
+        var d = document.createElement('div');
+        d.className = 'mermaid';
+        d.textContent = w.textContent.replace(/\n$/, '');
+        w.parentNode.replaceChild(d, w);
+      });
+      try { window.mermaid.initialize({ startOnLoad: false }); } catch (e) {}
+      try { window.mermaid.run(); } catch (e) {}
     }
-  });
+    // Run whether or not DOMContentLoaded has already fired (the theme may inject this late).
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', renderMermaid);
+    } else {
+      renderMermaid();
+    }
+    window.addEventListener('load', renderMermaid);
+  })();
 </script>
