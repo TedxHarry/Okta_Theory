@@ -244,5 +244,5 @@ In [your notebook](../notebook/guide.md), record the five separate statements ab
 
 [Day 2](day-02-requests-and-evidence.md) follows a request between systems and shows how to read evidence from individual steps without mistaking one successful result for the whole outcome.
 
-[Course home](../README.md) · [Northbridge reference](../reference/northbridge-company.md)
+[Course home](../index.md) · [Northbridge reference](../reference/northbridge-company.md)
 

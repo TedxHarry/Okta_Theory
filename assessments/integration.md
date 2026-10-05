@@ -76,4 +76,4 @@ A colleague suggests using Maya's Expense ID token to authorize the Projects con
 
 Use the [debrief and rubric](self-checks/integration.md) after attempting all tasks. Record one corrected distinction in [your notebook](../notebook/guide.md).
 
-[Day 10](../lessons/day-10-scim.md) · [Course home](../README.md)
+[Day 10](../lessons/day-10-scim.md) · [Course home](../index.md)

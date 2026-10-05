@@ -204,4 +204,4 @@ In [your notebook](../notebook/guide.md), annotate the data flow with the person
 
 [Day 5](day-05-groups-and-assignments.md) connects these identity attributes to groups and application assignments.
 
-[Previous: Day 3](day-03-profiles-and-mappings.md) · [Course home](../README.md)
+[Previous: Day 3](day-03-profiles-and-mappings.md) · [Course home](../index.md)

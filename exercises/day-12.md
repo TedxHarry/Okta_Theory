@@ -1,5 +1,5 @@
 ---
-title: "Day 12"
+title: "Day 12: exercises"
 parent: Exercises
 nav_order: 12
 ---
@@ -36,4 +36,4 @@ L6 shows a new authenticated Expense response through Jordan's existing session 
 
 Write one short handoff for Maya and one for Jordan. Each should state the approved outcome, completed changes, remaining discrepancy, responsible owner or next action, and closure evidence. Then explain why a later successful Projects deactivation would not close Jordan's entire case by itself.
 
-[Self-check answers](../self-checks/day-12.md) · [Course home](../README.md)
+[Self-check answers](../self-checks/day-12.md) · [Course home](../index.md)

@@ -19,4 +19,4 @@ These terms may appear in wider Okta discussions. They are not required for the 
 
 Availability and supported integrations must be checked in the relevant documentation and environment. These descriptions do not imply that Northbridge has enabled or licensed each capability.
 
-[Day 15](../lessons/day-15-integrated-case.md) · [Course home](../README.md)
+[Day 15](../lessons/day-15-integrated-case.md) · [Course home](../index.md)

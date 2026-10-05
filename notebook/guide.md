@@ -75,5 +75,5 @@ Unresolved decisions and their owners:
 
 For R-14, Finance employee eligibility belongs in the normal path. Daniel's separate approver approval belongs under permitted actions. Priya's missing exception decision stays unresolved; the template is not permission to fill it with a guess.
 
-[Day 15](../lessons/day-15-integrated-case.md) · [Course home](../README.md)
+[Day 15](../lessons/day-15-integrated-case.md) · [Course home](../index.md)
 

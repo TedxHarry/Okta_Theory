@@ -8,6 +8,8 @@ search_exclude: true
 
 Follow the people, accounts, and decisions behind a workforce identity environment. Each lesson connects a business situation to the identity data, sign-in behavior, application access, and evidence that explain it.
 
+**[Read the published course](https://tedxharry.github.io/Okta_Theory/)**
+
 Start with [Day 1: People, identities, and access](lessons/day-01-people-identities-access.md).
 
 Use the [learning path](learning-path.md) to see how the concepts connect. Product explanations use Okta Identity Engine; older Classic Engine terminology is distinguished where it matters.

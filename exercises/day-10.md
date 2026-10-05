@@ -1,5 +1,5 @@
 ---
-title: "Day 10"
+title: "Day 10: exercises"
 parent: Exercises
 nav_order: 10
 ---
@@ -36,4 +36,4 @@ An approved hypothetical removal generates active false. Projects returns 204; a
 
 Maya completed MFA for a sign-in attempt, but the Projects SCIM request receives an authorization rejection from Projects. Explain why successful user authentication does not repair or prove the connector's authorization. Does an Expense ID token belong in that SCIM request?
 
-[Self-check answers](../self-checks/day-10.md) · [Course home](../README.md)
+[Self-check answers](../self-checks/day-10.md) · [Course home](../index.md)

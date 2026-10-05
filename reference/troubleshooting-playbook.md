@@ -6,7 +6,7 @@ nav_order: 5
 
 # Troubleshooting playbook
 
-Keep this page open when you work a real ticket. It does not replace the lessons. It gives you a starting path for the most common problems, and it reminds you what each check actually proves.
+Use these paths to reason through a supplied case after reading the relevant lessons. Each path identifies evidence to seek; it cannot establish a cause from the symptom alone. Start with Days 1–5, then use the protocol and lifecycle sections after those lessons.
 
 Start every ticket the same way:
 
@@ -21,88 +21,107 @@ Then pick the matching path below. Each path tells you where to look first, not 
 
 ```mermaid
 flowchart TD
-  S["Person cannot use the app"] --> Q1{"Is the app assigned<br/>to them in Okta?"}
-  Q1 -->|No| A1["Check the assignment path:<br/>group rule, group membership, or direct assignment"]
-  Q1 -->|Yes| Q2{"Does an account exist<br/>in the target app?"}
-  Q2 -->|No| A2["Check provisioning result,<br/>or how accounts are created for this app"]
-  Q2 -->|Yes| Q3{"Can they sign in<br/>to the app?"}
-  Q3 -->|No| A3["Check federation (SAML or OIDC)<br/>and the sign-in policy"]
-  Q3 -->|Yes| A4["Check the role or permission<br/>inside the application itself"]
+  S["Cannot use the app"] --> Q1{"Assigned in Okta?"}
+  Q1 -->|No| A1["Check approved eligibility and assignment paths"]
+  Q1 -->|Yes| Q2{"Intended target account exists?"}
+  Q2 -->|Unknown or no| A2["Check matching and the account creation process"]
+  Q2 -->|Yes| Q3{"App sign-in accepted?"}
+  Q3 -->|No| A3["Locate the failed authentication or federation stage"]
+  Q3 -->|Yes| A4["Check the requested app permission"]
 ```
 
-Remember: an Okta sign-in success only proves they reached Okta. It does not prove the app account exists or that the app let them in.
+Name the event precisely. A successful authentication result establishes authentication for that attempt. An SSO issuance result establishes a different step. Neither alone proves that the application accepted the sign-in or granted the requested permission. See [Day 2](../lessons/day-02-requests-and-evidence.md).
 
 ## The person is not getting the application
 
 ```mermaid
 flowchart TD
-  S["Expected app is missing"] --> Q1{"Do their profile values<br/>match the rule? (department, type)"}
-  Q1 -->|No| A1["Fix the source data or mapping<br/>that feeds those values"]
-  Q1 -->|Yes| Q2{"Are they in the group<br/>the rule should add them to?"}
-  Q2 -->|No| A2["Check the group rule logic<br/>and whether it has evaluated"]
-  Q2 -->|Yes| Q3{"Is the app assigned<br/>to that group?"}
-  Q3 -->|No| A3["Assign the app to the group,<br/>or find the intended assignment path"]
-  Q3 -->|Yes| A4["Check provisioning, since assignment<br/>is not the same as an account"]
+  S["Expected app is missing"] --> Q1{"Eligible under the approved requirement?"}
+  Q1 -->|Unknown| A1["Confirm the requirement with its owner"]
+  Q1 -->|No| A2["No ordinary entitlement; review any approved exception"]
+  Q1 -->|Yes| Q2{"Intended assignment path?"}
+  Q2 -->|Rule-managed group| A3["Compare owned values, rule logic and membership"]
+  Q2 -->|Other group or direct| A4["Check the responsible process and approval"]
+  A3 --> A5["Verify app assignment, then target outcome"]
+  A4 --> A5
 ```
+
+Correct profile data can mean that a person is ineligible. Do not alter it to force a rule match. For an eligible person, compare the approved condition with the responsible source, mapping, group membership and assignment. See [Day 5](../lessons/day-05-groups-and-assignments.md).
 
 ## Assigned in Okta, but no usable account in the app
 
 ```mermaid
 flowchart TD
-  S["Assigned, but no account"] --> Q1{"Is provisioning configured<br/>for this app?"}
-  Q1 -->|No| A1["Accounts may be created another way.<br/>Find the responsible process."]
-  Q1 -->|Yes| Q2{"What did the provisioning<br/>attempt report?"}
-  Q2 -->|Error| A2["Read the exact response.<br/>A conflict means a name is in use;<br/>a bad value means a mapping is wrong."]
-  Q2 -->|No attempt| A3["Check whether the assignment<br/>actually triggered provisioning"]
-  Q2 -->|Success| A4["Check the target account state<br/>and whether it matches this person"]
+  S["Assigned but no usable account"] --> Q1{"Supported provisioning configured?"}
+  Q1 -->|No| A1["Identify the account management owner and process"]
+  Q1 -->|Yes| Q2{"Correlated operation result?"}
+  Q2 -->|Error| A2["Read status and details; compare payload and contract"]
+  Q2 -->|No attempt found| A3["Check scope, trigger and observation coverage"]
+  Q2 -->|Success| A4["Confirm target identifier, state and required permissions"]
 ```
+
+For SCIM, read the HTTP status, `scimType`, and error detail together. A uniqueness conflict does not identify the conflicting field or its owner by itself. An invalid value can reflect source data, a mapping, missing required data, or a target contract mismatch. Compare the source, app profile, actual request and target requirements before proposing a correction. See [Day 10](../lessons/day-10-scim.md) and [SCIM error handling](https://www.rfc-editor.org/rfc/rfc7644.html#section-3.12).
 
 ## Moved department, but old access remains
 
 ```mermaid
 flowchart TD
-  S["Department changed,<br/>old access still there"] --> Q1{"Did the new department<br/>reach the Okta profile?"}
-  Q1 -->|No| A1["Check the source and mapping first"]
-  Q1 -->|Yes| Q2{"Was the old access<br/>given by a group rule?"}
-  Q2 -->|Yes| A2["Rule-based access should drop<br/>when they no longer match. Verify it did."]
-  Q2 -->|No| A3["Directly granted or separately given access<br/>does not disappear on its own. Review it."]
+  S["Old access after a move"] --> A1["Compare approved change with owned profile data"]
+  A1 --> A2["Inspect rule processing and every assignment path"]
+  A2 --> A3["Group membership, other groups and direct assignments"]
+  A3 --> A4["Compare surviving access with approved exceptions"]
+  A4 --> T["Check target account and permissions"]
+  A4 --> U["Check relevant application sessions"]
 ```
+
+Removing one group path does not remove a surviving direct assignment or another group path. Preserve access that remains approved and investigate each remaining path. See [Day 12](../lessons/day-12-joiners-movers-leavers.md).
 
 ## Left the company, but still has access
 
 ```mermaid
 flowchart TD
-  S["Terminated, but access remains"] --> Q1{"Is the Okta account<br/>deactivated or suspended?"}
-  Q1 -->|No| A1["Check why the leaver action<br/>did not change the Okta state"]
-  Q1 -->|Yes| Q2{"Did each app account<br/>get disabled?"}
-  Q2 -->|No| A2["Deprovisioning depends on each app.<br/>Check each one separately."]
-  Q2 -->|Yes| Q3{"Is an existing app session<br/>still active?"}
-  Q3 -->|Yes| A3["A live session can outlast deactivation.<br/>Check the app's session behavior."]
-  Q3 -->|No| A4["Confirm there is no second<br/>access path you missed."]
+  S["Access after departure"] --> O["Confirm person, effective departure and approved outcome"]
+  O --> K["Check actual Okta state and lifecycle result"]
+  O --> T["Check each target account and remaining access path"]
+  O --> U["Check relevant Okta and application sessions"]
+  K --> Q{"Suspended or deactivated?"}
+  Q -->|Suspended| A["Assignments retained; no SCIM deactivation event"]
+  Q -->|Deactivated| B["Check completion and configured deprovisioning results"]
+  Q -->|Other or unknown| C["Investigate the intended lifecycle action"]
 ```
+
+These are separate checks: an unresolved target account must not postpone investigating a reported live session. Suspension and deactivation have different effects; neither observation establishes every target outcome. [Okta SCIM guidance](https://developer.okta.com/docs/api/openapi/okta-scim/guides/scim-20) states that suspension does not send a deprovisioning event. Use [Day 12](../lessons/day-12-joiners-movers-leavers.md) for lifecycle reasoning and [Day 13](../lessons/day-13-policies-and-sessions.md) for session behavior.
 
 ## The application rejects the sign-in
 
 ```mermaid
 flowchart TD
-  S["Okta says success,<br/>app rejects sign-in"] --> Q1{"SAML or OIDC?"}
-  Q1 -->|SAML| B1{"Does the audience,<br/>signature, and timing check out?"}
-  B1 -->|No| B2["Fix the setting that is wrong.<br/>Do not disable validation."]
-  B1 -->|Yes| B3["Check whether the NameID<br/>matches a user in the app"]
-  Q1 -->|OIDC| C1{"Which stage failed?"}
-  C1 -->|Redirect| C2["The requested redirect URI<br/>is not registered. Fix the app config."]
-  C1 -->|Token| C3["Check issuer, audience, and expiry.<br/>Reading a token is not validating it."]
+  S["Application rejects sign-in"] --> E["Identify the exact event, result and failed stage"]
+  E --> Q{"Protocol in this connection?"}
+  Q -->|SAML| A["Inspect reported validation failure and trusted settings"]
+  A --> B["Then check configured account matching and access"]
+  Q -->|OIDC| C{"Which stage?"}
+  C -->|Authorization or redirect| D["Read rejection; compare requested and approved settings"]
+  C -->|Code exchange| F["Check response, client authentication and PKCE evidence"]
+  C -->|Token accepted for inspection| G["Validate token and transaction before account matching"]
 ```
+
+For a confirmed redirect-URI rejection, compare the requested URI, registered URI and approved destination. That comparison identifies which configuration needs correction; the symptom alone does not. A code-exchange error is distinct from ID token validation. SAML validation includes issuer, signature, audience, destination and timing; inspect the actual rejection without disabling validation. Continue with [Day 8](../lessons/day-08-saml.md) or [Day 9](../lessons/day-09-oidc.md).
 
 ## An AD-linked user cannot sign in
 
 ```mermaid
 flowchart TD
-  S["AD user cannot sign in"] --> Q1{"Was the account<br/>imported into Okta?"}
-  Q1 -->|No| A1["Check import scope and matching"]
-  Q1 -->|Yes| Q2{"Is this an AD password<br/>sign-in?"}
-  Q2 -->|Yes| A2["Import success does not prove the password path.<br/>Check the AD agent and domain controller."]
-  Q2 -->|No| A3["Check the authenticator and policy<br/>for the method actually used"]
+  S["AD-linked user cannot sign in"] --> Q1{"Correct Okta identity and AD association?"}
+  Q1 -->|Unknown or no| A1["Check scoped import or configured JIT and matching"]
+  Q1 -->|Yes| Q2{"AD delegated password authentication used?"}
+  Q2 -->|Yes| A2["Check agent, domain controller and account result"]
+  Q2 -->|No| A3["Check the actual authenticator and applicable policy"]
 ```
 
+An earlier import is not universal proof or a universal prerequisite for every configured AD sign-in route. Just-in-time (JIT) creation, where enabled and applicable, is another route to inspect. Import success does not establish delegated-authentication health. See [Day 6](../lessons/day-06-active-directory.md).
+
 A last reminder. "Not checked yet" is not the same as "not there." If you have not looked at the assignment, do not report it as missing. Look, then report what the evidence shows.
+
+
+[Course home](../index.md)

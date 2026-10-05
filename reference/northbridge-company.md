@@ -46,7 +46,7 @@ The arrows show logical relationships. They do not mean that every account exist
 
 Employee information is HR-led. Contractor identities such as Priya's are maintained in Okta following sponsor approval. The detailed source ownership and sign-in decisions become part of the examples as those concepts are introduced.
 
-[Source and ownership reference](attribute-ownership.md) · [Return to Day 1](../lessons/day-01-people-identities-access.md) · [Course home](../README.md)
+[Source and ownership reference](attribute-ownership.md) · [Return to Day 1](../lessons/day-01-people-identities-access.md) · [Course home](../index.md)
 
 ## Follow the timeline
 

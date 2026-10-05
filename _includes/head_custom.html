@@ -41,11 +41,25 @@
   .main-content code { background: #eef1f4; color: #b5370f; padding: .12em .35em; border-radius: 4px; }
   .main-content pre { background: #f6f8fa; border: 1px solid #e3e6ea; border-radius: 6px; }
   .main-content pre code { background: transparent; color: #24292f; }
-  .mermaid { margin: 1.25rem 0; text-align: center; }
+  .mermaid { margin: 1.25rem 0; text-align: center; overflow-x: auto; }
+  /* The theme's badge class also matches Mermaid labels. Undo it here. */
+  .main-content .mermaid .label,
+  .main-content .mermaid .nodeLabel,
+  .main-content .mermaid .edgeLabel {
+    display: inline; padding: 0; margin: 0; border-radius: 0;
+    background: transparent; color: inherit; font-size: 16px !important;
+    text-transform: none !important; letter-spacing: normal; line-height: 1.4;
+    font-family: Arial, sans-serif !important;
+  }
+  .main-content .mermaid svg { max-width: none !important; }
+  .mermaid:focus-visible, #nav-toggle:focus-visible {
+    outline: 3px solid #0a56c2; outline-offset: 3px;
+  }
+  .diagram-hint { font-size: .875rem; color: #33404d; }
 
   /* ===== Collapsible sidebar (desktop) ===== */
   #nav-toggle {
-    position: fixed; top: 0.5rem; left: 0.5rem; z-index: 1000;
+    position: fixed; bottom: 1rem; left: 1rem; z-index: 1000;
     display: none;
     background: #0b2545; color: #fff; border: 0; border-radius: 6px;
     padding: 0.4rem 0.7rem; font-size: 0.85rem; cursor: pointer; line-height: 1;
@@ -55,6 +69,7 @@
 
   @media (min-width: 50rem) {
     #nav-toggle { display: block; }
+    .side-bar { padding-bottom: 4rem; }
     body.nav-collapsed .side-bar { display: none; }
     /* Center the whole content area when the menu is hidden, so it is not left-stranded */
     body.nav-collapsed .main {
@@ -72,8 +87,14 @@
       var btn = document.createElement('button');
       btn.id = 'nav-toggle';
       btn.type = 'button';
+      var sidebar = document.querySelector('.side-bar');
+      if (!sidebar) return;
+      sidebar.id = sidebar.id || 'course-sidebar';
+      btn.setAttribute('aria-controls', sidebar.id);
       function label() {
-        btn.textContent = document.body.classList.contains('nav-collapsed') ? '☰  Menu' : '⟨  Hide menu';
+        var collapsed = document.body.classList.contains('nav-collapsed');
+        btn.textContent = collapsed ? '☰  Menu' : '⟨  Hide menu';
+        btn.setAttribute('aria-expanded', String(!collapsed));
       }
       try { if (localStorage.getItem('nbNavCollapsed') === '1') document.body.classList.add('nav-collapsed'); } catch (e) {}
       label();
@@ -105,9 +126,10 @@
       window.mermaid.initialize({
         startOnLoad: false,
         theme: 'base',
+        themeCSS: '.label, .nodeLabel, .edgeLabel { font-family: Arial, sans-serif !important; font-size: 16px !important; text-transform: none !important; letter-spacing: normal; }',
         themeVariables: {
-          fontFamily: "Inter, -apple-system, Segoe UI, Roboto, sans-serif",
-          fontSize: "15px",
+          fontFamily: "Arial, sans-serif",
+          fontSize: "16px",
           primaryColor: "#eef2f7",
           primaryTextColor: "#0b2545",
           primaryBorderColor: "#0b2545",
@@ -119,7 +141,25 @@
         }
       });
     } catch (e) {}
-    try { window.mermaid.run(); } catch (e) {}
+    window.mermaid.run().then(function () {
+      document.querySelectorAll('.mermaid svg').forEach(function (svg) {
+        var box = svg.viewBox.baseVal;
+        if (box && box.width) {
+          svg.style.width = box.width + 'px';
+          svg.style.height = 'auto';
+        }
+        var region = svg.parentElement;
+        region.setAttribute('tabindex', '0');
+        region.setAttribute('role', 'region');
+        region.setAttribute('aria-label', 'Course diagram; scroll horizontally if needed');
+        if (!region.nextElementSibling || !region.nextElementSibling.classList.contains('diagram-hint')) {
+          var hint = document.createElement('p');
+          hint.className = 'diagram-hint';
+          hint.textContent = 'On a narrow screen, scroll the diagram sideways. Its flow is also explained in the surrounding text.';
+          region.insertAdjacentElement('afterend', hint);
+        }
+      });
+    }).catch(function (error) { console.error('Course diagram rendering failed', error); });
     return true;
   };
 </script>

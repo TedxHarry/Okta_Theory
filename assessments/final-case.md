@@ -124,4 +124,4 @@ The ticket is retained for investigation review; it is not a request to restore 
 
 Complete the [seven tasks](../exercises/day-15.md), including a prioritized handoff and one complete mover or leaver explanation. Use evidence labels and leave unresolved findings explicit.
 
-[Day 15](../lessons/day-15-integrated-case.md) · [Course home](../README.md)
+[Day 15](../lessons/day-15-integrated-case.md) · [Course home](../index.md)

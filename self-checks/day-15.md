@@ -1,5 +1,5 @@
 ---
-title: "Day 15"
+title: "Day 15: self-check answers"
 parent: Self-Checks
 nav_order: 15
 ---
@@ -80,4 +80,4 @@ Both are historical reasoning exercises. Jordan is now departed; resolving an ea
 
 Use the [final debrief and skills checklist](../assessments/self-checks/final-case.md) to identify specific concepts to revisit.
 
-[Case evidence](../assessments/final-case.md) · [Day 15](../lessons/day-15-integrated-case.md) · [Course home](../README.md)
+[Case evidence](../assessments/final-case.md) · [Day 15](../lessons/day-15-integrated-case.md) · [Course home](../index.md)

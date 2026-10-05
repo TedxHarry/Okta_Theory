@@ -81,4 +81,4 @@ The current preview no longer demonstrates the constant-value mapping defect. In
 
 </details>
 
-[Checkpoint](../foundation.md) · [Day 5](../../lessons/day-05-groups-and-assignments.md) · [Course home](../../README.md)
+[Checkpoint](../foundation.md) · [Day 5](../../lessons/day-05-groups-and-assignments.md) · [Course home](../../index.md)

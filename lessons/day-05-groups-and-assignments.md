@@ -188,4 +188,4 @@ In [your notebook](../notebook/guide.md), extend the ownership flow with the rul
 
 [Day 6](day-06-active-directory.md) separates AD imports from AD password validation.
 
-[Previous: Day 4](day-04-sources-and-ownership.md) · [Course home](../README.md)
+[Previous: Day 4](day-04-sources-and-ownership.md) · [Course home](../index.md)

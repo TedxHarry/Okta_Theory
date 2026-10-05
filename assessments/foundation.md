@@ -64,4 +64,4 @@ Starting from A, suppose Maya later has an approved move to Finance. Workday and
 
 Use the [debrief and rubric](self-checks/foundation.md) to assess your reasoning. Keep the corrected flow in [your notebook](../notebook/guide.md).
 
-[Return to Day 5](../lessons/day-05-groups-and-assignments.md) · [Course home](../README.md)
+[Return to Day 5](../lessons/day-05-groups-and-assignments.md) · [Course home](../index.md)

@@ -1,5 +1,5 @@
 ---
-title: "Day 13"
+title: "Day 13: exercises"
 parent: Exercises
 nav_order: 13
 ---
@@ -36,4 +36,4 @@ In S-13, Okta session K-13 ends and cannot be reused, but Expense accepts a new 
 
 The requirement is to end both checked sessions. Name the unresolved work in S-13 and the evidence needed to close it. Contrast local logout with configured SLO. Explain why Daniel's session behavior cannot be presented as Jordan's proven root cause from Day 12.
 
-[Self-check answers](../self-checks/day-13.md) · [Course home](../README.md)
+[Self-check answers](../self-checks/day-13.md) · [Course home](../index.md)

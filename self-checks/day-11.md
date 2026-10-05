@@ -1,5 +1,5 @@
 ---
-title: "Day 11"
+title: "Day 11: self-check answers"
 parent: Self-Checks
 nav_order: 11
 ---
@@ -65,4 +65,4 @@ No. The configured comparison is employeeNumber, not email. Investigate the emai
 
 </details>
 
-[Return to Day 11](../lessons/day-11-imports-and-matching.md) · [Course home](../README.md)
+[Return to Day 11](../lessons/day-11-imports-and-matching.md) · [Course home](../index.md)

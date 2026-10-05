@@ -1,5 +1,5 @@
 ---
-title: "Day 1"
+title: "Day 1: exercises"
 parent: Exercises
 nav_order: 1
 ---
@@ -68,5 +68,5 @@ Mark each of these as **I can explain it**, **I need the example**, or **I need 
 
 Compare your reasoning with the [self-check answers](../self-checks/day-01.md) after attempting the questions.
 
-[Return to the lesson](../lessons/day-01-people-identities-access.md) · [Course home](../README.md)
+[Return to the lesson](../lessons/day-01-people-identities-access.md) · [Course home](../index.md)
 

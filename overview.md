@@ -13,32 +13,34 @@ Okta sits in the middle. On one side are the systems that say who works at the c
 
 ```mermaid
 flowchart TD
-  HR["HR system such as Workday<br/>says who works here"] --> OKTA
-  AD["Active Directory<br/>directory accounts"] --> OKTA
-  subgraph OKTA["Okta"]
-    direction TB
-    P["User profile in Universal Directory"] --> R["Group rules look at the profile"]
-    R --> G["Groups"]
-    G --> AS["Application assignments"]
-  end
-  AS --> PROV["Provisioning creates, updates, or disables the account"]
-  PROV --> APPS["Applications such as Salesforce, Microsoft 365, ServiceNow"]
+  HR["Workday: employee profile source"] --> P["Okta user profile"]
+  C["Approved contractor maintenance in Okta"] --> P
+  P -->|"Configured employee provisioning"| AD["AD employee accounts"]
+  AD -->|"Designated AD-owned attributes"| P
+  P --> G["Governed groups and assignments"]
+  G --> Q["Configured account management process"]
+  Q --> T["Target accounts: verify each outcome"]
 ```
 
-Read it as a sentence. The HR system says who works here. Okta keeps a profile for each person. Group rules look at that profile and decide which groups the person belongs to. Groups lead to application assignments. Provisioning then creates or updates the account inside the target application.
+At Northbridge, Workday is the profile source for employees such as Maya and Daniel. Okta provisions their AD accounts through the configured employee process; AD returns designated directory-owned values such as work email. Priya is an Okta-managed contractor, maintained after sponsor approval and outside employee import scope. A sponsor approves the change; the sponsor is not another technical source integration.
+
+Workday is first and AD second in external profile-source priority. That order applies to a user's actual source associations, not to every user merely because both integrations exist. A separately scoped AD-led example teaches users whose profile source is AD; it does not change Maya's Workday-led model. [Day 4](lessons/day-04-sources-and-ownership.md) explains source priority and attribute ownership.
+
+Group rules are one way to maintain membership. Approved group or direct assignments establish intended application access. A supported, configured provisioning process can then manage the target account; otherwise another accountable process must do so. Assignment alone does not prove account creation.
 
 Here is the habit to build early. Each arrow is a separate step that can succeed or fail on its own. A person can have an Okta profile and still have no account in Salesforce. Always ask which step you are actually looking at.
 
 ## How sign-in works
 
 ```mermaid
-flowchart LR
-  U["Person opens an app"] --> APP["Application"]
-  APP -->|"redirect"| OK["Okta checks who they are<br/>and applies its sign-in policy"]
-  OK -->|"SAML or OIDC response"| APP2["Application checks that message<br/>and starts its own session"]
+flowchart TD
+  U["Browser opens application"] --> OK["Redirect to Okta for applicable checks"]
+  OK --> R["Browser carries protocol response"]
+  R --> APP["App completes and validates its protocol flow"]
+  APP --> S["App decides access and creates its own session"]
 ```
 
-When someone opens an app, the app sends them to Okta. Okta checks who they are and applies its sign-in rules. It then sends the app a message the app can trust, either a SAML response or an OIDC token. The app checks that message and starts its own session.
+In these app-initiated examples, the browser travels to Okta for the applicable sign-in checks. With SAML, it carries the response back to the application. In the OIDC code flow taught here, it carries a code; the application backend exchanges that code for tokens. The app validates the relevant messages, identifies the user and decides whether to establish its own session. Receiving a response alone does not establish trust or successful access.
 
 Signing in and having an account are two different things. Signing in and being allowed to do a particular action inside the app are also two different things.
 

@@ -38,6 +38,10 @@ After Day 5, attempt the [foundation checkpoint](assessments/foundation.md). Its
 | [14](lessons/day-14-requirements-and-responsibilities.md) | How do you turn a business request into a clear access requirement? |
 | [15](lessons/day-15-integrated-case.md) | Can you explain and investigate the connected Northbridge environment? Includes the [final case](assessments/final-case.md). |
 
+## Use the references at the right point
+
+Read [Okta at a glance](overview.md) before Day 1. Use the [cheat sheets](reference/cheat-sheets.md) to recall distinctions after learning them. The [troubleshooting playbook](reference/troubleshooting-playbook.md) links each investigation to its lesson; protocol and lifecycle branches assume those lessons have been read. After Day 14, use [application onboarding](reference/onboarding-an-application.md) and its changed-condition exercise to connect requirements, matching, access and removal evidence.
+
 ## Read the examples consistently
 
 Maya starts in Sales; her move to Finance belongs to the later lifecycle story. Daniel is already a Finance manager. An explicitly labelled alternative packet changes the evidence for a question; it does not silently change everyone's history.
@@ -46,4 +50,4 @@ A lesson or exercise may state that an account exists even when an earlier ticke
 
 Use the [company reference](reference/northbridge-company.md) for people and systems, the [ownership reference](reference/attribute-ownership.md) after Day 4, and [your notebook](notebook/guide.md) to connect each new flow to the earlier ones.
 
-[Course home](README.md)
+[Course home](index.md)

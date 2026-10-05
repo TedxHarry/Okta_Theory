@@ -1,5 +1,5 @@
 ---
-title: "Day 5"
+title: "Day 5: exercises"
 parent: Exercises
 nav_order: 5
 ---
@@ -54,4 +54,4 @@ Separate the claims. Name the evidence or capability needed for each, and explai
 
 Explain the full chain once without the lesson: authoritative values → Okta profile → rule → membership → assignment → separate target checks. Add where a direct assignment could give a different path.
 
-[Self-check answers](../self-checks/day-05.md) · [Foundation checkpoint](../assessments/foundation.md) · [Course home](../README.md)
+[Self-check answers](../self-checks/day-05.md) · [Foundation checkpoint](../assessments/foundation.md) · [Course home](../index.md)

@@ -1,5 +1,5 @@
 ---
-title: "Day 15"
+title: "Day 15: exercises"
 parent: Exercises
 nav_order: 15
 ---
@@ -38,4 +38,4 @@ For F, distinguish the import, agent connectivity, credential result, and applic
 
 After your attempt, use the [answers](../self-checks/day-15.md) and [debrief and skills checklist](../assessments/self-checks/final-case.md).
 
-[Day 15](../lessons/day-15-integrated-case.md) · [Course home](../README.md)
+[Day 15](../lessons/day-15-integrated-case.md) · [Course home](../index.md)

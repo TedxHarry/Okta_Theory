@@ -1,5 +1,5 @@
 ---
-title: "Day 2"
+title: "Day 2: exercises"
 parent: Exercises
 nav_order: 2
 ---
@@ -95,5 +95,5 @@ Mark each distinction as **I can explain it**, **I need the example**, or **I ne
 
 Compare your reasoning with the [self-check answers](../self-checks/day-02.md) after attempting the questions.
 
-[Return to Day 2](../lessons/day-02-requests-and-evidence.md) · [Course home](../README.md)
+[Return to Day 2](../lessons/day-02-requests-and-evidence.md) · [Course home](../index.md)
 

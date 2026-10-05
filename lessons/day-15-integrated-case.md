@@ -51,4 +51,4 @@ This case assesses explanation and investigation from supplied evidence. It does
 
 The [optional extension reference](../reference/optional-extensions.md) introduces terms you may encounter beyond these investigations. It is not required to answer the case.
 
-[Previous: Day 14](day-14-requirements-and-responsibilities.md) · [Course home](../README.md)
+[Previous: Day 14](day-14-requirements-and-responsibilities.md) · [Course home](../index.md)

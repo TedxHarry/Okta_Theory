@@ -1,5 +1,5 @@
 ---
-title: "Day 7"
+title: "Day 7: self-check answers"
 parent: Self-Checks
 nav_order: 7
 ---
@@ -70,4 +70,4 @@ Revisit Day 1's Daniel example and **Keep the evidence tied to the question** if
 
 Explain available → enrolled → required for this attempt → accepted result, then name the remaining application checks. If any arrow depends on an assumption, identify it. That prepares you to examine the sign-in information an application receives in Day 8.
 
-[Return to Day 7](../lessons/day-07-authenticators-enrollment-mfa.md) · [Course home](../README.md)
+[Return to Day 7](../lessons/day-07-authenticators-enrollment-mfa.md) · [Course home](../index.md)

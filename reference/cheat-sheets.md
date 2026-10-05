@@ -6,36 +6,38 @@ nav_order: 7
 
 # Cheat sheets
 
-Quick reminders you will reread often. Use them when a term trips you up or when you want to double-check yourself before you act.
+Use these reminders after the corresponding lessons. For first explanations, follow the [learning path](../learning-path.md); for unfamiliar terms, use the [glossary](glossary.md).
 
 ## Easily confused pairs
 
 | This | Is not this | The difference in one line |
 |---|---|---|
-| Identity | Account | A person is one identity; an account is one system's record of them. |
+| Identity | Account | A digital identity represents an entity in a context; an account is a system record. One person can have several identities, such as employee and administrator identities. |
 | Authentication | Authorization | Who is signing in, versus what they are allowed to do. |
 | SSO | Provisioning | Signing in, versus creating and managing the account. |
 | Assignment | A usable account | Okta intends them to have it, versus the account actually existing and working. |
-| Group | Group rule | A collection of users, versus the rule that decides who is in it. |
-| Import | Provisioning | Reading accounts into Okta, versus pushing accounts out to an app. |
+| Group | Group rule | A collection of users, versus one mechanism for managing membership; groups can be managed in other ways. |
+| Import | Provisioning | Import reads records from a connected system into Okta; provisioning manages account lifecycle. In these outbound examples, Okta provisions target accounts. |
 | SAML | OIDC | Two different sign-in protocols; their messages are not interchangeable. |
-| ID token | Access token | Proof of who signed in, versus permission to call an API. |
+| ID token | Access token | Identity information validated by the OIDC client, versus a token presented to an intended API; neither is a universal permission grant. |
 | Okta session | Application session | Being signed in to Okta, versus being signed in to the app. |
 | Profile source | Mapping | Who controls a value, versus how a value moves and changes shape. |
-| Agent | Connector | Software in your network that reaches a system, versus the built-in integration to it. |
+| Agent | Connector | An agent is software carrying out integration work; a connector defines supported integration capabilities. A connector may rely on an agent, as AD does here. |
 
 ## Okta user states, in plain words
 
-| State | What it means |
-|---|---|
-| Staged | The account is created but not active yet. The person cannot use it. |
-| Active | The person can use Okta normally. |
-| Suspended | Access is temporarily blocked. It can be restored later. |
-| Deactivated | Access is removed. The account can be reactivated if needed. |
-| Locked out | A temporary condition, usually after too many failed sign-ins. |
-| Password reset or expired | A temporary condition until the person sets a new password. |
+| API status | Console label | How to read it |
+|---|---|---|
+| STAGED | Staged | Created before activation is initiated, or awaiting administrative action. |
+| PROVISIONED | Pending user action | Activation-related user action remains. This does not mean every application account was provisioned. |
+| ACTIVE | Active | Account is enabled; authentication requirements and application access still need their own checks. |
+| RECOVERY | Password reset | Account is in a password-recovery state. |
+| PASSWORD_EXPIRED | Password expired | Password update is required. |
+| LOCKED_OUT | Locked out | A lockout condition has been reached. |
+| SUSPENDED | Suspended | Okta access is suspended while assignments are retained. |
+| DEPROVISIONED | Deactivated | Okta account has been deactivated; distinct from deletion. |
 
-The first four are lifecycle states. The last two are temporary conditions on an otherwise active account.
+These are distinct API statuses, not required steps in one sequence. Active alone does not establish working sign-in or app access. Suspension retains assignments; deactivation is separate from deletion and does not prove every application session ended. See [Day 12](../lessons/day-12-joiners-movers-leavers.md) and [Okta user states](https://help.okta.com/oie/en-us/content/topics/users-groups-profiles/usgp-end-user-states.htm).
 
 ## What common evidence proves, and does not
 
@@ -45,7 +47,10 @@ The first four are lifecycle states. The last two are temporary conditions on an
 | An app tile on the dashboard | The app is shown to the user | That the account exists or that sign-in works |
 | An assignment in Okta | Okta intends them to have the app | That the account was created in the app |
 | A SCIM "201 Created" | The app created the account for that request | That sign-in works or that permissions are correct |
-| An import finished | Records were read into Okta | That password sign-in works, or that matching is correct |
+| An import job reports completion | That job completed within its reported scope | That a particular user was included, correctly matched, or can sign in |
 | A "200 OK" on a page | The request was handled | That the person authenticated |
 
 Keep the right-hand column in mind. Most wrong conclusions come from treating one green result as proof of the whole flow.
+
+
+[Course home](../index.md)

@@ -1,5 +1,5 @@
 ---
-title: "Day 8"
+title: "Day 8: exercises"
 parent: Exercises
 nav_order: 8
 ---
@@ -46,4 +46,4 @@ A new correlated attempt S-3 has accepted application validation and confirmed e
 
 What succeeded, and what question remains? Does the evidence show that SAML created her account? Explain how a separately configured JIT capability would differ from that assumption.
 
-[Self-check answers](../self-checks/day-08.md) · [Course home](../README.md)
+[Self-check answers](../self-checks/day-08.md) · [Course home](../index.md)

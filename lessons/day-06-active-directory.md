@@ -182,4 +182,4 @@ In [your notebook](../notebook/guide.md), draw the import and password paths sep
 
 [Day 7](day-07-authenticators-enrollment-mfa.md) explains authenticators, enrollment, and additional authentication requirements.
 
-[Previous: Day 5](day-05-groups-and-assignments.md) · [Course home](../README.md)
+[Previous: Day 5](day-05-groups-and-assignments.md) · [Course home](../index.md)

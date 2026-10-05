@@ -153,4 +153,4 @@ Try the [exercises](../exercises/day-13.md), then the [answers](../self-checks/d
 
 [Day 14](day-14-requirements-and-responsibilities.md) turns business requests into clear access requirements and administrative responsibilities.
 
-[Previous: Day 12](day-12-joiners-movers-leavers.md) · [Course home](../README.md)
+[Previous: Day 12](day-12-joiners-movers-leavers.md) · [Course home](../index.md)

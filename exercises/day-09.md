@@ -1,5 +1,5 @@
 ---
-title: "Day 9"
+title: "Day 9: exercises"
 parent: Exercises
 nav_order: 9
 ---
@@ -40,4 +40,4 @@ O-2 has accepted request validation, a correlated code, successful backend excha
 
 Write a short supported conclusion and explain what remains unknown. Compare the message route with Day 8's SAML flow.
 
-[Self-check answers](../self-checks/day-09.md) · [Course home](../README.md)
+[Self-check answers](../self-checks/day-09.md) · [Course home](../index.md)

@@ -66,4 +66,4 @@ Creation and the checked account state are now supported, so the uniqueness inve
 
 </details>
 
-[Checkpoint](../integration.md) · [Day 10](../../lessons/day-10-scim.md) · [Course home](../../README.md)
+[Checkpoint](../integration.md) · [Day 10](../../lessons/day-10-scim.md) · [Course home](../../index.md)

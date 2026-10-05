@@ -140,4 +140,4 @@ Try the [exercises](../exercises/day-12.md), then the [answers](../self-checks/d
 
 [Day 13](day-13-policies-and-sessions.md) examines authentication policies and separate Okta and application sessions.
 
-[Previous: Day 11](day-11-imports-and-matching.md) · [Course home](../README.md)
+[Previous: Day 11](day-11-imports-and-matching.md) · [Course home](../index.md)

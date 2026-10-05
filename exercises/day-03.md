@@ -1,5 +1,5 @@
 ---
-title: "Day 3"
+title: "Day 3: exercises"
 parent: Exercises
 nav_order: 3
 ---

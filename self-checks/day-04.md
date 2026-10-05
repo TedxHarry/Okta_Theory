@@ -1,5 +1,5 @@
 ---
-title: "Day 4"
+title: "Day 4: self-check answers"
 parent: Self-Checks
 nav_order: 4
 ---
@@ -77,4 +77,4 @@ Revisit Day 3's **A preview is a calculation, not delivery evidence** for the da
 
 You should be able to identify a person's applicable sources, read the priority order, and check field-level ownership before judging conflicting values. You should also be able to leave delivery and password-path conclusions unproven when the evidence only concerns profile data.
 
-[Return to the lesson](../lessons/day-04-sources-and-ownership.md) · [Course home](../README.md)
+[Return to the lesson](../lessons/day-04-sources-and-ownership.md) · [Course home](../index.md)

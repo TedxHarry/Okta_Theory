@@ -1,5 +1,5 @@
 ---
-title: "Day 11"
+title: "Day 11: exercises"
 parent: Exercises
 nav_order: 11
 ---
@@ -36,4 +36,4 @@ The first Okta Users API page contains Maya and Daniel and a next link. Priya is
 
 Explain how an import-based association differs from supported JIT account creation during sign-in. For each, name the system in which an account or association would be created. Why does successful SSO not settle this? Describe what reconciliation would check after a confirmed match.
 
-[Self-check answers](../self-checks/day-11.md) · [Course home](../README.md)
+[Self-check answers](../self-checks/day-11.md) · [Course home](../index.md)

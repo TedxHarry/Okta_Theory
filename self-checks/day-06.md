@@ -1,5 +1,5 @@
 ---
-title: "Day 6"
+title: "Day 6: self-check answers"
 parent: Self-Checks
 nav_order: 6
 ---
@@ -70,4 +70,4 @@ Revisit Day 4's source applicability and **Northbridge is still HR-led** if you 
 
 You should be able to trace both paths, explain what each component contributes, and choose different evidence for a connection failure and a credential rejection. If that distinction is clear, the next question is what other authentication requirements may remain after a password is accepted.
 
-[Return to Day 6](../lessons/day-06-active-directory.md) · [Course home](../README.md)
+[Return to Day 6](../lessons/day-06-active-directory.md) · [Course home](../index.md)

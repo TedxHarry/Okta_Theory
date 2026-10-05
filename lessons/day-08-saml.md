@@ -51,8 +51,17 @@ These are claims to validate, not facts to accept merely because they appear in 
 Northbridge's example starts at Salesforce, so it is **SP-initiated**:
 
 ```mermaid
-flowchart TD
-  A["1. Browser to Salesforce: request access"] --> B["2. Salesforce via browser to Okta: carry the authentication request"] --> C["3. Okta: assignment and authentication checks"] --> D["4. Okta to browser: supply the SAML response"] --> E["5. Browser to Salesforce ACS endpoint: submit the response"] --> F["6. Salesforce: validate, match the account, decide access"]
+sequenceDiagram
+  participant B as Browser
+  participant S as Salesforce
+  participant O as Okta
+  B->>S: 1. Request access
+  S-->>B: Redirect with authentication request
+  B->>O: 2. Carry authentication request
+  Note over B,O: 3. Applicable assignment and authentication checks
+  O-->>B: 4. Supply SAML response
+  B->>S: 5. POST response to ACS
+  Note over S: 6. Validate, match account, decide access
 ```
 
 The application's **Assertion Consumer Service**, or **ACS**, is the endpoint that receives the response. In a common browser flow, the browser submits it using an HTTP POST. Recall Day 2: POST describes a message operation, not automatic account creation.
@@ -178,4 +187,4 @@ In [your notebook](../notebook/guide.md), draw the browser flow and annotate the
 
 [Day 9](day-09-oidc.md) follows Northbridge Expense through OIDC, a different sign-in protocol.
 
-[Previous: Day 7](day-07-authenticators-enrollment-mfa.md) · [Course home](../README.md)
+[Previous: Day 7](day-07-authenticators-enrollment-mfa.md) · [Course home](../index.md)

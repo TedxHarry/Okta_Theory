@@ -1,5 +1,5 @@
 ---
-title: "Day 10"
+title: "Day 10: self-check answers"
 parent: Self-Checks
 nav_order: 10
 ---
@@ -63,4 +63,4 @@ No. The current evidence no longer shows the full-name conversion defect. Compar
 
 </details>
 
-[Integration checkpoint](../assessments/integration.md) · [Return to Day 10](../lessons/day-10-scim.md) · [Course home](../README.md)
+[Integration checkpoint](../assessments/integration.md) · [Return to Day 10](../lessons/day-10-scim.md) · [Course home](../index.md)

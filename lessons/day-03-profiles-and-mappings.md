@@ -263,5 +263,5 @@ In [your notebook](../notebook/guide.md), draw the four data layers and label ea
 
 [Day 4](day-04-sources-and-ownership.md) asks who controls the profile and individual attributes when more than one source is connected.
 
-[Previous: Day 2](day-02-requests-and-evidence.md) · [Course home](../README.md)
+[Previous: Day 2](day-02-requests-and-evidence.md) · [Course home](../index.md)
 

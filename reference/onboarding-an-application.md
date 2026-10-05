@@ -6,67 +6,84 @@ nav_order: 6
 
 # Onboarding a new application
 
-One of the most common projects you will get is "we bought a new app, connect it to Okta." The exact clicks differ for every app. The thinking does not. Here is how to work through it from start to finish.
+“Connect our new app to Okta” contains several decisions. Which people need it? How will the app recognize them? Who manages its accounts, and what should happen when access ends?
+
+Use this framework after [Day 14](../lessons/day-14-requirements-and-responsibilities.md). It is a theory exercise in explaining a proposed design and its evidence. No tenant or configuration work is required.
 
 ```mermaid
 flowchart TD
-  A["Understand the requirement"] --> B["Choose the sign-in method the app supports"]
-  B --> C["Decide if Okta manages accounts in the app"]
-  C --> D["Decide how the app recognizes the user"]
-  D --> E["Decide who gets the app"]
-  E --> F["Test end to end with one test user"]
-  F --> G["Confirm what happens when someone leaves"]
+  A["Define people and required access"] --> B["Choose supported sign-in and account management"]
+  B --> C["Define matching and assignment ownership"]
+  C --> D["Explain positive, negative and exception cases"]
+  D --> E["Explain moves, departures and recovery"]
+  E --> F["Identify evidence and unresolved decisions"]
 ```
 
-## 1. Understand the requirement
+## 1. Define the requirement and the system boundary
 
-Before anything technical, get the real request. A line like "give Sales the new app" is not enough yet. Ask:
+An **Okta organization**, often called an **org** or tenant, is a separate Okta environment with its own users and configuration. An **application integration instance** is a particular configured connection within that org. Two connections to the same product can point to different target environments and have different settings.
 
-- Which people exactly? Employees only, or contractors too?
-- How are those people identified? Which attribute, and which system owns it?
-- Should they get it automatically, or only when they ask?
-- What should they be able to do inside the app?
-- What happens when they change teams or leave?
+Record the intended org, integration instance and target environment before comparing evidence. A successful operation against a test instance does not establish the production outcome.
 
-You cannot design access until you know who, how, and when.
+Ask which employees and contractors qualify, which system owns the deciding attributes, which application permissions they need, and when access starts or ends. Name the business approver, identity-data owner, IAM owner and application owner. A department does not automatically establish an application role.
 
-## 2. Choose the sign-in method
+## 2. Choose the supported sign-in method
 
-Find out what the app supports for single sign-on. Usually it is SAML or OIDC. Pick the one the app documents. You are deciding how Okta will prove to the app who the user is. Both send the app a trusted message about the user; their formats and checks differ.
+Establish what the particular app and connector support. For SAML, explain the trusted issuer, validation requirements, destination and matching rule. For this course's OIDC web-client model, the browser returns a code and the backend exchanges it for tokens, validates the response and establishes an application session. Do not copy these settings into a connector that uses a different protocol.
 
-## 3. Decide if Okta manages accounts in the app
+Revisit [SAML](../lessons/day-08-saml.md) or [OIDC](../lessons/day-09-oidc.md) for the full flow.
 
-Sign-in and account management are separate choices. Ask whether Okta should create and update accounts in the app, often through SCIM, or whether accounts already exist or are made another way. Do not assume every app supports provisioning, and do not assume signing in creates an account.
+## 3. Separate account management from sign-in
 
-## 4. Decide how the app recognizes the user
+Identify who creates, updates and disables accounts. If provisioning is supported and configured, establish its actual operations and credentials. Otherwise, explain the responsible manual or external process and the evidence it returns. Signing in does not universally create an account, and an assignment is not proof of successful provisioning.
 
-The app needs to match the incoming person to an account on its side. For SAML this is usually the NameID. For OIDC it is the subject or a claim. For provisioning it is the userName. Decide which value identifies the user, and make sure the value Okta sends is the value the app expects.
+For an existing account, establish ownership before linking or creating anything. See [SCIM](../lessons/day-10-scim.md) and [matching](../lessons/day-11-imports-and-matching.md).
 
-## 5. Decide who gets the app
+## 4. Distinguish the identifiers
 
-For access that everyone in a group should have, use a group rule so the right people are added automatically. For one-off exceptions, use a direct assignment. Write down the rule in plain words first, for example "Sales employees, not contractors," then build it.
+| Decision | What to establish |
+|---|---|
+| SAML sign-in matching | The app's configured identity rule; in Day 8, NameID must match the intended Salesforce username. An email-looking value is not automatically correct. |
+| OIDC identity | Validate the token and use the issuer (`iss`) and subject (`sub`) together for the stable identity within that issuer. Email is not an equivalent guaranteed stable key. |
+| Initial provisioning lookup | The connector's documented matching criteria; the Projects SCIM example looks up `userName` and checks ownership. |
+| Subsequent target operations | The confirmed target-assigned resource identifier, such as Projects `id`, associated with the intended Okta user. |
 
-## 6. Test end to end with one test user
+Consider what happens when a login or email changes and when a lookup finds a conflicting account. Do not infer ownership from one matching string. See [OIDC claim stability](https://openid.net/specs/openid-connect-core-1_0.html#ClaimStability) and [Okta SCIM operations](https://developer.okta.com/docs/api/openapi/okta-scim/guides/scim-20).
 
-Do not declare it done after one green screen. Walk the whole path with a single test user:
+## 5. Explain membership and exceptions
 
-- The user is assigned the app.
-- An account exists in the app, with the right attributes.
-- The user can sign in to the app.
-- The user can do what they are supposed to do, and not more.
+Write the eligibility condition in plain words first. A group rule can manage membership from attributes; an existing directory group or an approved manually maintained group may suit a different requirement. Name the membership owner and the app assignment attached to that group.
 
-Check each step with its own evidence.
+A direct assignment or a governed exception group can represent an approved exception. State the approver, scope, owner and end condition. Neither mechanism automatically supplies those controls. Check surviving assignment paths when normal eligibility ends. See [Day 5](../lessons/day-05-groups-and-assignments.md).
 
-## 7. Confirm what happens when someone leaves
+## 6. Compare several evidence cases
 
-Access is only half the job. Confirm the leaver path too. When the person is deactivated, check that the app account is disabled and that no stray access path remains. This is the part people forget, and it is the part auditors ask about.
+For this fictional design variant, Northbridge Projects is intended for Sales employees. A contractor needs a separately approved, limited exception. Maya's move to Finance would end ordinary access under this variant; this does not change the different approved Projects outcome in Day 12.
 
-## Before you call it done
+| Case | Required reasoning |
+|---|---|
+| Eligible Sales employee | Explain assignment, intended account, successful sign-in and permitted actions with separate evidence. |
+| Ineligible Finance employee | Explain why the ordinary assignment is absent and why an old account or session still needs checking. |
+| Priya's contractor exception | Establish sponsor approval, limited permission, assignment path and end condition; preserve her Okta-managed source model. |
+| Maya moves out of Sales | Inspect every surviving assignment, target account and relevant session against the variant's removal requirement. |
+| Existing account or rehire | Verify ownership and intended reuse before assuming a new account is needed. |
+| Departure or exception expiry | Explain the Okta action, per-app removal results and separate session outcome. |
 
-- The right people get the app, and the wrong people do not.
-- Sign-in works, and you have seen it work.
-- The account exists in the app with correct attributes.
-- Removing the person removes the access.
-- You wrote down what you configured and why.
+One successful example supports only its observed path. It does not establish the negative, exception or lifecycle cases.
 
-If you can tick all five with evidence, the integration is ready. If you are guessing on any of them, you are not done yet.
+## 7. Explain maintenance, shared impact and recovery
+
+Identify other apps or users affected by shared groups and policies. State who owns a failed change and what evidence would show that both the configuration and its unintended effects have been corrected. Restoring a setting alone does not remove accounts or sessions already created.
+
+Two short comparisons help locate a maintenance failure:
+
+- **SAML credential or field mismatch:** a reported expired or untrusted signing certificate calls for comparing the received signature's credential, validity and configured trust. A reported audience mismatch calls for comparing the audience with the intended application identifier. Both can reject sign-in; they require different evidence and owners. Keep validation enabled.
+- **Service credential or user authentication:** a provisioning API's rejected integration credential concerns the connection acting on accounts. It does not establish that Maya's password or authenticator is wrong. Identify the caller, endpoint and exact error before proposing a credential change.
+
+Record owners for certificate and service-credential maintenance, expected expiry or rotation events, and the supported recovery process. No secret values belong in the learning notes.
+
+## State what the evidence supports
+
+A clear explanation connects the approved population, identifiers, assignment paths, account operations, sign-in, permissions and removal behavior. It also names unresolved questions and the evidence needed to answer them. That is an assessed design explanation; operational deployment readiness requires the organization's own validation and change process.
+
+[Day 14 practice](../exercises/day-14.md) · [Learning path](../learning-path.md) · [Course home](../index.md)

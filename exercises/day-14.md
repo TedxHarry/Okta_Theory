@@ -1,5 +1,5 @@
 ---
-title: "Day 14"
+title: "Day 14: exercises"
 parent: Exercises
 nav_order: 14
 ---
@@ -38,4 +38,8 @@ Priya reports an unavailable old phone. Her access exception is approved, but th
 
 A colleague proposes copying Expense's OIDC settings and Projects' SCIM contract into the Office 365 integration, then treating successful sign-in as proof of licensing. Using the lesson's supplied documentation summary, identify the unsupported assumptions and the separate responsibilities that must be established.
 
-[Self-check answers](../self-checks/day-14.md) · [Course home](../README.md)
+## Optional: apply the onboarding framework
+
+Use the explicitly labelled Projects design variant in [Onboarding a new application](../reference/onboarding-an-application.md). One eligible Sales employee has a working account and sign-in. Does that establish the design for an ineligible Finance employee, Priya's contractor exception, and Maya's move to Finance? For each, name the expected outcome, a separate piece of evidence, and an unknown. Why must Maya's move check both group and direct assignment paths? If an API rejects the integration credential, would resetting Maya's password address the evidence?
+
+[Self-check answers](../self-checks/day-14.md) · [Course home](../index.md)

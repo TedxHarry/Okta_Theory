@@ -1,5 +1,5 @@
 ---
-title: "Day 14"
+title: "Day 14: self-check answers"
 parent: Self-Checks
 nav_order: 14
 ---
@@ -67,4 +67,10 @@ No. A new implementation capability does not change the approved permission mode
 
 </details>
 
-[Return to Day 14](../lessons/day-14-requirements-and-responsibilities.md) · [Course home](../README.md)
+## Optional onboarding framework: model reasoning
+
+The successful employee case does not establish the other cases. Under this variant, an ordinary Finance employee should lack the Sales entitlement; inspect assignments and any surviving target account or session. Priya needs a separately approved exception with limited permissions and an end condition; inspect its approval and actual assignment without inventing a Workday association. Maya's Finance move ends ordinary Projects access in this variant; inspect all surviving group and direct assignments, the target account and relevant sessions. This differs explicitly from Day 12's requirement to retain her Projects account.
+
+The supplied facts do not establish any of those target outcomes. A rejected integration credential concerns the service connection; Maya's password reset does not correct that evidence. Identify the caller, endpoint, exact rejection and credential owner. Different evidence may support different hypotheses, but an answer must preserve the approved eligibility and distinguish unknown outcomes from confirmed failures.
+
+[Return to Day 14](../lessons/day-14-requirements-and-responsibilities.md) · [Course home](../index.md)

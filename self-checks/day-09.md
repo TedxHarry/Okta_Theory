@@ -1,5 +1,5 @@
 ---
-title: "Day 9"
+title: "Day 9: self-check answers"
 parent: Self-Checks
 nav_order: 9
 ---
@@ -63,4 +63,4 @@ O-1 failed before code issuance because of the redirect mismatch. O-3 reached to
 
 </details>
 
-[Return to Day 9](../lessons/day-09-oidc.md) · [Course home](../README.md)
+[Return to Day 9](../lessons/day-09-oidc.md) · [Course home](../index.md)

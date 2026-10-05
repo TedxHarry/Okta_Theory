@@ -27,8 +27,8 @@ Work the days in order. Later days build on earlier ones.
 
 ## Handy references
 
-- [Troubleshooting playbook](reference/troubleshooting-playbook.md) when you are working a problem.
-- [Onboarding a new application](reference/onboarding-an-application.md) when you connect a new app.
+- [Troubleshooting playbook](reference/troubleshooting-playbook.md) after the relevant lessons, to locate evidence in a case.
+- [Onboarding a new application](reference/onboarding-an-application.md) for a design-and-evidence exercise after Day 14.
 - [Cheat sheets](reference/cheat-sheets.md) for quick reminders.
 - [Northbridge Services](reference/northbridge-company.md), the fictional company used throughout.
 - [Glossary](reference/glossary.md) for terms in plain language.

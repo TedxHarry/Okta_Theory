@@ -86,4 +86,4 @@ Keep three pieces in [your notebook](../../notebook/guide.md):
 
 These records show what you can explain from supplied evidence. They do not replace supervised operational experience or establish competence to deploy or recover a live tenant. Keep untested implementation questions explicit when applying the reasoning to another environment.
 
-[Case evidence](../final-case.md) · [Day 15](../../lessons/day-15-integrated-case.md) · [Course home](../../README.md)
+[Case evidence](../final-case.md) · [Day 15](../../lessons/day-15-integrated-case.md) · [Course home](../../index.md)

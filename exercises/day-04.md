@@ -1,5 +1,5 @@
 ---
-title: "Day 4"
+title: "Day 4: exercises"
 parent: Exercises
 nav_order: 4
 ---
@@ -66,4 +66,4 @@ Choose the next evidence you would request. Say how two different possible findi
 
 For each answer, distinguish a stated business rule, observed configuration, observed value, and operation result. If a result is absent, say what you still need to establish.
 
-[Day 4 answers](../self-checks/day-04.md) · [Course home](../README.md)
+[Day 4 answers](../self-checks/day-04.md) · [Course home](../index.md)

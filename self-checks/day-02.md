@@ -1,5 +1,5 @@
 ---
-title: "Day 2"
+title: "Day 2: self-check answers"
 parent: Self-Checks
 nav_order: 2
 ---

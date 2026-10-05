@@ -24,4 +24,4 @@ The employee flow is Workday → Okta → AD and applications. AD can also retur
 
 An absent field, failed import, or unavailable source does not by itself prove a change in ownership or fallback. Check actual associations, field settings, mappings, and operation results.
 
-[Company reference](northbridge-company.md) · [Course home](../README.md)
+[Company reference](northbridge-company.md) · [Course home](../index.md)

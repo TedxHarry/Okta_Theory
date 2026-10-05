@@ -46,8 +46,19 @@ A **client ID** identifies Expense's registration. It is not a password. Backend
 An **authorization code** is a temporary, single-use value that the client exchanges for tokens. It is not an MFA code and not a token for calling an API.
 
 ```mermaid
-flowchart TD
-  A["1. Browser to Expense: start sign-in"] --> B["2. Expense via browser to Okta: authorization request"] --> C["3. Okta: validate request and user/authorization checks"] --> D["4. Okta via browser to Expense callback: code and state"] --> E["5. Expense backend to Okta token endpoint: exchange code"] --> F["6. Okta to Expense backend: token response"] --> G["7. Expense: validate ID token, identify user, establish session"]
+sequenceDiagram
+  participant B as Browser
+  participant E as Expense backend
+  participant O as Okta
+  B->>E: 1. Start sign-in
+  E-->>B: Redirect to authorization endpoint
+  B->>O: 2. Authorization request
+  Note over B,O: 3. Request and user checks
+  O-->>B: Redirect with code and state
+  B->>E: 4. Carry code and state to callback
+  E->>O: 5. Code exchange with PKCE and client authentication
+  O-->>E: 6. Token response
+  Note over E: 7. Validate ID token, identify user, establish session
 ```
 
 The **callback**, or redirect URI, is the application's registered return location. The **authorization endpoint** receives the authorization request. The **token endpoint** receives the backend's code exchange. An endpoint is an address for a particular operation.
@@ -183,4 +194,4 @@ In [your notebook](../notebook/guide.md), draw the browser and backend as separa
 
 [Day 10](day-10-scim.md) returns to account management through SCIM.
 
-[Previous: Day 8](day-08-saml.md) · [Course home](../README.md)
+[Previous: Day 8](day-08-saml.md) · [Course home](../index.md)

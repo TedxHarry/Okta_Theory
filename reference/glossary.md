@@ -85,7 +85,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Group Push | A separate capability for maintaining groups and memberships in supported target applications. |
 | workerType | Northbridge's custom text attribute describing Employee or Contractor classification. |
 
-[Day 5 explanations](../lessons/day-05-groups-and-assignments.md) · [Course home](../README.md)
+[Day 5 explanations](../lessons/day-05-groups-and-assignments.md) · [Course home](../index.md)
 
 ## Directory operations (Day 6)
 
@@ -100,7 +100,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Password synchronization | Propagating password changes through a configured, supported process. |
 | UPN | User principal name: an AD sign-in name whose email-like form does not prove it is a mailbox address. |
 
-[Day 6 explanations](../lessons/day-06-active-directory.md) · [Course home](../README.md)
+[Day 6 explanations](../lessons/day-06-active-directory.md) · [Course home](../index.md)
 
 ## Authentication evidence (Day 7)
 
@@ -117,7 +117,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | User verification | A check of the person using an authenticator, such as a supported biometric or device passcode check. |
 | Phishing resistance | Protection against using authentication proof through an impostor site; method and flow support matter. |
 
-[Day 7 explanations](../lessons/day-07-authenticators-enrollment-mfa.md) · [Course home](../README.md)
+[Day 7 explanations](../lessons/day-07-authenticators-enrollment-mfa.md) · [Course home](../index.md)
 
 ## Federation (Day 8)
 
@@ -134,7 +134,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Digital signature | Cryptographic evidence verified against trusted signing information; different from encryption. |
 | JIT provisioning | Supported, configured account creation or update during a sign-in journey. |
 
-[Day 8 explanations](../lessons/day-08-saml.md) · [Course home](../README.md)
+[Day 8 explanations](../lessons/day-08-saml.md) · [Course home](../index.md)
 
 ## Application sign-in (Day 9)
 
@@ -153,7 +153,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | State / nonce | Values connecting the returned browser response / ID token to the client's authentication transaction. |
 | PKCE | Proof Key for Code Exchange: a verifier/challenge check tying code redemption to the initiating transaction. |
 
-[Day 9 explanations](../lessons/day-09-oidc.md) · [Course home](../README.md)
+[Day 9 explanations](../lessons/day-09-oidc.md) · [Course home](../index.md)
 
 ## Application account management (Day 10)
 
@@ -170,7 +170,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | 409 uniqueness | A reported uniqueness conflict; does not establish the conflicting account's owner. |
 | 400 invalidValue | Rejection for a value incompatible with the operation or schema, or a missing required value; inspect the details. |
 
-[Day 10 explanations](../lessons/day-10-scim.md) · [Course home](../README.md)
+[Day 10 explanations](../lessons/day-10-scim.md) · [Course home](../index.md)
 
 ## Record matching (Day 11)
 
@@ -185,7 +185,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Pagination | Returning a result set in separate pages. |
 | Cursor | A service-supplied position marker used to retrieve another page; not a page number to invent. |
 
-[Day 11 explanations](../lessons/day-11-imports-and-matching.md) · [Course home](../README.md)
+[Day 11 explanations](../lessons/day-11-imports-and-matching.md) · [Course home](../index.md)
 
 ## Lifecycle changes (Day 12)
 
@@ -200,7 +200,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Deletion | Removal of the Okta user through a separate irreversible action. |
 | Closure evidence | Observations establishing that the agreed outcome has been achieved in the affected systems. |
 
-[Day 12 explanations](../lessons/day-12-joiners-movers-leavers.md) · [Course home](../README.md)
+[Day 12 explanations](../lessons/day-12-joiners-movers-leavers.md) · [Course home](../index.md)
 
 ## Authentication decisions and sessions (Day 13)
 
@@ -217,7 +217,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | SLO | Single Logout: coordinated logout across supported, configured participants. |
 | Event correlation | Connecting related records using identity, targets, sequence, and available transaction/session identifiers. |
 
-[Day 13 explanations](../lessons/day-13-policies-and-sessions.md) · [Course home](../README.md)
+[Day 13 explanations](../lessons/day-13-policies-and-sessions.md) · [Course home](../index.md)
 
 ## Access decisions and responsibility (Day 14)
 
@@ -233,4 +233,4 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | WS-Federation | A federation protocol used by the documented Office 365 integration's federated sign-in path. |
 | Microsoft Entra ID | Microsoft's cloud identity service used with Microsoft 365. |
 
-[Day 14 explanations](../lessons/day-14-requirements-and-responsibilities.md) · [Course home](../README.md)
+[Day 14 explanations](../lessons/day-14-requirements-and-responsibilities.md) · [Course home](../index.md)

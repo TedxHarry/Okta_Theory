@@ -1,5 +1,5 @@
 ---
-title: "Day 13"
+title: "Day 13: self-check answers"
 parent: Self-Checks
 nav_order: 13
 ---
@@ -63,4 +63,4 @@ No. Determine which service issued the prompt and correlate the actual request, 
 
 </details>
 
-[Return to Day 13](../lessons/day-13-policies-and-sessions.md) · [Course home](../README.md)
+[Return to Day 13](../lessons/day-13-policies-and-sessions.md) · [Course home](../index.md)

@@ -262,5 +262,5 @@ In [your notebook](../notebook/guide.md), write Maya's request sequence. For eac
 
 [Day 3](day-03-profiles-and-mappings.md) follows identity values between profiles and shows how a correct source value can become a different value elsewhere.
 
-[Previous: Day 1](day-01-people-identities-access.md) · [Course home](../README.md)
+[Previous: Day 1](day-01-people-identities-access.md) · [Course home](../index.md)
 

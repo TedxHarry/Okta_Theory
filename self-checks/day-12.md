@@ -1,5 +1,5 @@
 ---
-title: "Day 12"
+title: "Day 12: self-check answers"
 parent: Self-Checks
 nav_order: 12
 ---
@@ -73,4 +73,4 @@ The technical assignment path remains the same, but continued access is no longe
 
 </details>
 
-[Return to Day 12](../lessons/day-12-joiners-movers-leavers.md) · [Course home](../README.md)
+[Return to Day 12](../lessons/day-12-joiners-movers-leavers.md) · [Course home](../index.md)

@@ -1,5 +1,5 @@
 ---
-title: "Day 7"
+title: "Day 7: exercises"
 parent: Exercises
 nav_order: 7
 ---
@@ -48,4 +48,4 @@ A new correlated attempt D-3 has completed enrollment, accepted password and Pus
 
 Write an update to Daniel. State what has succeeded and what evidence is needed if he still cannot approve an expense. Do not claim the application outcome from the authentication results alone.
 
-[Self-check answers](../self-checks/day-07.md) · [Course home](../README.md)
+[Self-check answers](../self-checks/day-07.md) · [Course home](../index.md)

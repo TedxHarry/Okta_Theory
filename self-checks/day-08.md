@@ -1,5 +1,5 @@
 ---
-title: "Day 8"
+title: "Day 8: self-check answers"
 parent: Self-Checks
 nav_order: 8
 ---
@@ -62,4 +62,4 @@ Revisit **Authentication does not define the account lifecycle** and Day 1's aut
 
 Tell the SP-initiated story without XML, then use the excerpt to locate the three named fields. Explain one case where delivery succeeds but validation fails and one where sign-in succeeds but an application action is denied.
 
-[Return to Day 8](../lessons/day-08-saml.md) · [Course home](../README.md)
+[Return to Day 8](../lessons/day-08-saml.md) · [Course home](../index.md)
