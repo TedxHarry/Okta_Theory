@@ -1,0 +1,91 @@
+# Day 1: Self-check answers
+
+The important part is your reasoning. Different wording is fine if you keep the records, decisions, and evidence separate.
+
+## 1. One person, several records
+
+The records represent Maya for different system purposes: employment in Workday, identity and access decisions in Okta, directory needs in AD, and application use in Salesforce.
+
+A disabled Salesforce account establishes a Salesforce account-state fact. It does not, by itself, establish whether Maya's Okta user or AD account is enabled or disabled. You need their state evidence separately.
+
+**Revisit:** "Maya is one person; the systems hold different records" if you treated all account states as one state.
+
+## 2. Sign-in works; an action fails
+
+Authentication and authorization are different. The supplied observations show successful sign-in and application entry; they do not establish permission to approve expenses.
+
+Request the approval requirement, Daniel's application permissions or role, and evidence for the denied action. His Finance manager title is not proof of a configured application permission.
+
+The evidence does not support resetting his Okta password as the correction. You also should not automatically grant an approval permission before confirming the authorized business requirement.
+
+**Revisit:** "Signing in and having permission are different" if you treated every denial as a credential failure.
+
+## 3. SSO without account creation
+
+The arrangement is possible. SSO handles the connected sign-in relationship, while provisioning handles application account management. In this example, accounts are created through a manual process rather than automatically by the Okta connection.
+
+An SSO connection does not prove that automatic account provisioning is available or configured. Some applications support other account-creation arrangements; the selected application's behavior must be checked.
+
+**Revisit:** "SSO helps with sign-in; provisioning manages accounts" if you assumed SSO necessarily creates every account.
+
+## 4. A value is correct in one system
+
+The Workday record proves that the observed source value is Sales. It does not prove that the value has reached Okta or any particular application.
+
+Compare the relevant Okta profile and target-side value, then inspect the connecting data path if the observations differ. At this point, either value may already be correct; the statement lacks the evidence to claim it.
+
+An explanation that requests source, intermediate, and destination evidence is sound even without knowing the mapping mechanism yet.
+
+**Revisit:** "What a directory does" and the mapping-related observations if you inferred destination state from source state.
+
+## 5. An incomplete account investigation
+
+A confirmed finding is that no account matching the approved identifier was found in the checked Salesforce instance. Another confirmed finding is the successful Okta sign-in for the identified attempt.
+
+Possible explanations include:
+
+- The required Salesforce assignment is missing.
+- The expected account-management process has not completed or failed.
+- An existing account has a different identifier and has not been correctly associated with Maya.
+
+These are alternatives, not three facts established by the packet.
+
+Request assignment evidence, the configured account-management approach and relevant results, and target account/identifier information as needed. If accounts are created separately, ask for the responsible process's record rather than assuming an Okta provisioning failure.
+
+Avoid creating a duplicate account, granting access without approval, or changing a working sign-in credential before establishing the cause. A correction becomes justified when the evidence identifies the relevant gap and the requirement is clear.
+
+**Revisit:** "Investigating Maya's ticket" if you treated "not inspected" as "missing" or presented a possible cause as confirmed.
+
+## 6. Assignment and a tile
+
+No. The assignment shows an Okta-side relationship to the application. The tile supports what is visible to the user. Neither establishes that target account creation succeeded.
+
+Inspect the target account state and the relevant account-management outcome. If provisioning is not configured, identify how the account is expected to be created or matched.
+
+**Revisit:** "Being assigned an application is another fact to check" if you equated assignment with a usable target account.
+
+## 7. Tell the whole story
+
+A sound explanation might be:
+
+> HR records Maya's employee information. Okta has a user representing her. Northbridge must establish her Salesforce assignment and a corresponding account in Salesforce through the applicable process. Sign-in must succeed through the configured connection, and the application must give her the permissions needed for her work. These are connected steps, but one successful observation does not prove all of them.
+
+If the Salesforce account exists but is disabled, its existence is now known and its state may prevent use. The reason for the disabled state still needs investigation. Check whether it should be enabled, how account state is controlled, and whether assignment and sign-in information are correct. Do not enable it merely because someone reports an access problem.
+
+Your answer need not reproduce this paragraph. It should preserve the distinct records and decisions, identify known versus unknown facts, and avoid unsupported causes or changes.
+
+## Before-moving-on questions from the lesson
+
+| Question | Essential reasoning |
+|---|---|
+| Why can an Okta user exist without usable Salesforce access? | User existence does not establish assignment, target account state, sign-in, or application permissions. |
+| Authentication versus authorization? | Checking who is signing in versus deciding what access or action is allowed. |
+| SSO versus provisioning? | Connected sign-in versus account management; one does not prove the other succeeded. |
+| Correct source department versus target department? | The source observation needs destination evidence before a cross-system claim. |
+| Not inspected versus confirmed absent? | Missing evidence is not an observed negative result; even a negative result has a defined search scope. |
+| What should Alex request next? | Expected assignment, account-management approach/results, and relevant target identity/account evidence. |
+
+If you can explain these without relying on copied definitions, you have the distinctions needed to follow the next flow. If a distinction is unclear, revisit the linked section and try a changed example: an existing disabled account instead of a missing one, or a denied application action instead of failed sign-in.
+
+[Return to the exercises](../exercises/day-01.md) · [Return to the lesson](../lessons/day-01-people-identities-access.md)
+

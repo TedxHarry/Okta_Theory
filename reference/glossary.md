@@ -1,0 +1,230 @@
+# Foundations glossary
+
+Use these short reminders alongside the examples. The linked lessons explain the relationships and limits.
+
+## People and access — Day 1
+
+| Term | Meaning |
+|---|---|
+| IAM | Identity and access management: managing identities and the access they should receive. |
+| Identity | A representation of who a person or software actor is. |
+| Account | A record representing that actor within a particular system. |
+| Directory | An organized store of identity information. |
+| AD | Active Directory, the directory used in Northbridge's employee environment. |
+| Universal Directory | Okta's directory layer for identity profiles and related data. |
+| Group | A collection of users managed together; its access role is explained on Day 5. |
+| Authentication | Checking who is signing in. |
+| Authorization | Deciding what access or action is permitted. |
+| SSO | Single sign-on: using a connected sign-in relationship across applications. |
+| Federation | A configured trust relationship in which one system accepts validated identity information from another. |
+| Provisioning | Managing accounts through operations such as creation and updates. |
+| Deprovisioning | Removing or disabling access or accounts through the applicable process; not necessarily deletion. |
+| Assignment | The Okta-side relationship granting a user an application; target account success is a separate fact. |
+| Identifier | A value that distinguishes an object; an employee number and application username serve different contexts. |
+| Application instance | A particular application environment or configured connection, rather than the product name alone. |
+
+[Day 1 explanations](../lessons/day-01-people-identities-access.md)
+
+## Messages and evidence — Day 2
+
+| Term | Meaning |
+|---|---|
+| Request / response | A message asking a server for something and that server's reply. |
+| HTTP / HTTPS | Rules for web messages / HTTP carried over an encrypted connection. |
+| URL | An address identifying a destination and resource; it can also contain query parameters. |
+| DNS | The naming system used to look up a host's network address. |
+| Method | The request's operation category, such as GET or POST. |
+| Header / body | Message information / message content. |
+| Redirect | A response directing the client to another location. |
+| Status code | A response's numeric result for a particular request. |
+| API | An interface through which software requests information or operations. |
+| JSON | A structured text format containing named fields and values, objects, and lists. |
+| System Log | Okta's event record; external systems have their own evidence. |
+| Session | State associated with an ongoing interaction. |
+| Cookie | Data stored by a browser and sent on matching requests; some cookies help identify sessions. |
+| Hypothesis | A possible explanation to test against evidence. |
+
+[Day 2 explanations](../lessons/day-02-requests-and-evidence.md)
+
+## Data and ownership — Days 3–4
+
+| Term | Meaning |
+|---|---|
+| Attribute / value | A named detail / its content, such as department / Sales. |
+| Profile / schema | A collection of a user's attributes / the definition of its fields and constraints. |
+| App user profile | Application-specific user data represented inside Okta, separate from the target account. |
+| Mapping | A defined relationship between source and destination fields. |
+| Transformation | A conversion of a value, such as Finance to FIN. |
+| Expression | A formula used to calculate an output from inputs. |
+| Profile source | The effective system controlling a user's profile. |
+| Source association | The link between an Okta user and their record in a source integration. |
+| Source priority | The configured order of applicable profile sources. |
+| Attribute source | The designated source for one field, which may differ from the profile source. |
+| Import / matching | Bringing external records into Okta for processing / comparing records to identify a candidate association; comparison alone does not prove ownership. |
+| Lifecycle | Changes as someone joins, changes responsibilities, and leaves. |
+
+[Day 3 explanations](../lessons/day-03-profiles-and-mappings.md) · [Day 4 explanations](../lessons/day-04-sources-and-ownership.md)
+
+## From attributes to access — Day 5
+
+| Term | Meaning |
+|---|---|
+| Membership | The relationship that places a user in a group. |
+| Group rule | A condition used to manage membership in designated groups. |
+| AND / OR | Both conditions must hold / at least one condition must hold. |
+| Boolean | A true-or-false value. |
+| Group-based assignment | An application assignment supplied through group membership. |
+| Direct assignment | An application assigned individually to a user. |
+| Assignment source | The origin of an application assignment, such as a group; different from a profile source. |
+| Group Push | A separate capability for maintaining groups and memberships in supported target applications. |
+| workerType | Northbridge's custom text attribute describing Employee or Contractor classification. |
+
+[Day 5 explanations](../lessons/day-05-groups-and-assignments.md) · [Course home](../README.md)
+
+## Directory operations — Day 6
+
+| Term | Meaning |
+|---|---|
+| AD DS | Active Directory Domain Services, the directory service used for Northbridge's employee AD environment. |
+| Domain | An AD directory and administration boundary. |
+| Domain controller (DC) | A server running the directory service and supporting directory queries and credential validation. |
+| Organizational unit (OU) | A container for organizing directory objects; not a group membership. |
+| Okta AD agent | Integration software connecting Okta with AD for supported operations. |
+| Delegated authentication | Asking another system to validate credentials; AD does so through the agent in this example. |
+| Password synchronization | Propagating password changes through a configured, supported process. |
+| UPN | User principal name: an AD sign-in name whose email-like form does not prove it is a mailbox address. |
+
+[Day 6 explanations](../lessons/day-06-active-directory.md) · [Course home](../README.md)
+
+## Authentication evidence — Day 7
+
+| Term | Meaning |
+|---|---|
+| Authenticator | A means of providing authentication evidence. |
+| Authentication method | A particular way of authenticating, such as Push or TOTP. |
+| Factor type | The kind of proof: knowledge, possession, or biometric. |
+| MFA | Multifactor authentication: combining different factor types. |
+| Enrollment | Registration associating an authenticator with a user's account. |
+| Challenge | A request for proof during an authentication interaction. |
+| TOTP | Time-based one-time password: a changing code generated by an authenticator. |
+| FastPass | Passwordless cryptographic authentication through Okta Verify in a supported flow. |
+| User verification | A check of the person using an authenticator, such as a supported biometric or device passcode check. |
+| Phishing resistance | Protection against using authentication proof through an impostor site; method and flow support matter. |
+
+[Day 7 explanations](../lessons/day-07-authenticators-enrollment-mfa.md) · [Course home](../README.md)
+
+## Federation — Day 8
+
+| Term | Meaning |
+|---|---|
+| SAML | Security Assertion Markup Language, a standard used for the federation exchange in Day 8. |
+| IdP / SP | Identity provider issuing identity information / service provider validating it to decide application access. |
+| Assertion | Statements about a subject and authentication, with conditions governing their use. |
+| ACS | Assertion Consumer Service: the SP endpoint receiving the SAML response. |
+| Entity ID / audience | Participant identifier / the intended recipient identity expressed in assertion conditions. |
+| NameID | A subject identifier interpreted under the application's configured identity-matching rule. |
+| Metadata | Connection information such as identifiers, endpoints, and certificates. |
+| XML | A text format using named, nested elements to structure information. |
+| Digital signature | Cryptographic evidence verified against trusted signing information; different from encryption. |
+| JIT provisioning | Supported, configured account creation or update during a sign-in journey. |
+
+[Day 8 explanations](../lessons/day-08-saml.md) · [Course home](../README.md)
+
+## Application sign-in — Day 9
+
+| Term | Meaning |
+|---|---|
+| OAuth 2.0 | A framework for authorizing access to protected resources, such as APIs. |
+| OIDC | OpenID Connect: an identity layer on OAuth 2.0 defining user-authentication information and its validation. |
+| Confidential client | An application able to protect its client credentials, such as Expense's server-side backend. |
+| Client ID | Public identifier for the application's registration; not a credential. |
+| Authorization code | Temporary, single-use value exchanged for tokens under the exchange requirements. |
+| Callback / redirect URI | The application's registered location for receiving the browser's return. |
+| ID token | Token the OIDC client validates for information about the user's authentication. |
+| Access token | Token presented to its intended resource server for authorized access under that server's checks. |
+| Scope / claim | Requested access or information category / a named statement in returned information. |
+| JWT | JSON Web Token: a format representing claims; decoding it does not establish validity. |
+| State / nonce | Values connecting the returned browser response / ID token to the client's authentication transaction. |
+| PKCE | Proof Key for Code Exchange: a verifier/challenge check tying code redemption to the initiating transaction. |
+
+[Day 9 explanations](../lessons/day-09-oidc.md) · [Course home](../README.md)
+
+## Application account management — Day 10
+
+| Term | Meaning |
+|---|---|
+| SCIM | System for Cross-domain Identity Management: a standard for managing identity resources between systems. |
+| Resource | An object managed through an interface, such as a user account. |
+| Integration contract | Supported operations, expected fields, and behavior of a connection. |
+| SCIM id | The service provider's identifier for a resource; distinct from a user name or Okta object ID. |
+| Schema extension | An additional defined set of attributes, such as enterprise User department. |
+| POST / PUT / PATCH | Create at the user collection / replace a resource's writable representation / apply selected changes, under the supported contract. |
+| Deactivation | An account-state change; not automatically deletion or termination of every session. |
+| 201 / 204 | Created / successful response with no content. Interpret alongside the operation. |
+| 409 uniqueness | A reported uniqueness conflict; does not establish the conflicting account's owner. |
+| 400 invalidValue | Rejection for a value incompatible with the operation or schema, or a missing required value; inspect the details. |
+
+[Day 10 explanations](../lessons/day-10-scim.md) · [Course home](../README.md)
+
+## Record matching — Day 11
+
+| Term | Meaning |
+|---|---|
+| Discovery | Finding a record within the scope of a read or import operation. |
+| Exact match | A record meeting the configured exact comparison; not independent proof that the data is correct. |
+| Partial match | A candidate meeting configured weaker comparison criteria. |
+| Confirmation | Acceptance of a proposed match or new-user outcome through the configured process. |
+| Association | A link between records in an integration; profile-source effects depend on source settings. |
+| Reconciliation | Comparing expected records and relationships with observed ones and investigating differences. |
+| Pagination | Returning a result set in separate pages. |
+| Cursor | A service-supplied position marker used to retrieve another page; not a page number to invent. |
+
+[Day 11 explanations](../lessons/day-11-imports-and-matching.md) · [Course home](../README.md)
+
+## Lifecycle changes — Day 12
+
+| Term | Meaning |
+|---|---|
+| JML | Joiner, mover, and leaver: access changes associated with starting work, changing responsibilities, and leaving. |
+| Effective event | An approved business change that has taken effect; distinct from a future planned change. |
+| STAGED | Okta account state before activation begins or while administrative action is pending. |
+| PROVISIONED | Okta Pending user action state; not proof that all target accounts exist. |
+| SUSPENDED | Okta access is suspended while app assignments and group memberships remain. |
+| DEPROVISIONED | Okta Deactivated state; distinct from deletion. |
+| Deletion | Removal of the Okta user through a separate irreversible action. |
+| Closure evidence | Observations establishing that the agreed outcome has been achieved in the affected systems. |
+
+[Day 12 explanations](../lessons/day-12-joiners-movers-leavers.md) · [Course home](../README.md)
+
+## Authentication decisions and sessions — Day 13
+
+| Term | Meaning |
+|---|---|
+| Global session policy | Requirements and limits governing the Okta session. |
+| App sign-in policy | Authentication requirements applied to access requests for its associated applications. |
+| Authentication assurance | Confidence supported by the authentication evidence and its characteristics. |
+| Reauthentication | Another authentication check required for an access request. |
+| Freshness | Whether earlier authentication is recent enough under the applicable requirement. |
+| Idle limit / maximum lifetime | Inactivity limit evaluated by the service / overall session-duration limit. |
+| Local session | An application's own session, distinct from the Okta session. |
+| Local logout | Termination of the application's session under its implementation. |
+| SLO | Single Logout: coordinated logout across supported, configured participants. |
+| Event correlation | Connecting related records using identity, targets, sequence, and available transaction/session identifiers. |
+
+[Day 13 explanations](../lessons/day-13-policies-and-sessions.md) · [Course home](../README.md)
+
+## Access decisions and responsibility — Day 14
+
+| Term | Meaning |
+|---|---|
+| Requirement / design | Approved outcome and constraints / the proposed means of achieving them. |
+| Access model | How eligibility, exceptions, assignments, and target permissions connect. |
+| Least privilege | Administrative permissions and scope limited to the defined responsibility. |
+| Acceptance evidence | Observations demonstrating that an agreed requirement is satisfied. |
+| Rollback | Restoring an earlier configuration; downstream consequences need separate verification. |
+| Account recovery | Restoring authorized access through approved identity verification and supported recovery processes. |
+| SWA | Secure Web Authentication: Okta's stored-credential sign-in method. |
+| WS-Federation | A federation protocol used by the documented Office 365 integration's federated sign-in path. |
+| Microsoft Entra ID | Microsoft's cloud identity service used with Microsoft 365. |
+
+[Day 14 explanations](../lessons/day-14-requirements-and-responsibilities.md) · [Course home](../README.md)

@@ -1,0 +1,64 @@
+# Day 14: Self-check answers
+
+Attempt the [exercises](../exercises/day-14.md) first. Distinguish a proposed design from a verified deployment.
+
+## 1. Clarify before designing
+
+Establish the application and instance, eligible population and effective point, permitted business actions, data owners, meaning and approval of exceptions, existing-account handling, and removal requirements. The business and application owners decide eligibility, business permissions, exception authority, and intended access outcomes. IAM translates approved decisions into supported technical behavior.
+
+Revisit **Turn the request into observable outcomes**. A reasonable alternative question is acceptable if it resolves a material ambiguity.
+
+## 2. Explain the approved model
+
+Maya qualifies for the normal Finance path but does not gain approval permission merely from department. Daniel uses that path and has separately approved application authority. Priya does not meet the employee condition; an exception requires its own supplied approval and maintenance. Jordan's departure requires access removal regardless of retained attributes or memberships.
+
+The group rule handles only the stated population comparison. Effective lifecycle processing, exceptions, app assignment, target readiness, business roles, and sessions require their own controls and evidence. Revisit **Translate the requirement without changing its meaning**.
+
+## 3. Inspect surviving paths
+
+The old individual assignment survives a different path's removal. Establish whether it has a current approved exception, inspect other paths, and apply the actual removal requirement. Do not falsify the employee's governed department to make the assignment look consistent.
+
+Verify the assignment result and the application's supported account, role, and session outcomes. Expense provisioning automation has not been established in R-14; coordinate with its owner rather than assuming SCIM. Revisit **Make verification part of the requirement**.
+
+## 4. Use the permission reference
+
+No. Managing Expense alone does not establish permission to manage a policy shared with Projects; the supplied footnote requires authority over all apps assigned to it. Group Admin also does not supply group-rule management permission in the stated standard-role matrix.
+
+Refer the operations to an administrator with the required existing authority, or have the administrative owner evaluate appropriate delegation. The matrix describes product permissions and restrictions, not business approval, the caller's actual assigned roles, or the tenant's complete configuration. Check those separately. It also does not justify granting Super Admin as a default workaround.
+
+Revisit **Separate approval from technical authority**. Reading the supplied excerpt is sufficient; no tenant access is required.
+
+## 5. Define acceptance and change recovery
+
+A positive case is a current eligible Finance employee gaining intended submission access. Negative cases include a contractor without approval and an ordinary Finance user attempting an unapproved approval action. Change cases include an employee leaving Finance, an exception ending, and a departure requiring account and session removal.
+
+Restoring AND repairs the population condition but does not prove unintended effects were reversed. Identify affected users and remaining assignments, target accounts, roles, and sessions. Remove only the access that violates the approved requirement, preserving legitimate records and access, then verify the results.
+
+Revisit **Plan recovery from an incorrect change**.
+
+## 6. Reason about account recovery
+
+Access approval does not verify that the caller is Priya. Establish the correct account and requester through the approved identity-verification process, identify the unavailable enrollment, and confirm the administrator's authorized scope. Follow the supported recovery route and verify replacement enrollment and a permitted sign-in afterward.
+
+A reset cancels selected enrollment; it is not itself recovered access. Extra permissions neither establish identity nor repair the lost authenticator. If compromise is suspected, involve the incident process and investigate relevant sessions. Revisit **Account recovery is a different problem**.
+
+## 7. Compare Microsoft 365
+
+The documented Office 365 connector lists SWA and WS-Federation; Expense's OIDC configuration is not its WS-Federation configuration. Projects' SCIM contract also does not establish the Microsoft connector's provisioning behavior.
+
+Identify Microsoft-side tenant and identity responsibilities, configured sign-in, supported account-management/deprovisioning, licensing, and service permissions. A successful sign-in alone does not establish the required license or access to a service. The lesson's references support the architectural distinctions, not a completed deployment or a particular tenant's configuration.
+
+Revisit **Recognize Microsoft 365's separate responsibilities**.
+
+## Optional changed condition
+
+The Expense owner later confirms a supported automated provisioning connection. Does the original access requirement need to become “all Finance users are approvers”?
+
+<details>
+<summary>Check the reasoning</summary>
+
+No. A new implementation capability does not change the approved permission model. Evaluate its mapping, matching, operations, and removal behavior against the same requirements, and replace the manual account-management step only when the new design and its outcomes are established. Approval permission remains a separate business decision.
+
+</details>
+
+[Return to Day 14](../lessons/day-14-requirements-and-responsibilities.md) · [Course home](../README.md)
