@@ -2,11 +2,8 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
   (function () {
-    function renderMermaid() {
-      if (!window.mermaid) return;
-      var wraps = document.querySelectorAll('.language-mermaid');
-      if (!wraps.length) return;
-      wraps.forEach(function (w) {
+    function render() {
+      document.querySelectorAll('.language-mermaid').forEach(function (w) {
         var d = document.createElement('div');
         d.className = 'mermaid';
         d.textContent = w.textContent.replace(/\n$/, '');
@@ -15,12 +12,17 @@
       try { window.mermaid.initialize({ startOnLoad: false }); } catch (e) {}
       try { window.mermaid.run(); } catch (e) {}
     }
-    // Run whether or not DOMContentLoaded has already fired (the theme may inject this late).
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', renderMermaid);
-    } else {
-      renderMermaid();
-    }
-    window.addEventListener('load', renderMermaid);
+    // The theme may inject this script after load, and the mermaid library may still be
+    // loading, so poll until both the library and the diagram blocks are ready.
+    var tries = 0;
+    var timer = setInterval(function () {
+      tries++;
+      if (window.mermaid && document.querySelector('.language-mermaid')) {
+        clearInterval(timer);
+        render();
+      } else if (tries > 50) {
+        clearInterval(timer); // give up after ~10s (e.g. pages with no diagrams)
+      }
+    }, 200);
   })();
 </script>
