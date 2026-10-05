@@ -116,9 +116,10 @@ A nearby success for Maya, another app, or an earlier Daniel attempt is not a su
 
 After P-2, the browser can interact with two services:
 
-```text
-Browser → Okta: presents information for Okta session K-13
-Browser → Expense: presents information for application session E-LOCAL-13
+```mermaid
+flowchart LR
+  B1["Browser"] -->|"presents info for Okta session K-13"| O["Okta"]
+  B2["Browser"] -->|"presents info for app session E-LOCAL-13"| E["Expense"]
 ```
 
 Expense established its own session after validating the sign-in exchange. In this fictional implementation, ordinary protected-page requests are checked against Expense's local session, not sent to Okta for a fresh OIDC exchange every time. That behavior must be established from the application, not assumed for all products.

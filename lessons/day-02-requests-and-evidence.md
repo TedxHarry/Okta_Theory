@@ -22,9 +22,10 @@ When you open a website, your browser asks a system for something: a page, infor
 
 The browser's message is a **request**. The reply is a **response**. The system receiving and handling the request is a **server**.
 
-```text
-Browser  ── request ──→  Server
-Browser  ←─ response ──  Server
+```mermaid
+flowchart LR
+  B["Browser"] -->|"request"| S["Server"]
+  S -->|"response"| B
 ```
 
 One page can involve many requests. Loading the page, submitting a form, and retrieving its data need not be the same request.
@@ -97,10 +98,9 @@ The `302` is a redirect status. The `Location` header supplies the next address.
 
 The browser follows it and requests the sign-in page from `identity.northbridge.example`, which represents Okta in this example.
 
-```text
-Browser → Expense: request the starting page
-Expense → Browser: go to the identity service
-Browser → Identity service: request the sign-in page
+```mermaid
+flowchart TD
+  A["Browser requests the starting page from Expense"] --> B["Expense tells the browser to go to the identity service"] --> C["Browser requests the sign-in page from the identity service"]
 ```
 
 The redirect has not created Maya's application account. It has not proved that she authenticated. It has moved the browser to another part of the sign-in flow.
@@ -219,12 +219,16 @@ A provisioning request asks a target system to perform an account-management ope
 
 An **API** is an interface through which software can ask another system for information or an operation. Many web APIs use HTTP requests and responses. A browser opening a sign-in page and Okta sending an account-management request are both message exchanges, but they solve different problems.
 
-```text
-Browser sign-in flow:
-Browser → application → redirect instruction → browser visits identity service
-
-Account-management flow:
-Configured Okta integration → target account operation → target response
+```mermaid
+flowchart TD
+  subgraph SI["Browser sign-in flow"]
+    direction LR
+    A["Browser"] --> B["Application"] --> C["Redirect instruction"] --> D["Browser visits identity service"]
+  end
+  subgraph AM["Account-management flow"]
+    direction LR
+    E["Configured Okta integration"] --> F["Target account operation"] --> G["Target response"]
+  end
 ```
 
 A POST does not identify which flow is happening by itself. Nor does a successful browser redirect prove a provisioning operation occurred. Read who communicated, the destination, and the purpose.

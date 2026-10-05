@@ -79,20 +79,18 @@ The integration needs a defined relationship between the incoming field and the 
 
 At its simplest, the mapping copies a value:
 
-```text
-Incoming employee department: Finance
-                  ↓
-Okta user profile.department: Finance
+```mermaid
+flowchart TD
+  A["Incoming employee department: Finance"] --> B["Okta user profile.department: Finance"]
 ```
 
 The labels here describe the intended data flow; they are not instructions or exact Workday connector field names.
 
 Another mapping can take a value from the Okta user profile and prepare the value required by an application's profile.
 
-```text
-Okta user profile.department
-                  ↓
-Projects app user profile.departmentCode
+```mermaid
+flowchart TD
+  A["Okta user profile.department"] --> B["Projects app user profile.departmentCode"]
 ```
 
 Always name both sides. "The department mapping" is ambiguous when several systems and profiles are involved.
@@ -174,16 +172,9 @@ What has been shown? The mapping evaluated to the expected value for that input.
 
 What has not been shown? That the configuration was applied, that existing app user values were updated, that a target update was attempted, or that Projects accepted and stored FIN.
 
-```text
-Expected input
-      ↓
-Mapping produces the intended value
-      ↓
-Relevant app user profile reflects that value
-      ↓
-Configured account-update operation occurs
-      ↓
-Target account contains the intended value
+```mermaid
+flowchart TD
+  A["Expected input"] --> B["Mapping produces the intended value"] --> C["Relevant app user profile reflects that value"] --> D["Configured account-update operation occurs"] --> E["Target account contains the intended value"]
 ```
 
 Each step requires its own evidence. A preview does not perform the entire chain for you.

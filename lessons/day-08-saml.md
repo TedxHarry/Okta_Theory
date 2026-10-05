@@ -50,13 +50,9 @@ These are claims to validate, not facts to accept merely because they appear in 
 
 Northbridge's example starts at Salesforce, so it is **SP-initiated**:
 
-```text
-1. Browser → Salesforce: request access
-2. Salesforce → browser → Okta: carry the authentication request
-3. Okta: perform the applicable assignment and authentication checks
-4. Okta → browser: supply the SAML response for the application
-5. Browser → Salesforce's receiving endpoint: submit the response
-6. Salesforce: validate it, match the account, and decide access
+```mermaid
+flowchart TD
+  A["1. Browser to Salesforce: request access"] --> B["2. Salesforce via browser to Okta: carry the authentication request"] --> C["3. Okta: assignment and authentication checks"] --> D["4. Okta to browser: supply the SAML response"] --> E["5. Browser to Salesforce ACS endpoint: submit the response"] --> F["6. Salesforce: validate, match the account, decide access"]
 ```
 
 The application's **Assertion Consumer Service**, or **ACS**, is the endpoint that receives the response. In a common browser flow, the browser submits it using an HTTP POST. Recall Day 2: POST describes a message operation, not automatic account creation.

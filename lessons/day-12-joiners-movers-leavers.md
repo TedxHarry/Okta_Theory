@@ -52,16 +52,9 @@ Target behavior requires its own verification. For example, Okta's [outbound SCI
 
 Think back to Maya's initial arrival in Sales. A sound joiner explanation connects:
 
-```text
-Approved employment and effective start
-                 ↓
-Correct source record, matching, and Okta identity
-                 ↓
-Intended activation and authentication readiness
-                 ↓
-Applicable groups and application assignments
-                 ↓
-Required target accounts, sign-in, and permissions
+```mermaid
+flowchart TD
+  A["Approved employment and effective start"] --> B["Correct source record, matching, and Okta identity"] --> C["Intended activation and authentication readiness"] --> D["Applicable groups and application assignments"] --> E["Required target accounts, sign-in, and permissions"]
 ```
 
 This is a chain of dependencies, not a guarantee that every connector operates in this exact order. Northbridge must distinguish preparation before a start from permission to use access after it takes effect. A future-dated HR record alone is not evidence that access should already work.

@@ -45,15 +45,9 @@ A **client ID** identifies Expense's registration. It is not a password. Backend
 
 An **authorization code** is a temporary, single-use value that the client exchanges for tokens. It is not an MFA code and not a token for calling an API.
 
-```text
-1. Browser → Expense: start sign-in
-2. Expense → browser → Okta: authorization request
-3. Okta: validate request and perform applicable user/authorization checks
-4. Okta → browser → Expense callback: code and returned state
-5. Expense backend → Okta token endpoint: exchange code
-6. Okta → Expense backend: token response
-7. Expense: validate the response and ID token, identify the user,
-   and establish the application session if its conditions are met
+```mermaid
+flowchart TD
+  A["1. Browser to Expense: start sign-in"] --> B["2. Expense via browser to Okta: authorization request"] --> C["3. Okta: validate request and user/authorization checks"] --> D["4. Okta via browser to Expense callback: code and state"] --> E["5. Expense backend to Okta token endpoint: exchange code"] --> F["6. Okta to Expense backend: token response"] --> G["7. Expense: validate ID token, identify user, establish session"]
 ```
 
 The **callback**, or redirect URI, is the application's registered return location. The **authorization endpoint** receives the authorization request. The **token endpoint** receives the backend's code exchange. An endpoint is an address for a particular operation.

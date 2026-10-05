@@ -14,14 +14,9 @@ An assignment establishes a relationship in Okta. A separate account-management 
 
 **SCIM**, System for Cross-domain Identity Management, standardizes exchanges for managing identity resources. Here Okta is the SCIM client sending requests, and Projects is the service provider receiving them. A **resource** is an object managed through the interface, such as a user account.
 
-```text
-Approved assignment and configured provisioning behavior
-                       ↓
-Projects app user profile in Okta
-                       ↓
-Okta connector → Projects SCIM endpoint
-                       ↓
-Request result and Projects account state
+```mermaid
+flowchart TD
+  A["Approved assignment and configured provisioning behavior"] --> B["Projects app user profile in Okta"] --> C["Okta connector to Projects SCIM endpoint"] --> D["Request result and Projects account state"]
 ```
 
 This is a backend exchange, not Maya's browser sign-in. The connector needs its own configured authorization to call Projects. Maya successfully completing MFA does not prove that this connection works. Nor is an Expense ID token a credential for this connection.

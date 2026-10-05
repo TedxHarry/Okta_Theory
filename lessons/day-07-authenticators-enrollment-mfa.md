@@ -98,14 +98,11 @@ Suppose Daniel subsequently completes the approved enrollment. In a new attempt 
 
 A **challenge** is a request for authentication proof during an interaction. For Push, Daniel responds through the registered device; the system must receive and accept the relevant response.
 
-```text
-Authenticator available
-        ↓ approved account/device registration
-Daniel enrolled
-        ↓ method required for this attempt
-Challenge issued
-        ↓ relevant response received and validated
-Requirement satisfied, if the result is accepted
+```mermaid
+flowchart TD
+  A["Authenticator available"] -->|"approved account or device registration"| B["Daniel enrolled"]
+  B -->|"method required for this attempt"| C["Challenge issued"]
+  C -->|"relevant response received and validated"| D["Requirement satisfied, if the result is accepted"]
 ```
 
 This is a conceptual relationship, not a claim that every authenticator displays the same sequence of screens.

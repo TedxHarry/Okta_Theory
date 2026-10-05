@@ -130,12 +130,16 @@ SSO does not mean that another check will never be required. The application and
 
 Separately, Northbridge may need to create Maya's Salesforce account, update information on an application account, or disable an account when employment ends. Managing those account changes is called **provisioning**, with removal or disabling commonly discussed as **deprovisioning**.
 
-```text
-Sign-in concern:
-Maya → Okta sign-in checks → application accepts identity information
-
-Account-management concern:
-Configured account-management operation → application account change
+```mermaid
+flowchart TD
+  subgraph S["Sign-in concern"]
+    direction LR
+    A["Maya"] --> B["Okta sign-in checks"] --> C["Application accepts identity information"]
+  end
+  subgraph MG["Account-management concern"]
+    direction LR
+    D["Configured account-management operation"] --> E["Application account change"]
+  end
 ```
 
 These flows can be related without being identical.
@@ -194,11 +198,9 @@ Alex should inspect the expected Salesforce assignment and how Northbridge manag
 
 The investigation follows the first supported difference between expectation and observation:
 
-```text
-Expected: Maya can use the required Salesforce account
-Observed: No matching account is found in the checked instance
-Unknown: Assignment and account-management history
-Next: Obtain those facts before choosing a correction
+```mermaid
+flowchart TD
+  E["Expected: Maya can use the required Salesforce account"] --> O["Observed: no matching account in the checked instance"] --> U["Unknown: assignment and account-management history"] --> N["Next: obtain those facts before choosing a correction"]
 ```
 
 Resetting her password because she reported an access problem would be guessing. Her successful Okta sign-in already points us toward other unanswered questions for this attempt.

@@ -22,12 +22,9 @@ Instead, Northbridge uses an Okta-managed group named `NB-Sales-Employees`. Its 
 
 There are two distinct relationships:
 
-```text
-Maya belongs to NB-Sales-Employees
-                      |
-                      | Salesforce is assigned to this group
-                      v
-Maya receives a Salesforce assignment through the group
+```mermaid
+flowchart TD
+  A["Maya belongs to NB-Sales-Employees"] -->|"Salesforce is assigned to this group"| B["Maya receives a Salesforce assignment through the group"]
 ```
 
 **Membership** means a user belongs to the group. **Group-based application assignment** means members receive an application assignment through that group's connection to the application.
@@ -54,16 +51,12 @@ This is plain-language logic, not expression code. **AND** requires both conditi
 
 The rule's output is group membership. The separate assignment of Salesforce to the group gives that membership its application-access purpose.
 
-```text
-Authoritative data
-       ↓ incoming mapping or approved Okta maintenance
-Okta user profile
-       ↓ group rule evaluates department AND workerType
-NB-Sales-Employees membership
-       ↓ Salesforce assigned to that group
-User's Salesforce assignment in Okta
-       ↓ configured account-management and sign-in processes
-Target account, sign-in, and application permissions
+```mermaid
+flowchart TD
+  A["Authoritative data"] -->|"incoming mapping or approved Okta maintenance"| B["Okta user profile"]
+  B -->|"group rule evaluates department AND workerType"| C["NB-Sales-Employees membership"]
+  C -->|"Salesforce assigned to that group"| D["User's Salesforce assignment in Okta"]
+  D -->|"configured account-management and sign-in processes"| E["Target account, sign-in, and application permissions"]
 ```
 
 This is a conceptual dependency flow. It is not a guarantee that all steps complete immediately or successfully.

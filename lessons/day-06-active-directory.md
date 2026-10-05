@@ -24,12 +24,10 @@ An **organizational unit**, or **OU**, is a container inside a domain that helps
 
 The **Okta AD agent** is separate software in the company's environment. It connects Okta with AD for supported operations. It is neither the AD directory database nor the domain controller itself. It can run on a separate server.
 
-```text
-Okta service
-     ↕ communication through the configured integration
-Okta AD agent in Northbridge's environment
-     ↕ directory operations
-AD domain controller
+```mermaid
+flowchart TD
+  A["Okta service"] <-->|"communication through the configured integration"| B["Okta AD agent in Northbridge's environment"]
+  B <-->|"directory operations"| C["AD domain controller"]
 ```
 
 These arrows describe communication relationships, not a requirement to expose a domain controller directly to the internet. The agent's connection to Okta and its ability to perform a particular AD operation are separate things to verify.
@@ -55,12 +53,10 @@ Priya's Okta-managed contractor identity has no AD assignment in this architectu
 
 An **import** brings directory records and changes into Okta for processing. The relevant flow is:
 
-```text
-Selected AD users, groups, and attributes
-                  ↓ read through the AD integration
-Imported records in Okta
-                  ↓ applicable matching and processing
-Associated users and represented directory information
+```mermaid
+flowchart TD
+  A["Selected AD users, groups, and attributes"] -->|"read through the AD integration"| B["Imported records in Okta"]
+  B -->|"applicable matching and processing"| C["Associated users and represented directory information"]
 ```
 
 Import scope matters. The integration selects which user and group OUs to include. A successful import of the selected population is not a statement that every object in AD was included.
@@ -79,18 +75,9 @@ When a system asks another system to validate a user's credentials, it is **dele
 
 The following is a simplified logical flow:
 
-```text
-Jordan submits sign-in information to Okta
-                  ↓
-Okta sends the delegated request to an AD agent
-                  ↓
-The agent passes the credentials to a domain controller
-                  ↓
-AD evaluates the credentials and applicable account conditions
-                  ↓
-The result returns through the agent to Okta
-                  ↓
-Okta continues or refuses the attempt under its requirements
+```mermaid
+flowchart TD
+  A["Jordan submits sign-in information to Okta"] --> B["Okta sends the delegated request to an AD agent"] --> C["The agent passes the credentials to a domain controller"] --> D["AD evaluates the credentials and account conditions"] --> E["The result returns through the agent to Okta"] --> F["Okta continues or refuses the attempt under its requirements"]
 ```
 
 A successful password result is one sign-in step. Additional authentication or policy requirements may remain, and application assignment and application-side acceptance are still separate. Not every sign-in method uses this password path.
@@ -163,9 +150,16 @@ This is how an investigation progresses: keep the first conclusion within the in
 
 In a separately labelled AD-led company, AD may control the employee profile as well as validate the password:
 
-```text
-Profile data: AD → Okta → applications
-Password validation: Okta → agent → AD → result
+```mermaid
+flowchart LR
+  subgraph PD["Profile data"]
+    direction LR
+    A["AD"] --> B["Okta"] --> C["Applications"]
+  end
+  subgraph PV["Password validation"]
+    direction LR
+    D["Okta"] --> E["Agent"] --> F["AD"] --> G["Result"]
+  end
 ```
 
 That differs from Northbridge's Workday-led profile flow. Import and authentication remain distinct in both architectures. Neither a source-priority decision nor a successful import replaces authentication evidence.

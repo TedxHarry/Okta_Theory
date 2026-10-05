@@ -31,18 +31,11 @@ You need both answers before proposing a correction.
 
 For employees, Northbridge uses this arrangement:
 
-```text
-Workday employee record
-         |
-         | employee HR information
-         v
-    Okta user profile
-         |
-         | configured account provisioning and updates
-         v
- AD account and business application accounts
-
-AD directory-owned attributes ----> Okta user profile
+```mermaid
+flowchart TD
+  W["Workday employee record"] -->|"employee HR information"| O["Okta user profile"]
+  O -->|"configured account provisioning and updates"| AD["AD account and business application accounts"]
+  ATTR["AD directory-owned attributes"] -->|"designated attribute sourcing"| O
 ```
 
 Workday is the employee profile source. AD is a downstream account destination and also supplies designated directory-owned attributes back to Okta. These roles can coexist because they describe different responsibilities and directions.
@@ -136,14 +129,9 @@ A direct Okta edit is not a durable general solution for an externally controlle
 
 Northbridge's contractor process is deliberately different:
 
-```text
-Sponsor approves Priya's information
-                  |
-                  v
-Authorized administrator maintains her Okta profile
-                  |
-                  v
-Configured application mappings and account operations
+```mermaid
+flowchart TD
+  A["Sponsor approves Priya's information"] --> B["Authorized administrator maintains her Okta profile"] --> C["Configured application mappings and account operations"]
 ```
 
 Priya has no Workday association and no AD account assignment. Employee imports exclude her population. Her profile and department are Okta-managed under Northbridge's maintenance rules.
@@ -164,8 +152,9 @@ Giving AD ownership of Maya's email does not give it authority over her employee
 
 Another company might use an AD-led arrangement:
 
-```text
-AD employee record ---> Okta user profile ---> applications
+```mermaid
+flowchart LR
+  A["AD employee record"] --> B["Okta user profile"] --> C["Applications"]
 ```
 
 In this variation, AD is the applicable profile source and there is no applicable Workday source for the employee. AD can therefore control department through the configured incoming mapping.
