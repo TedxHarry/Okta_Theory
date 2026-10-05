@@ -16,6 +16,8 @@ Should he tell Maya that everything worked?
 
 Before answering, remember Day 1: signing in, having an application account, and receiving application permissions are different facts. Today, we will follow the messages between systems so we can attach each result to the step it describes.
 
+Your goal is to tell who sent each message, who answered it, and what that answer establishes. You do not need to memorize the message syntax.
+
 ## Your browser asks; a server responds
 
 When you open a website, your browser asks a system for something: a page, information, or an action. That system replies.
@@ -95,6 +97,8 @@ Location: https://identity.northbridge.example/signin
 ```
 
 The `302` is a redirect status. The `Location` header supplies the next address.
+
+Read the exchange aloud: “The browser asks Expense for its start page. Expense replies: go to this sign-in address.” `HTTP/1.1` identifies the protocol version used in the example; it is not an account state or the outcome of authentication.
 
 The browser follows it and requests the sign-in page from `identity.northbridge.example`, which represents Okta in this example.
 
@@ -183,6 +187,8 @@ This synthetic excerpt contains only selected fields. The event type is document
 
 This format is **JSON**: named fields and their values. Braces group fields into an object. Square brackets hold a list, such as the `target` list. You are reading the information, not writing an integration.
 
+For example, the object under `actor` contains `displayName`, whose value is Maya Rao. The list under `target` contains one application entry in this excerpt. Read one field at a time rather than treating the whole block as code to memorize.
+
 `outcome.result` means the `result` field inside `outcome`. The result belongs to the event named by `eventType`, with the actor and targets shown. It does not erase the later application's `403` observation.
 
 The excerpt also lacks the identifiers and timestamp needed to independently connect it to a specific request. In the supplied timeline, the matching attempt is stated as part of the training evidence. In an incident, Alex must establish that connection using the actual records; a matching display name is not enough.
@@ -194,6 +200,8 @@ Suppose another record has `SUCCESS`, but its actor is Priya Shah. Or it concern
 Check the person, application instance, relevant attempt, and available identifiers. Compare timestamps and their time zones as well: events from different attempts can have the same person and application. An **identifier** is a value used to distinguish a particular object, request, or event. Display names can repeat; object identifiers help distinguish records.
 
 Do not assume Okta and the application automatically share one identifier. Connecting their observations may require request context, application-side references, and a consistent sequence. Detailed correlation belongs later; the habit starts now.
+
+Here, **correlation** simply means establishing which records belong to the same activity. Two records mentioning Maya and Expense could still describe two different attempts.
 
 ## A remembered sign-in is not an account
 

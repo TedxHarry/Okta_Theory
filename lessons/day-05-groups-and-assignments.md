@@ -14,6 +14,8 @@ Northbridge's requirement is more specific than “give Sales access.” Sales e
 
 Today, follow how that requirement becomes a group membership and an application assignment. Remember Day 4: Maya's employee information comes from Workday, while Priya's profile is maintained in Okta through an approved process.
 
+Your goal is to explain three separate facts: whether a person matches the rule, belongs to the group, and has an application assignment.
+
 ## Manage a shared need through a group
 
 A **group** is a collection of users managed together. Northbridge could assign Salesforce to each employee separately, but it would then have to track the same business decision across many individual assignments.
@@ -65,6 +67,8 @@ This is a conceptual dependency flow. It is not a guarantee that all steps compl
 
 All three users below are Active in Okta. The example rule is active, has no individual exclusions for them, and has processed the supplied profiles. There are no other membership mechanisms for this example group.
 
+There are two different uses of *active* here. **Active user** is an account state. **Active rule** means the rule is enabled to operate. Neither phrase by itself proves that this user has joined this group. An **exclusion** is an explicit exception preventing the rule from adding a particular user.
+
 Before reading the explanation, predict the result for each person:
 
 | Person | Okta department | Okta workerType |
@@ -76,6 +80,8 @@ Before reading the explanation, predict the result for each person:
 Maya meets both conditions. Priya meets the department condition but not the worker-type condition. Daniel meets the worker-type condition but not the department condition. Only Maya qualifies through this rule.
 
 Changing AND to OR would produce a different business rule: a person could qualify by being in Sales or by being an employee. That would include Priya and Daniel in this table. It would not implement Northbridge's employee-only Sales requirement.
+
+With AND, ask both questions and require two “yes” answers. With OR, one “yes” is sufficient; a person who meets both conditions also qualifies. The **population** affected by a rule means the set of users it would include.
 
 A missing or unfamiliar `workerType` does not establish Employee status. Investigate its source and mapping instead of treating “not known to be a contractor” as “confirmed employee.”
 

@@ -16,6 +16,8 @@ Before changing anything, ask yourself: **what does her successful Okta sign-in 
 
 To answer that, we need to separate the person, the records that represent her, and the access she needs.
 
+By the end, you should be able to explain why a successful sign-in can coexist with missing application access. Keep that question in mind as the new terms appear.
+
 ## Maya is one person; the systems hold different records
 
 HR needs Maya's employee number, department, and manager. Active Directory needs a directory account. Okta needs a user record it can use in its identity and access decisions. Salesforce needs an application account that represents her there.
@@ -48,7 +50,7 @@ If Maya has an Okta user but no Salesforce account, resetting her Okta password 
 
 ## What a directory does
 
-A company needs an organized place to keep information about users. That collection is a **directory**. It can also store groups: collections of users that a company can manage together. Day 5 explains how groups relate to access.
+A company needs an organized place to keep information about users. That collection is a **directory**. It can also store groups, which are collections of users. Their access behavior is the subject of Day 5.
 
 Active Directory, often shortened to **AD**, is one such directory. Northbridge uses it for directory accounts and groups. Okta also keeps identity information in a directory layer called **Universal Directory**.
 
@@ -79,6 +81,8 @@ Also keep the source and destination separate. A department value being correct 
 Northbridge has several applications. Each has its own accounts and access decisions. The company needs a consistent way to connect workforce identity information to application access and sign-in.
 
 Okta helps Northbridge maintain identity information, assign applications, make sign-in decisions, and connect to other systems for supported account-management operations.
+
+An **integration** is a configured connection between systems for particular supported tasks. In a data flow, the **source** supplies information and the **target** receives it. These words describe roles in that flow: Okta can receive information from Workday and then supply information to an application.
 
 Start with this small picture:
 
@@ -126,7 +130,7 @@ That capability is **single sign-on**, usually called **SSO**.
 
 In a representative **federated sign-in**, the application trusts identity information from another system under a configured relationship. Okta authenticates the user as required and sends the application information it can validate. The application then uses that information to complete its own sign-in process. We will examine the messages later.
 
-SSO does not mean that another check will never be required. The application and Okta still have their own sign-in and session requirements.
+SSO does not mean that another check will never be required. Each system can have requirements for starting or continuing a signed-in interaction; Day 2 introduces the term *session* for that interaction.
 
 Separately, Northbridge may need to create Maya's Salesforce account, update information on an application account, or disable an account when employment ends. Managing those account changes is called **provisioning**, with removal or disabling commonly discussed as **deprovisioning**.
 
@@ -164,7 +168,7 @@ For today, separate these statements:
 
 Evidence for statement 1 does not establish statements 2 through 5.
 
-An assignment can trigger configured provisioning, but assignment itself is not proof of successful account creation. Likewise, seeing an application tile is not enough to confirm that all target-account and sign-in conditions are correct.
+An assignment can trigger configured provisioning, but assignment itself is not proof of successful account creation. An **application tile** is the app's visible shortcut on the user's dashboard. Seeing that shortcut does not confirm that the account exists or that sign-in works.
 
 ## Investigating Maya's ticket
 
@@ -192,7 +196,7 @@ What can Alex say now?
 
 Maya has an Okta identity, and her reported Okta sign-in is supported by evidence. The check has not established a matching Salesforce account under the expected identifier in that instance. This is an account-matching gap, not yet proof that her account was never created.
 
-Possible explanations include a missing assignment, an account-management process that has not completed, or an identifier mismatch involving an existing account. These are hypotheses, not confirmed causes.
+Possible explanations include a missing assignment, an account-management process that has not completed, or an identifier mismatch involving an existing account. Each is a **hypothesis**: a possible explanation that still needs evidence.
 
 Alex should inspect the expected Salesforce assignment and how Northbridge manages that application's accounts. If automatic provisioning is configured, its relevant result matters. If account creation is handled separately, the responsible process matters. An account match must be established before deciding to create another account.
 

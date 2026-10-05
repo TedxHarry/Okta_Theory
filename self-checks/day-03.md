@@ -59,7 +59,7 @@ These requests investigate possibilities; they do not establish a failed connect
 
 The excerpt does not show the field. That alone establishes neither a blank HR value nor automatic fallback to AD.
 
-An empty string is an explicitly supplied empty text value. Null is an explicit null value. An omitted field in a selected excerpt may simply be outside the excerpt. Their update effects depend on the operation and configuration.
+An empty string is an explicitly supplied empty text value. JSON `null` explicitly marks no value; it is not the text `"null"`. An omitted field in a selected excerpt may simply be outside the excerpt. Their update effects depend on the operation and configuration; none alone proves that the destination was cleared.
 
 Request the relevant full source/profile evidence, source ownership, mapping behavior for missing inputs, and applicable update behavior. Do not invent a department or assume another source supplies it automatically.
 

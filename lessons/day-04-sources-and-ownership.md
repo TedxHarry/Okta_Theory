@@ -14,6 +14,8 @@ Alex receives two questions:
 
 The answer starts with which source applies to each person and which source controls the particular field. A value being visible in Okta does not make Okta its owner.
 
+Your goal is to identify who controls a particular person's department or email before deciding where a correction belongs.
+
 ## Start with authority
 
 Day 3 followed a value through profiles and mappings. A mapping describes where a value goes and how it changes format. It does not decide whose version the company trusts.
@@ -26,6 +28,8 @@ Think of two questions:
 - Does this particular attribute follow that source, or have an explicit source of its own?
 
 You need both answers before proposing a correction.
+
+Here, **authority** means the responsibility to control the data; it does not mean every value in that system is correct. A wrongly recorded department can still need correction in its authoritative system. **Topology**, in the next section, means the arrangement of systems and the directions information travels between them.
 
 ## Northbridge's employee topology
 
@@ -95,6 +99,17 @@ Northbridge also avoids writing AD-owned email back to AD from a competing Okta-
 When asking which source wins, identify the field's sourcing configuration and the applicable source order. Do not collapse all those decisions into a single global ranking.
 
 For Northbridge's work email, the evidence explicitly designates AD. We have not specified a rule that substitutes Workday's email when AD has no value. That behavior would need separate configuration evidence.
+
+Use this order when reading the examples:
+
+| Question | Maya's department | Maya's work email | Priya's department |
+|---|---|---|---|
+| Which sources apply to this user? | Workday and AD | Workday and AD | Okta-managed; no external associations |
+| Which profile source applies after priority? | Workday | Workday | Okta |
+| Does this field inherit or have an explicit source? | Inherits from profile source | Explicit AD source | Inherits from profile source |
+| Where does the expected value come from? | Workday | AD | Approved Okta maintenance |
+
+That sequence identifies the expected owner. Comparing the actual values and operation results is the next step; ownership alone does not prove delivery.
 
 ## Work through the disagreement
 

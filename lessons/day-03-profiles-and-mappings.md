@@ -14,6 +14,8 @@ Daniel reports:
 
 Before deciding where to make a correction, follow the value between systems. Day 1 separated the person from the accounts representing them. Day 2 separated individual observations from the whole outcome. Here, those habits help us find where identity information changes.
 
+Your goal is to locate the first demonstrated wrong value and distinguish a calculation from delivery to the application.
+
 ## Start with one piece of information
 
 Daniel's department is an **attribute**: one named piece of information about him. The value of that attribute is `Finance`.
@@ -59,6 +61,8 @@ The reverse matters too. A value can be readable text but still be unacceptable 
 Daniel has an Okta user profile in Universal Directory. Okta also represents the information associated with his assignment to a particular application in an **app user profile**.
 
 The app user profile is in Okta. It is not the same record as Daniel's account stored inside Northbridge Projects.
+
+The name describes which application the profile is for, not where it is stored. Think “the Projects-specific information held in Okta” whenever you read *Projects app user profile*.
 
 | Layer | Where it is | What it represents |
 |---|---|---|
@@ -193,6 +197,8 @@ This packet points to a different unanswered boundary: the value prepared in Okt
 
 Ask whether updates are supported and enabled for that attribute, whether an update was attempted, what response it received, and whether the inspected target is the linked account. Do not claim a specific connector failure without the result. Do not assume saving a mapping means all existing accounts were updated.
 
+A useful evidence request separates possible explanations. Ask for the update record for Daniel's linked Projects account: what value was sent and what reply came back? A recorded rejection calls for examining its reason. Evidence that updates are disabled calls for checking the intended update configuration instead. Neither finding is supplied by this packet.
+
 ## Recognize a verified correction
 
 Here is a separate synthetic follow-up for Daniel after the approved mapping correction. All observations concern his linked Projects account, and the target check follows the recorded update.
@@ -218,7 +224,7 @@ These examples also have different meanings:
 |---|---|
 | `"department": "Finance"` | A supplied text value. |
 | `"department": ""` | An empty string. |
-| `"department": null` | An explicit null value. |
+| `"department": null` | The field is present with JSON's marker for no value. This is different from the text `"null"` or an empty text string. |
 | No `department` field in a selected excerpt | The excerpt does not show the field. |
 
 Do not assume these cases behave identically in every integration. A field omitted from an excerpt may simply have been left out of the evidence. A missing input also does not prove that Okta will automatically choose another source or clear an existing destination value.

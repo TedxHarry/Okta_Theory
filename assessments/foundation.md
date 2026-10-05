@@ -10,6 +10,8 @@ Explain Northbridge's access decisions using Days 1 to 5. Write your reasoning b
 
 All packets are synthetic. B, C, and D are independent variations on A, not consecutive incidents. Maya remains a Sales employee except in D's explicitly hypothetical move.
 
+Treat a **packet** as a small set of supplied case facts. For B, start with A and replace only the stated facts. For C, start from A again, without carrying over B's error. For D, start from A again and apply the hypothetical move. This keeps separate questions from accidentally becoming one changing story.
+
 ## Packet A: Expected access
 
 Northbridge assigns Salesforce automatically to Sales employees through NB-Sales-Employees. Contractors require a separately approved exception. The rule is active, both users are Active and processed, neither is excluded, and no other membership mechanism supplies this group.
@@ -56,7 +58,7 @@ An Okta SSO event concerning Priya and Salesforce records SUCCESS for a specifie
 
 Starting from A, suppose Maya later has an approved move to Finance. Workday and Okta both receive Finance, and the active rule processes her updated profile. Assume this rule is the sole membership mechanism for NB-Sales-Employees and there is no individual exclusion.
 
-**Task 4:** Predict her Sales-group membership. Contrast two assignment states: no other Salesforce path exists, or another checked group still assigns Salesforce. What target and session evidence would you need before claiming the end of all Salesforce access?
+**Task 4:** Predict her Sales-group membership. Contrast two assignment states: no other Salesforce path exists, or another checked group still assigns Salesforce. What target and session evidence would you need before claiming the end of all Salesforce access? Identify the separate checks using Day 2's account/session distinction; you do not need to explain session-expiry mechanisms.
 
 ## Explain the architecture
 
