@@ -1,0 +1,19 @@
+title: Okta Theory
+description: A 15-day theory course for understanding how an Okta workforce identity environment works.
+
+# Native GitHub Pages build (no Actions). just-the-docs v0.3.3 is the last release
+# that GitHub's built-in Jekyll build can compile.
+remote_theme: just-the-docs/just-the-docs@v0.3.3
+plugins:
+  - jekyll-remote-theme
+
+search_enabled: true
+
+aux_links:
+  "View on GitHub":
+    - "https://github.com/TedxHarry/Okta_Theory"
+
+exclude:
+  - maintainers/
+  - README.md
+  - "*.pdf"

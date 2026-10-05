@@ -1,3 +1,8 @@
+---
+title: "Notebook"
+nav_order: 8
+---
+
 # Your learning notebook
 
 Keep a short record of explanations you can use again. Write in your own words; copying a definition is less useful than explaining what happens to someone at Northbridge.

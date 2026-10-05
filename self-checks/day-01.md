@@ -1,3 +1,9 @@
+---
+title: "Day 1"
+parent: Self-Checks
+nav_order: 1
+---
+
 # Day 1: Self-check answers
 
 The important part is your reasoning. Different wording is fine if you keep the records, decisions, and evidence separate.

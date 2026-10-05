@@ -1,3 +1,9 @@
+---
+title: "Northbridge's source and ownership reference"
+parent: Reference
+nav_order: 2
+---
+
 # Northbridge's source and ownership reference
 
 Use this alongside [Day 4](../lessons/day-04-sources-and-ownership.md). These are Northbridge's stated architecture decisions, not universal settings for every organization.

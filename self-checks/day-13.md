@@ -1,3 +1,9 @@
+---
+title: "Day 13"
+parent: Self-Checks
+nav_order: 13
+---
+
 # Day 13: Self-check answers
 
 Attempt the [exercises](../exercises/day-13.md) first. Explain each result in the context of its policy, operation, and service.

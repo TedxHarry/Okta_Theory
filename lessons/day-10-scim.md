@@ -1,3 +1,9 @@
+---
+title: "Day 10: SCIM and application accounts"
+parent: Lessons
+nav_order: 10
+---
+
 # Day 10: SCIM and application accounts
 
 Maya has an approved Northbridge Projects assignment in Okta. The support ticket says, “Assigned, but no usable Projects account.” Alex needs more than the assignment screen to explain the result.

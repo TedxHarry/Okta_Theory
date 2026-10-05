@@ -1,3 +1,9 @@
+---
+title: "Day 12"
+parent: Exercises
+nav_order: 12
+---
+
 # Day 12: Reasoning exercises
 
 Use the [lesson's](../lessons/day-12-joiners-movers-leavers.md) approved requirements and synthetic timelines. Maya's move and Jordan's departure have now taken effect.

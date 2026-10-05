@@ -1,3 +1,9 @@
+---
+title: "Day 10"
+parent: Self-Checks
+nav_order: 10
+---
+
 # Day 10: Self-check answers
 
 Attempt the [exercises](../exercises/day-10.md) before reading these explanations.

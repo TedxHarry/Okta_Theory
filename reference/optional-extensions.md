@@ -1,3 +1,9 @@
+---
+title: "Optional extensions"
+parent: Reference
+nav_order: 4
+---
+
 # Optional extensions
 
 These terms may appear in wider Okta discussions. They are not required for the final case. Start with the underlying ownership, access requirement, and evidence question before choosing another capability.

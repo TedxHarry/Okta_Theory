@@ -1,3 +1,9 @@
+---
+title: "Day 2"
+parent: Self-Checks
+nav_order: 2
+---
+
 # Day 2: Self-check answers
 
 Use these to check the distinctions in your reasoning. You do not need to repeat the wording or memorize the example routes.

@@ -1,3 +1,9 @@
+---
+title: "Day 9: OIDC and the authorization code"
+parent: Lessons
+nav_order: 9
+---
+
 # Day 9: OIDC and the authorization code
 
 Maya opens Northbridge Expense. Instead of returning to her expense page, the sign-in journey stops with a message that the return address is not permitted.

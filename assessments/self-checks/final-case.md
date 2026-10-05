@@ -1,3 +1,9 @@
+---
+title: "Final case: Debrief and skills checklist (debrief)"
+parent: Assessments
+nav_order: 13
+---
+
 # Final case: Debrief and skills checklist
 
 Use this after attempting the [case tasks](../../exercises/day-15.md) and comparing your reasoning with the [model investigation](../../self-checks/day-15.md). No numerical score is needed. A confident unsupported claim is a reason to revisit a concept, not evidence of mastery.

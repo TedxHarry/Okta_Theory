@@ -1,3 +1,9 @@
+---
+title: "Day 5"
+parent: Self-Checks
+nav_order: 5
+---
+
 # Day 5: Self-check answers
 
 Try the [exercises](../exercises/day-05.md) first. Equivalent explanations are welcome when they preserve the evidence boundaries.

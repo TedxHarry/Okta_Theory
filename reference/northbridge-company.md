@@ -1,3 +1,9 @@
+---
+title: "Northbridge Services"
+parent: Reference
+nav_order: 1
+---
+
 # Northbridge Services
 
 Northbridge Services has Sales, Finance, and IT teams. Employees and contractors need access to different applications. The company must also change that access when people's responsibilities change or their work ends.

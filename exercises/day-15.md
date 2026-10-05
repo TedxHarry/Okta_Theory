@@ -1,3 +1,9 @@
+---
+title: "Day 15"
+parent: Exercises
+nav_order: 15
+---
+
 # Day 15: Final investigation tasks
 
 Read the [case evidence](../assessments/final-case.md) before answering. Refer to evidence labels and separate facts, hypotheses, proposals, and completed outcomes.

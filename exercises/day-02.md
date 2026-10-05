@@ -1,3 +1,9 @@
+---
+title: "Day 2"
+parent: Exercises
+nav_order: 2
+---
+
 # Day 2: Reasoning exercises
 
 The addresses, messages, and records below are fictional training examples. They are supplied evidence, not instructions to visit or operate a system.

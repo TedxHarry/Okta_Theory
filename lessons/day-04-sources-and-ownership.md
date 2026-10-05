@@ -1,3 +1,9 @@
+---
+title: "Day 4: Sources, priority, and ownership"
+parent: Lessons
+nav_order: 4
+---
+
 # Day 4: Sources, priority, and ownership
 
 Maya Rao is still a Sales employee at Northbridge Services. Workday says Sales, but an AD record says Finance. Priya Shah is a Sales contractor whose department is maintained in Okta after her sponsor approves it.

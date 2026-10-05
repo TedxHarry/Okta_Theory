@@ -1,3 +1,9 @@
+---
+title: "Foundation checkpoint: From identity data to access"
+parent: Assessments
+nav_order: 1
+---
+
 # Foundation checkpoint: From identity data to access
 
 Explain Northbridge's access decisions using Days 1–5. Write your reasoning before opening the [separate debrief](self-checks/foundation.md). You may use your notebook and references; record where you needed help.

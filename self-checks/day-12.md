@@ -1,3 +1,9 @@
+---
+title: "Day 12"
+parent: Self-Checks
+nav_order: 12
+---
+
 # Day 12: Self-check answers
 
 Attempt the [exercises](../exercises/day-12.md) first. Separate the business requirement from the observed result in each system.

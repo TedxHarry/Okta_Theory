@@ -1,3 +1,9 @@
+---
+title: "Day 14"
+parent: Exercises
+nav_order: 14
+---
+
 # Day 14: Reasoning exercises
 
 Use the [lesson's](../lessons/day-14-requirements-and-responsibilities.md) approved R-14 decisions. The access model is proposed; implementation outcomes are not supplied.

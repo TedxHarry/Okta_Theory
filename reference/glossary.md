@@ -1,3 +1,9 @@
+---
+title: "Foundations glossary"
+parent: Reference
+nav_order: 3
+---
+
 # Foundations glossary
 
 Use these short reminders alongside the examples. The linked lessons explain the relationships and limits.

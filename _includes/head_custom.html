@@ -1,0 +1,17 @@
+<!-- Render Mermaid diagrams inside lessons -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Jekyll (rouge) renders ```mermaid as a .language-mermaid wrapper; convert each to a Mermaid div.
+    document.querySelectorAll('.language-mermaid').forEach(function (wrap) {
+      var div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = wrap.textContent.replace(/\n$/, '');
+      wrap.parentNode.replaceChild(div, wrap);
+    });
+    if (window.mermaid) {
+      mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'strict' });
+      mermaid.run();
+    }
+  });
+</script>

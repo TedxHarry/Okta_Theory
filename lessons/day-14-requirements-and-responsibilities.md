@@ -1,3 +1,9 @@
+---
+title: "Day 14: Requirements, responsibility, and recovery"
+parent: Lessons
+nav_order: 14
+---
+
 # Day 14: Requirements, responsibility, and recovery
 
 The Finance team asks Alex: “Give Finance users access by default, except some contractors and executives.”

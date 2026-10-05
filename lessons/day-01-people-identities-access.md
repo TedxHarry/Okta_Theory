@@ -1,3 +1,9 @@
+---
+title: "Day 1: People, identities, and access"
+parent: Lessons
+nav_order: 1
+---
+
 # Day 1: People, identities, and access
 
 Maya Rao has joined the Sales team at Northbridge Services. HR has recorded her employment details. Her manager expects her to start using Salesforce.
@@ -29,14 +35,11 @@ In identity and access management, an **identity** is the representation of who 
 
 The account can exist without being ready for use. It might be disabled, waiting for activation, or missing a required permission. We therefore need to distinguish:
 
-```text
-The person exists
-       ↓
-The system has an account for the person
-       ↓
-The account is in an appropriate state
-       ↓
-The required access and sign-in conditions are satisfied
+```mermaid
+flowchart TD
+  A[The person exists] --> B[A system has an account for the person]
+  B --> C[The account is in an appropriate state]
+  C --> D[The required access and sign-in conditions are satisfied]
 ```
 
 This is a set of questions to check, not a promise that one step automatically completes the next.
@@ -79,9 +82,9 @@ Okta helps Northbridge maintain identity information, assign applications, make 
 
 Start with this small picture:
 
-```text
-Workday                        Okta                       Salesforce
-Employment information   →    Workforce identity    →    Application access
+```mermaid
+flowchart LR
+  W["Workday<br/>Employment information"] --> O["Okta<br/>Workforce identity"] --> S["Salesforce<br/>Application access"]
 ```
 
 The first arrow means that employee information can reach Okta through a configured integration. The second represents the configured relationship between Okta and the application.

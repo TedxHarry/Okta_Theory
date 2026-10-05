@@ -1,3 +1,9 @@
+---
+title: "Foundation checkpoint: Debrief and rubric (debrief)"
+parent: Assessments
+nav_order: 11
+---
+
 # Foundation checkpoint: Debrief and rubric
 
 Attempt the [checkpoint](../foundation.md) before reading this explanation. Judge the reasoning, not exact wording.

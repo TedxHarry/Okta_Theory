@@ -1,3 +1,9 @@
+---
+title: "Day 15"
+parent: Self-Checks
+nav_order: 15
+---
+
 # Day 15: Model investigation
 
 Attempt the [tasks](../exercises/day-15.md) before reading. Equivalent reasoning is acceptable when it follows the packet. A missing approval or cause should remain missing in the answer.

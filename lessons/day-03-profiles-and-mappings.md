@@ -1,3 +1,9 @@
+---
+title: "Day 3: Profiles, attributes, and mappings"
+parent: Lessons
+nav_order: 3
+---
+
 # Day 3: Profiles, attributes, and mappings
 
 Daniel Brooks is a Finance manager at Northbridge Services. Workday correctly places him in Finance. His Okta profile also says Finance. Northbridge Projects, however, displays his department as Sales.

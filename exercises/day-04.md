@@ -1,3 +1,9 @@
+---
+title: "Day 4"
+parent: Exercises
+nav_order: 4
+---
+
 # Day 4: Reasoning exercises
 
 Use the [lesson](../lessons/day-04-sources-and-ownership.md) and explain your reasoning before opening the [answers](../self-checks/day-04.md).

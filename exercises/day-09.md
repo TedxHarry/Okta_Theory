@@ -1,3 +1,9 @@
+---
+title: "Day 9"
+parent: Exercises
+nav_order: 9
+---
+
 # Day 9: Reasoning exercises
 
 Use the [lesson's](../lessons/day-09-oidc.md) confidential web-client architecture throughout. All observations are synthetic.

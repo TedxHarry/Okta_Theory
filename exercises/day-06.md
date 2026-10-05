@@ -1,3 +1,9 @@
+---
+title: "Day 6"
+parent: Exercises
+nav_order: 6
+---
+
 # Day 6: Reasoning exercises
 
 The packets are fictional and independent unless explicitly linked. Jordan is still employed and Active in Okta. Use the [lesson](../lessons/day-06-active-directory.md) when needed.

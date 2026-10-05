@@ -1,3 +1,9 @@
+---
+title: "Day 9"
+parent: Self-Checks
+nav_order: 9
+---
+
 # Day 9: Self-check answers
 
 Attempt the [exercises](../exercises/day-09.md) first. Keep the server-side web-client model consistent.

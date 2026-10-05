@@ -1,3 +1,9 @@
+---
+title: "Day 15: Investigate Northbridge as a connected system"
+parent: Lessons
+nav_order: 15
+---
+
 # Day 15: Investigate Northbridge as a connected system
 
 Northbridge has several open identity tickets. Some have a demonstrated technical defect. Others still need an ownership or approval decision. One concerns access that remains available after a departure.

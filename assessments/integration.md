@@ -1,3 +1,9 @@
+---
+title: "Integration checkpoint: Sign-in and account management"
+parent: Assessments
+nav_order: 2
+---
+
 # Integration checkpoint: Sign-in and account management
 
 Use Days 1–10 to explain the following independent synthetic packets. Write your conclusions before opening the [debrief](self-checks/integration.md). Each packet names its own application, attempt, and target evidence. Do not transfer success from one application to another.

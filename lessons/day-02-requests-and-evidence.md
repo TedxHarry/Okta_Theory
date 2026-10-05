@@ -1,3 +1,9 @@
+---
+title: "Day 2: Following a request and reading evidence"
+parent: Lessons
+nav_order: 2
+---
+
 # Day 2: Following a request and reading evidence
 
 Maya opens Northbridge Expense. Her browser takes her to Okta, she completes the required sign-in checks, and she returns to the application. Instead of her expense page, she sees:

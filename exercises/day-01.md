@@ -1,3 +1,9 @@
+---
+title: "Day 1"
+parent: Exercises
+nav_order: 1
+---
+
 # Day 1: Reasoning exercises
 
 Use the facts supplied in each question. State what you know, what you do not know, and what you would check next. You do not need menu paths or protocol details.

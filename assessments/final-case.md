@@ -1,3 +1,9 @@
+---
+title: "Final case: Northbridge's open identity tickets"
+parent: Assessments
+nav_order: 3
+---
+
 # Final case: Northbridge's open identity tickets
 
 All records, identifiers, and operation summaries are synthetic. These are investigation snapshots, not raw product logs or executable requests. No corrective results are supplied unless explicitly stated.

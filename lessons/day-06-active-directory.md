@@ -1,3 +1,9 @@
+---
+title: "Day 6: AD imports and password validation"
+parent: Lessons
+nav_order: 6
+---
+
 # Day 6: AD imports and password validation
 
 Jordan Lee is an active Northbridge employee. His later departure has not occurred. An AD import completed successfully, and Alex confirmed that Jordan's directory record is associated with the correct Okta user.

@@ -1,3 +1,8 @@
+---
+title: "Learning Path"
+nav_order: 2
+---
+
 # Learning path
 
 Follow the numbered lessons in order. Each begins with a Northbridge situation, explains the relevant concepts, and asks you to reason from supplied evidence. Try the exercises before reading their separate answers. If an answer exposes a missed distinction, revisit the named lesson section and explain the example again in your own words.

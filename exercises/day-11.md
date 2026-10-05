@@ -1,3 +1,9 @@
+---
+title: "Day 11"
+parent: Exercises
+nav_order: 11
+---
+
 # Day 11: Reasoning exercises
 
 Use the [lesson's](../lessons/day-11-imports-and-matching.md) stated integration and review policy. The packets are synthetic.

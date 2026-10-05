@@ -1,3 +1,9 @@
+---
+title: "Day 14"
+parent: Self-Checks
+nav_order: 14
+---
+
 # Day 14: Self-check answers
 
 Attempt the [exercises](../exercises/day-14.md) first. Distinguish a proposed design from a verified deployment.

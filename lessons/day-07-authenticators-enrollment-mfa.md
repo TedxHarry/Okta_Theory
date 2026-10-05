@@ -1,3 +1,9 @@
+---
+title: "Day 7: Authenticators, enrollment, and MFA"
+parent: Lessons
+nav_order: 7
+---
+
 # Day 7: Authenticators, enrollment, and MFA
 
 Daniel opens Northbridge Expense. His password is accepted, but he is asked to set up Okta Verify before continuing. His manager asks:

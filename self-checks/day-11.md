@@ -1,3 +1,9 @@
+---
+title: "Day 11"
+parent: Self-Checks
+nav_order: 11
+---
+
 # Day 11: Self-check answers
 
 Attempt the [exercises](../exercises/day-11.md) first. Use the supplied evidence rather than a familiar name alone.

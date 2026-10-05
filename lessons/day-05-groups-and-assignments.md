@@ -1,3 +1,9 @@
+---
+title: "Day 5: Groups, rules, and application assignments"
+parent: Lessons
+nav_order: 5
+---
+
 # Day 5: Groups, rules, and application assignments
 
 Maya and Priya both work with Sales. Maya is an employee; Priya is a contractor. Their manager asks:

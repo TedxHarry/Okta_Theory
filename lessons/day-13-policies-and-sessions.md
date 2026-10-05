@@ -1,3 +1,9 @@
+---
+title: "Day 13: Policies, sessions, and another authentication check"
+parent: Lessons
+nav_order: 13
+---
+
 # Day 13: Policies, sessions, and another authentication check
 
 Daniel opens Northbridge Expense from his Okta dashboard and receives another authentication challenge. He asks, “I am already signed in. Why am I being asked again?”

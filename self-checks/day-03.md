@@ -1,3 +1,9 @@
+---
+title: "Day 3"
+parent: Self-Checks
+nav_order: 3
+---
+
 # Day 3: Self-check answers
 
 Check the relationships in your explanation. Exact wording and expression syntax are not required.

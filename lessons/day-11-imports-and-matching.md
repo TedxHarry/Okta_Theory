@@ -1,3 +1,9 @@
+---
+title: "Day 11: Imports, matching, and reconciliation"
+parent: Lessons
+nav_order: 11
+---
+
 # Day 11: Imports, matching, and reconciliation
 
 “There is already a Projects account called Maya Rao. Should we link it or create another?”

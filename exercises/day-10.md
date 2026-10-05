@@ -1,3 +1,9 @@
+---
+title: "Day 10"
+parent: Exercises
+nav_order: 10
+---
+
 # Day 10: Reasoning exercises
 
 Use the [lesson's Projects contract](../lessons/day-10-scim.md). All packets are synthetic and independent unless a follow-up is stated.

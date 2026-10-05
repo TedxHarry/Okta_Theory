@@ -1,3 +1,9 @@
+---
+title: "Day 4"
+parent: Self-Checks
+nav_order: 4
+---
+
 # Day 4: Self-check answers
 
 Compare the reasoning, not exact wording. Return to the [exercises](../exercises/day-04.md) if you have not attempted them.

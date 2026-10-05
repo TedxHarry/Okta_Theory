@@ -1,3 +1,9 @@
+---
+title: "Repository README"
+nav_exclude: true
+search_exclude: true
+---
+
 # Okta Theory
 
 Follow the people, accounts, and decisions behind a workforce identity environment. Each lesson connects a business situation to the identity data, sign-in behavior, application access, and evidence that explain it.

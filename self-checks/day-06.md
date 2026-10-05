@@ -1,3 +1,9 @@
+---
+title: "Day 6"
+parent: Self-Checks
+nav_order: 6
+---
+
 # Day 6: Self-check answers
 
 Attempt the [exercises](../exercises/day-06.md) first. Explain the operation and its evidence, rather than memorizing a component list.

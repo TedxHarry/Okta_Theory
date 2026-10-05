@@ -1,3 +1,9 @@
+---
+title: "Day 5"
+parent: Exercises
+nav_order: 5
+---
+
 # Day 5: Reasoning exercises
 
 Use the [lesson](../lessons/day-05-groups-and-assignments.md) when needed. State assumptions separately from observations.

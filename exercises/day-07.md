@@ -1,3 +1,9 @@
+---
+title: "Day 7"
+parent: Exercises
+nav_order: 7
+---
+
 # Day 7: Reasoning exercises
 
 Use the [lesson](../lessons/day-07-authenticators-enrollment-mfa.md) as needed. These are synthetic observations, not instructions to operate a tenant.

@@ -1,3 +1,9 @@
+---
+title: "Day 7"
+parent: Self-Checks
+nav_order: 7
+---
+
 # Day 7: Self-check answers
 
 Attempt the [exercises](../exercises/day-07.md) first. Keep configuration, enrollment, authentication evidence, and application authorization separate.

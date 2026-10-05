@@ -1,3 +1,9 @@
+---
+title: "Day 8: SAML and application sign-in"
+parent: Lessons
+nav_order: 8
+---
+
 # Day 8: SAML and application sign-in
 
 Maya opens Northbridge's Salesforce environment. She completes the required Okta checks, returns to Salesforce, and sees a sign-in rejection.

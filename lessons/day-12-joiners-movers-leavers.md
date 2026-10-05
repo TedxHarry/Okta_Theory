@@ -1,3 +1,9 @@
+---
+title: "Day 12: Joining, moving, and leaving"
+parent: Lessons
+nav_order: 12
+---
+
 # Day 12: Joining, moving, and leaving
 
 Maya's move to Finance has taken effect. Jordan's employment has ended. Alex receives two tickets: “Maya still has Sales access” and “Jordan's application session still works.”

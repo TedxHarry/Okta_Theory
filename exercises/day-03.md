@@ -1,3 +1,9 @@
+---
+title: "Day 3"
+parent: Exercises
+nav_order: 3
+---
+
 # Day 3: Reasoning exercises
 
 These are fictional Northbridge observations. The intended Projects codes are Sales → SAL, Finance → FIN, and IT → IT. Missing or unrecognized department values require review.

@@ -1,3 +1,9 @@
+---
+title: "Integration checkpoint: Debrief and rubric (debrief)"
+parent: Assessments
+nav_order: 12
+---
+
 # Integration checkpoint: Debrief and rubric
 
 Attempt the [checkpoint](../integration.md) first. Equivalent reasoning is acceptable; judge whether the conclusion follows from the packet.

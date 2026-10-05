@@ -1,3 +1,9 @@
+---
+title: "Day 8"
+parent: Self-Checks
+nav_order: 8
+---
+
 # Day 8: Self-check answers
 
 Attempt the [exercises](../exercises/day-08.md) first. Use the specified connection's expectations when comparing values.

@@ -1,3 +1,9 @@
+---
+title: "Day 8"
+parent: Exercises
+nav_order: 8
+---
+
 # Day 8: Reasoning exercises
 
 Use the fictional configuration in the [lesson](../lessons/day-08-saml.md). These excerpts and reports are teaching evidence, not material to submit to a live system.

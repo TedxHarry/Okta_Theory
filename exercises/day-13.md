@@ -1,3 +1,9 @@
+---
+title: "Day 13"
+parent: Exercises
+nav_order: 13
+---
+
 # Day 13: Reasoning exercises
 
 Use the [lesson's](../lessons/day-13-policies-and-sessions.md) synthetic packets. P-3 is independent of P-1/P-2; S-13 concerns a session-ending action, not deactivation.
