@@ -22,11 +22,11 @@ An approved future employee record exists in HR. An existing application account
 
 ## 4. Investigate Maya's old access
 
-Use M1–M6. Find the first demonstrated access discrepancy against the approved move requirement. Explain why changing the Sales rule or reverting Finance would be the wrong correction. What should happen next, and what must remain available?
+Use M1 to M6. Find the first demonstrated access discrepancy against the approved move requirement. Explain why changing the Sales rule or reverting Finance would be the wrong correction. What should happen next, and what must remain available?
 
 ## 5. Separate Jordan's completed and failed outcomes
 
-Use L1–L5. What is confirmed for Okta and AD? What failed for Projects, and what is still unknown about that failure? Explain why reactivating Jordan is not an appropriate shortcut.
+Use L1 to L5. What is confirmed for Okta and AD? What failed for Projects, and what is still unknown about that failure? Explain why reactivating Jordan is not an appropriate shortcut.
 
 ## 6. Interpret the lingering session
 

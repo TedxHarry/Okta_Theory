@@ -28,7 +28,7 @@ A similar name is insufficient for a link. A future HR record is insufficient fo
 
 ## 4. Investigate Maya's old access
 
-M1–M3 demonstrate the intended department and Sales-group changes. M4 shows the remaining individual Salesforce assignment whose approval has ended; M6 confirms actual retained entry. This is the demonstrated access discrepancy, not a broken Sales rule.
+M1 to M3 demonstrate the intended department and Sales-group changes. M4 shows the remaining individual Salesforce assignment whose approval has ended; M6 confirms actual retained entry. This is the demonstrated access discrepancy, not a broken Sales rule.
 
 Address that remaining assignment under the approved removal requirement, check other paths as appropriate, and verify the relevant Salesforce account-management and access outcomes. Do not assume Salesforce uses SCIM. Preserve Maya's employee identity and continuing Projects access, whose department update is confirmed. Being in Finance does not automatically grant management permissions.
 

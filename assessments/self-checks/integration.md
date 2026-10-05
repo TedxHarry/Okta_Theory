@@ -48,9 +48,9 @@ For each criterion, mark **independent**, **with guidance**, or **needs review**
 
 | Criterion | Evidence of understanding | Revisit |
 |---|---|---|
-| Protocol purpose | Separates SAML/OIDC sign-in from SCIM account management. | Days 8–10 |
+| Protocol purpose | Separates SAML/OIDC sign-in from SCIM account management. | Days 8 to 10 |
 | Message route | Separates browser delivery from backend exchanges. | Days 2 and 9 |
-| Validation | Does not equate readable claims or issuance with target acceptance. | Days 8–9 |
+| Validation | Does not equate readable claims or issuance with target acceptance. | Days 8 to 9 |
 | Account evidence | Distinguishes a confirmed account from an unowned conflict report. | Days 1 and 10 |
 | Correction | Fixes the audience defect but investigates ownership before resolving the conflict. | Day 10 conflict example |
 | Scope | Keeps people, instances, attempts, permissions, and outcomes separate. | Day 2 evidence boundaries |

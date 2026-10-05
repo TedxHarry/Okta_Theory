@@ -87,7 +87,7 @@ All observations below are synthetic, correlated to Maya's move, and listed in t
 | M5 | The Projects app profile contains FIN. The supported update succeeds for Maya's linked prj-1042 account, and a later target read confirms FIN and active true. |
 | M6 | Salesforce confirms a new application session for Maya after the move. |
 
-M1–M3 show that the source, profile, and Sales rule processed the intended change. M4 establishes the remaining assignment path and its expired business justification. M6 establishes actual retained Salesforce access, not merely a visible tile.
+M1 to M3 show that the source, profile, and Sales rule processed the intended change. M4 establishes the remaining assignment path and its expired business justification. M6 establishes actual retained Salesforce access, not merely a visible tile.
 
 Do not change correct Finance data back to Sales or weaken the rule. Address the remaining individual assignment under the approved removal requirement, then verify the resulting Okta assignment, the applicable Salesforce account-management action, target access, and relevant sessions. Salesforce's connector behavior must be checked; do not substitute the Projects SCIM contract for it.
 

@@ -32,7 +32,7 @@ Review the other users sharing the mapping and identify which actually received 
 
 ## 3. Investigate Priya's Salesforce access
 
-B1–B2 show the expected employee-only rule result: Sales AND Employee excludes a Sales contractor. B3 supplies a separate individual assignment. B4 proves actual entry through the checked Salesforce account, but not its business authorization.
+B1 to B2 show the expected employee-only rule result: Sales AND Employee excludes a Sales contractor. B3 supplies a separate individual assignment. B4 proves actual entry through the checked Salesforce account, but not its business authorization.
 
 Request the named approver, current exception decision, eligible contractor population, allowed application actions, owner, and end condition. Clarify whether executives are excluded, included normally, or given specific different permissions. Do not interpret the phrase as permission to bypass authentication requirements.
 
@@ -42,7 +42,7 @@ B5 proves its supplied Expense authentication, validation, account association, 
 
 ## 4. Investigate Daniel's SAML failure
 
-C1 establishes the applicable Okta authentication requirements were met. C2 establishes response issuance. C3–C4 identify the audience mismatch and Salesforce's rejection: test was sent where production was expected. The signature and time checks are independently reported as accepted. C5 supplies a matching configured user identifier, but the attempt still fails validation before a Salesforce session is established.
+C1 establishes the applicable Okta authentication requirements were met. C2 establishes response issuance. C3 to C4 identify the audience mismatch and Salesforce's rejection: test was sent where production was expected. The signature and time checks are independently reported as accepted. C5 supplies a matching configured user identifier, but the attempt still fails validation before a Salesforce session is established.
 
 Review and correct the emitted audience configuration for the intended production integration against the approved expected value. Check shared impact, then verify a new correlated response, target acceptance, correct account association, actual entry, and the required reporting permission.
 

@@ -61,7 +61,7 @@ For each row, choose **independent**, **with guidance**, or **needs review**. In
 | Flow | Connects data, rule, membership, assignment, and target checks. | Day 5: A rule decides membership |
 | Ownership | Explains why Workday controls Maya and Okta controls Priya. | Day 4: applicable associations and inheritance |
 | Prediction | Evaluates AND and changes the outcome when department changes. | Day 5: Predict who matches |
-| Evidence | Separates preview, observed profile, membership, assignment, and event results. | Days 2–3 |
+| Evidence | Separates preview, observed profile, membership, assignment, and event results. | Days 2 to 3 |
 | Investigation | Requests evidence that distinguishes explanations or resolves approval. | Notebook: Choose evidence that separates explanations |
 | Correction | Fixes the demonstrated mapping defect without changing correct source data. | Day 3: first wrong representation |
 | Transfer | Recognizes another assignment path and independent target/session states. | Day 1 access distinctions; Day 5 assignment paths |

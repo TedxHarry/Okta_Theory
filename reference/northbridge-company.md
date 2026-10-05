@@ -50,7 +50,7 @@ Employee information is HR-led. Contractor identities such as Priya's are mainta
 
 ## Follow the timeline
 
-Days 1–11 use Maya's Sales employment and Jordan's active employment unless a packet explicitly states a hypothetical variation. In [Day 12](../lessons/day-12-joiners-movers-leavers.md), Maya's approved move to Finance and Jordan's departure take effect. Earlier observations remain evidence about their earlier states. Individual case packets state their own account and assignment evidence.
+Days 1 to 11 use Maya's Sales employment and Jordan's active employment unless a packet explicitly states a hypothetical variation. In [Day 12](../lessons/day-12-joiners-movers-leavers.md), Maya's approved move to Finance and Jordan's departure take effect. Earlier observations remain evidence about their earlier states. Individual case packets state their own account and assignment evidence.
 
 ## Keep Maya's identifiers separate
 

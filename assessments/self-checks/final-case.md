@@ -14,11 +14,11 @@ Mark each row **independent**, **with guidance**, or **needs review**. Independe
 
 | Criterion | Evidence in your response | Targeted review |
 |---|---|---|
-| Flow | Names the person, objects, direction, and affected systems in sequence. | Days 1–3; notebook investigation entry. |
+| Flow | Names the person, objects, direction, and affected systems in sequence. | Days 1 to 3; notebook investigation entry. |
 | Ownership | Applies source priority to actual associations and distinguishes the AD email exception from password validation. | Days 4 and 6. |
 | Prediction | Uses the approved population, exception, and lifecycle requirements without inventing permissions. | Days 5, 12, and 14. |
 | Evidence | Cites packet labels and keeps attempts, instances, and current/historical states separate. | Days 2, 11, and 13. |
-| Investigation | Distinguishes a demonstrated cause from unresolved ownership or approval and requests discriminating evidence. | Days 10–11. |
+| Investigation | Distinguishes a demonstrated cause from unresolved ownership or approval and requests discriminating evidence. | Days 10 to 11. |
 | Correction | Fixes the demonstrated representation or validation defect and names target verification and shared impact. | Days 3, 8, and 14. |
 | Transfer | Changes the diagnosis when the evidence changes instead of repeating a memorized fix. | Changed-condition questions below. |
 

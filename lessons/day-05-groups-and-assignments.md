@@ -182,7 +182,7 @@ Can you explain:
 - Why group removal does not prove all application access has ended?
 - How application assignment differs from Group Push?
 
-Try the [Day 5 exercises](../exercises/day-05.md) and then read the [self-check answers](../self-checks/day-05.md). Next, attempt the [foundation checkpoint](../assessments/foundation.md), which combines Days 1–5.
+Try the [Day 5 exercises](../exercises/day-05.md) and then read the [self-check answers](../self-checks/day-05.md). Next, attempt the [foundation checkpoint](../assessments/foundation.md), which combines Days 1 to 5.
 
 In [your notebook](../notebook/guide.md), extend the ownership flow with the rule condition, membership mechanism, assignment path, and the evidence needed beyond assignment.
 
