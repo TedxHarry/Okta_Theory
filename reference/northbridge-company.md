@@ -52,6 +52,10 @@ Employee information is HR-led. Contractor identities such as Priya's are mainta
 
 Days 1 to 11 use Maya's Sales employment and Jordan's active employment unless a packet explicitly states a hypothetical variation. In [Day 12](../lessons/day-12-joiners-movers-leavers.md), Maya's approved move to Finance and Jordan's departure take effect. Earlier observations remain evidence about their earlier states. Individual case packets state their own account and assignment evidence.
 
+Priya's application approvals are separate decisions. In the final case, her Expense and Projects exceptions are supplied, while her Salesforce exception remains unverified. Approval for one application does not answer another application's ticket. Likewise, Daniel's Finance manager role does not automatically grant Salesforce access or make him an Okta administrator; use the approvals and permissions stated in the packet.
+
+The [application-onboarding reference](onboarding-an-application.md) explicitly changes Projects eligibility for a design exercise. In that variant, Maya's Finance move ends ordinary Projects access. In Day 12 and the final case, her approved Projects access continues. Keep each requirement with its own case.
+
 ## Keep Maya's identifiers separate
 
 Different fields can identify the same person for different purposes. These values appear in the relevant teaching packets:

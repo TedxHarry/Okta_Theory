@@ -1,12 +1,20 @@
 ---
-title: "Foundations glossary"
+title: "Course glossary"
 parent: Reference
 nav_order: 3
 ---
 
-# Foundations glossary
+# Course glossary
 
 Use these short reminders alongside the examples. The linked lessons explain the relationships and limits.
+
+## Course context
+
+| Term | Meaning |
+|---|---|
+| Okta organization / org / tenant | A separate Okta environment with its own users and configuration. |
+| OIE | Okta Identity Engine, the engine used for this course's product explanations. |
+| Evidence packet | A set of supplied case facts. An independent variation changes only the stated facts for that question. |
 
 ## People and access (Day 1)
 
@@ -148,7 +156,9 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Callback / redirect URI | The application's registered location for receiving the browser's return. |
 | ID token | Token the OIDC client validates for information about the user's authentication. |
 | Access token | Token presented to its intended resource server for authorized access under that server's checks. |
-| Scope / claim | Requested access or information category / a named statement in returned information. |
+| OAuth scope / claim | Requested access or information category / a named statement in returned information. |
+| Resource server | The service, often an API, that checks an access token and the requested access. |
+| Issuer / subject | The issuing authority / the identity within that issuer. Expense uses the validated issuer-and-subject pair to identify the user. |
 | JWT | JSON Web Token: a format representing claims; decoding it does not establish validity. |
 | State / nonce | Values connecting the returned browser response / ID token to the client's authentication transaction. |
 | PKCE | Proof Key for Code Exchange: a verifier/challenge check tying code redemption to the initiating transaction. |
@@ -193,6 +203,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 |---|---|
 | JML | Joiner, mover, and leaver: access changes associated with starting work, changing responsibilities, and leaving. |
 | Effective event | An approved business change that has taken effect; distinct from a future planned change. |
+| Effective point | When an approved business change takes effect; separate from event receipt and downstream completion. |
 | STAGED | Okta account state before activation begins or while administrative action is pending. |
 | PROVISIONED | Okta Pending user action state; not proof that all target accounts exist. |
 | SUSPENDED | Okta access is suspended while app assignments and group memberships remain. |
@@ -207,7 +218,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Term | Meaning |
 |---|---|
 | Global session policy | Requirements and limits governing the Okta session. |
-| App sign-in policy | Authentication requirements applied to access requests for its associated applications. |
+| App sign-in policy / application authentication policy | Authentication requirements applied to access requests for its associated applications. |
 | Authentication assurance | Confidence supported by the authentication evidence and its characteristics. |
 | Reauthentication | Another authentication check required for an access request. |
 | Freshness | Whether earlier authentication is recent enough under the applicable requirement. |
@@ -216,6 +227,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Local logout | Termination of the application's session under its implementation. |
 | SLO | Single Logout: coordinated logout across supported, configured participants. |
 | Event correlation | Connecting related records using identity, targets, sequence, and available transaction/session identifiers. |
+| Event / transaction | One recorded occurrence / a group of events belonging to an operation. A session can span several operations. |
 
 [Day 13 explanations](../lessons/day-13-policies-and-sessions.md) · [Course home](../index.md)
 
@@ -226,6 +238,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Requirement / design | Approved outcome and constraints / the proposed means of achieving them. |
 | Access model | How eligibility, exceptions, assignments, and target permissions connect. |
 | Least privilege | Administrative permissions and scope limited to the defined responsibility. |
+| Administrative scope | The resources or users covered by an administrator's permission. This differs from an OAuth scope and from an import's selected population. |
 | Acceptance evidence | Observations demonstrating that an agreed requirement is satisfied. |
 | Rollback | Restoring an earlier configuration; downstream consequences need separate verification. |
 | Account recovery | Restoring authorized access through approved identity verification and supported recovery processes. |

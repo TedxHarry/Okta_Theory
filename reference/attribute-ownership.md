@@ -14,6 +14,7 @@ The employee flow is Workday → Okta → AD and applications. AD can also retur
 |---|---|---|
 | Maya and Daniel's profiles | Workday; both have Workday and AD associations | One effective profile source per user. |
 | Department | Inherits from the effective profile source | Workday for these employees; Okta for Priya. |
+| workerType | Inherits from the effective profile source | Workday supplies Employee for the employee examples; approved Okta maintenance supplies Contractor for Priya. This classification is separate from account status. |
 | AD-linked employee work email | Explicit AD attribute source | Avoid a competing outbound write back over this AD-owned field. |
 | Priya's profile | Okta | No Workday association or AD account assignment; outside employee import scope. |
 | Priya's maintenance | Authorized administrator after sponsor approval | A sponsor is a business approver, not another technical source integration. |

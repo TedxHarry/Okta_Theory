@@ -17,7 +17,9 @@ For each lesson, record:
 ## An investigation entry
 
 ```text
-Person and application:
+Person and intended account identifiers:
+Okta organization, application instance, and target environment:
+Case packet, attempt, and relevant sequence:
 Expected behavior:
 Observed behavior:
 Evidence available:
@@ -27,10 +29,14 @@ Possible explanations:
 Next evidence to request:
 How different findings would change my explanation:
 Correction, if the cause is established:
+Responsible owner and approval or decision still needed:
 How to verify the result:
+Remaining unknowns and unresolved access:
 ```
 
 You do not need a confirmed correction when the evidence is incomplete. Saying what remains unknown and how to investigate it is a useful answer.
+
+Keep a changed-condition exercise in a separately labelled entry. Revise a conclusion when the same case supplies new evidence, but do not carry an alternative packet's facts into the original case or overwrite an earlier historical state.
 
 ## Choose evidence that separates explanations
 

@@ -9,6 +9,8 @@ A 15-day theory course for understanding how an Okta workforce identity environm
 
 This is a reading-and-reasoning course. It builds understanding and evidence-based troubleshooting habits. It does not require an Okta tenant, and it does not claim to replace hands-on configuration experience.
 
+An **Okta tenant**, also called an **organization** or **org**, is a separate Okta environment with its own users and configuration. The product explanations use **Okta Identity Engine (OIE)**. When consulting other material, check which engine it describes before applying its policy terminology or behavior here.
+
 ## How to use it
 
 Each day has three parts:
@@ -18,6 +20,10 @@ Each day has three parts:
 - **Self-check**: model answers to compare against after you try the exercises.
 
 Work the days in order. Later days build on earlier ones.
+
+“Day” identifies a lesson's place in the sequence; work at your own pace. No prior Okta administration or programming is assumed. Read the supplied message examples as evidence; you do not need to run them.
+
+Use [your notebook](notebook/guide.md) to explain each situation in your own words. After Days 5 and 10, attempt the corresponding [checkpoint](assessments/index.md). Day 15 brings the concepts together in the final case. If an answer reveals a gap, revisit the relevant explanation and try again before continuing.
 
 ## Start here
 

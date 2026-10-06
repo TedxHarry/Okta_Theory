@@ -71,7 +71,7 @@ Use the [learning path](learning-path.md) to see how the concepts connect. Produ
 - [Foundation checkpoint: Days 1 to 5](assessments/foundation.md)
 - [Foundation checkpoint debrief and rubric](assessments/self-checks/foundation.md)
 - [Northbridge's people and systems](reference/northbridge-company.md)
-- [Foundations glossary](reference/glossary.md)
+- [Course glossary](reference/glossary.md)
 - [Northbridge's source and ownership reference](reference/attribute-ownership.md)
 - [Your learning notebook](notebook/guide.md)
 - [Optional extensions](reference/optional-extensions.md)

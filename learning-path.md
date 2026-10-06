@@ -50,4 +50,10 @@ A lesson or exercise may state that an account exists even when an earlier ticke
 
 Use the [company reference](reference/northbridge-company.md) for people and systems, the [ownership reference](reference/attribute-ownership.md) after Day 4, and [your notebook](notebook/guide.md) to connect each new flow to the earlier ones.
 
+## After the final case
+
+Use the [final skills checklist](assessments/self-checks/final-case.md) to identify what you can explain independently and what still needs a reference. Reattempt the changed-condition questions after revisiting any weak area. A different packet may require a different conclusion even when the symptom sounds familiar.
+
+Keep three reusable explanations in [your notebook](notebook/guide.md): Northbridge's architecture, one evidence-based investigation, and one access-decision record. Being able to explain these and respond to changed evidence is the course outcome. Live configuration and recovery require separate practical experience.
+
 [Course home](index.md)
