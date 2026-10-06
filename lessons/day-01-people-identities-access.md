@@ -6,7 +6,7 @@ nav_order: 1
 
 # Day 1: People, identities, and access
 
-Maya Rao has joined the Sales team at Northbridge Services. HR has recorded her employment details. Her manager expects her to start using Salesforce.
+Maya Rao has joined the Sales team at Northbridge Services. Human Resources (**HR**), the team responsible for employee records, has recorded her employment details. Her manager expects her to start using Salesforce.
 
 Maya opens her laptop, signs in to Okta, and then reports:
 
@@ -97,7 +97,7 @@ The second arrow includes different concerns. One connection can help with sign-
 
 In Northbridge's main employee setup, Workday supplies HR information to Okta, and Okta connects onward to AD and business applications. The presence of those connections does not guarantee that Maya has been processed successfully through each one.
 
-Priya Shah also works with the Sales team, but she is a contractor. Her identity is maintained in Okta following sponsor approval. The fact that Maya's employee data comes from Workday does not mean every identity in the company must come from Workday.
+Priya Shah also works with the Sales team, but she is a contractor. Her identity is maintained in Okta following approval from her **sponsor**, the employee responsible for confirming her business need at Northbridge. The fact that Maya's employee data comes from Workday does not mean every identity in the company must come from Workday.
 
 The important question is always about the particular person and the particular system involved.
 
@@ -124,7 +124,7 @@ Before deciding how to fix a ticket, ask the user what "cannot access" means. Ca
 
 ## SSO helps with sign-in; provisioning manages accounts
 
-Maya does not want to enter separate credentials every time she opens a company application. Northbridge can connect applications to Okta so they use an established identity relationship for sign-in.
+Maya does not want to enter separate credentials every time she opens a company application. **Credentials** are information used to establish identity during authentication, such as a password. Northbridge can connect applications to Okta so they use an established identity relationship for sign-in.
 
 That capability is **single sign-on**, usually called **SSO**.
 

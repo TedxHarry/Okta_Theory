@@ -22,7 +22,7 @@ Your goal is to tell who sent each message, who answered it, and what that answe
 
 When you open a website, your browser asks a system for something: a page, information, or an action. That system replies.
 
-The browser's message is a **request**. The reply is a **response**. The system receiving and handling the request is a **server**.
+The browser's message is a **request**. The reply is a **response**. The software making the request is the **client**; here, that is the browser. The system receiving and handling the request is a **server**. Another program can also act as a client without a browser.
 
 ```mermaid
 flowchart LR
@@ -54,9 +54,9 @@ The address is a **URL**. Its parts describe how and where to send the request.
 
 | Part | Meaning in this example |
 |---|---|
-| `https` | Use an encrypted HTTP connection. |
-| `expenses.northbridge.example` | The host being contacted. |
-| `/start` | The path requested on that host. |
+| `https` | The scheme: how to contact the destination, here using an encrypted HTTP connection. |
+| `expenses.northbridge.example` | The host name: the named destination being contacted. |
+| `/start` | The path: the page or resource requested at that destination. |
 | `?view=home` | Additional information in the query string: the parameter `view` has the value `home`. |
 
 The query string is information sent with the request. Seeing a value there does not prove the server applied it or changed a stored record.

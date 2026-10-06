@@ -145,7 +145,7 @@ The two values are different strings, but they carry the same meaning under the 
 
 ## Find the first wrong representation
 
-Alex gathers the following synthetic evidence for Daniel. The observations refer to the same user, the same Projects integration, and the account linked to that assignment. The preview is evaluated with the listed input.
+Alex gathers the following synthetic evidence for Daniel. The observations refer to the same user, the same Projects integration, and the account linked to that assignment. A **mapping preview** evaluates the mapping with a selected input and shows the calculated output. Here, it uses Daniel's listed input; the stored profile and target values are separate observations.
 
 | Boundary | Observed value or behavior |
 |---|---|

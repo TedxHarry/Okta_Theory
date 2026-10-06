@@ -21,6 +21,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Term | Meaning |
 |---|---|
 | IAM | Identity and access management: managing identities and the access they should receive. |
+| HR / sponsor | Human Resources, responsible for employee records / the employee confirming a contractor's business need. |
 | Identity | A representation of who a person or software actor is. |
 | Account | A record representing that actor within a particular system. |
 | Directory | An organized store of identity information. |
@@ -28,6 +29,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Universal Directory | Okta's directory layer for identity profiles and related data. |
 | Group | A collection of users managed together; its access role is explained on Day 5. |
 | Authentication | Checking who is signing in. |
+| Credentials | Information used to establish identity during authentication, such as a password. |
 | Authorization | Deciding what access or action is permitted. |
 | SSO | Single sign-on: using a connected sign-in relationship across applications. |
 | Federation | A configured trust relationship in which one system accepts validated identity information from another. |
@@ -44,6 +46,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Term | Meaning |
 |---|---|
 | Request / response | A message asking a server for something and that server's reply. |
+| Client / server | Software making a request / the system receiving and handling it. A browser is one kind of client. |
 | HTTP / HTTPS | Rules for web messages / HTTP carried over an encrypted connection. |
 | URL | An address identifying a destination and resource; it can also contain query parameters. |
 | DNS | The naming system used to look up a host's network address. |
@@ -68,6 +71,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Profile / schema | A collection of a user's attributes / the definition of its fields and constraints. |
 | App user profile | Application-specific user data represented inside Okta, separate from the target account. |
 | Mapping | A defined relationship between source and destination fields. |
+| Mapping preview | The calculated output for a selected input; separate evidence is needed for stored values and target delivery. |
 | Transformation | A conversion of a value, such as Finance to FIN. |
 | Expression | A formula used to calculate an output from inputs. |
 | Profile source | The effective system controlling a user's profile. |
