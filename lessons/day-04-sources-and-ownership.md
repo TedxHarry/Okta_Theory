@@ -61,6 +61,8 @@ That order is not a rule saying that Workday controls every identity merely beca
 
 An **import** brings records or changes from a connected system into Okta for processing. **Matching** determines whether an incoming record represents an existing Okta user. A **source association** links an Okta user to their record in a source integration. Import and matching processes help establish those links. Having similar names in two systems is not enough evidence that their records are correctly linked.
 
+**Import scope** is the set of records the integration is configured to include. Selecting employee records for import does not mean every contractor or administrative identity is included too. Scope determines which records enter processing; matching determines their proposed relationships with Okta users.
+
 For the following fictional evidence, the associations have been checked:
 
 | Person | Workday association | AD association | Effective profile source |

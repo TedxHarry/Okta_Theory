@@ -66,7 +66,7 @@ sequenceDiagram
   Note over S: 6. Validate, match account, decide access
 ```
 
-The application's **Assertion Consumer Service**, or **ACS**, is the endpoint that receives the response. In a common browser flow, the browser submits it using an HTTP POST. Recall Day 2: POST describes a message operation, not automatic account creation.
+The application's **Assertion Consumer Service**, or **ACS**, receives the response at a configured **endpoint**: an address for a particular operation. In a common browser flow, the browser submits the response there using an HTTP POST. Recall Day 2: POST describes a message operation, not automatic account creation.
 
 This diagram is a simplified browser exchange, not a complete network trace. An existing authentication context may affect which prompts occur; do not assume every SAML launch repeats every factor.
 

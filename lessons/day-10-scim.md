@@ -16,6 +16,8 @@ Your goal is to read an account-management request and response, identify which 
 
 **SCIM**, System for Cross-domain Identity Management, standardizes exchanges for managing identity resources. Here Okta is the SCIM client sending requests, and Projects is the service provider receiving them. A **resource** is an object managed through the interface, such as a user account.
 
+These roles belong to this account-management exchange. Okta is the SCIM client here, while Expense was the OIDC client on Day 9. Projects being a SCIM service provider does not tell us which sign-in protocol it uses.
+
 ```mermaid
 flowchart TD
   A["Approved assignment and configured provisioning behavior"] --> B["Projects app user profile in Okta"] --> C["Okta connector to Projects SCIM endpoint"] --> D["Request result and Projects account state"]
@@ -141,6 +143,8 @@ The current mapping does not meet the stated contract. Correct the approved conv
 ## Updating is not creating again
 
 A profile update addresses the linked existing resource, such as `/Users/prj-1020` for Daniel in a separate successful correction example. PUT replaces the resource's writable representation according to the contract; PATCH describes selected changes. A one-field body must not be treated casually as a complete PUT replacement.
+
+The distinction matters because omitted writable fields in a PUT can be cleared or given defaults under the service's rules. Sending only the corrected department is therefore not automatically an instruction to preserve every other field. Read the supported replacement contract; see [SCIM replacement behavior](https://www.rfc-editor.org/rfc/rfc7644.html#section-3.5.1).
 
 In that correction example, the connector sends a complete supported PUT representation containing FIN for Daniel's enterprise department. Projects returns success, and a subsequent read of prj-1020 confirms FIN. This is an update to a known account, not evidence of a newly created user.
 

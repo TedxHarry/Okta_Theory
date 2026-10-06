@@ -32,6 +32,8 @@ M1 to M3 demonstrate the intended department and Sales-group changes. M4 shows t
 
 Address that remaining assignment under the approved removal requirement, check other paths as appropriate, and verify the relevant Salesforce account-management and access outcomes. Do not assume Salesforce uses SCIM. Preserve Maya's employee identity and continuing Projects access, whose department update is confirmed. Being in Finance does not automatically grant management permissions.
 
+M5 confirms FIN and an active Projects account. It does not show a Projects sign-in or the required application permissions. Continuing access is the approved requirement; actual entry still needs separate evidence.
+
 Revisit **Follow Maya's evidence**. No supplied follow-up proves the Salesforce correction is complete.
 
 ## 5. Separate Jordan's completed and failed outcomes
@@ -54,7 +56,7 @@ Revisit **Leaver: verify each outcome**. Recognizing the separate unresolved ses
 
 An acceptable Maya handoff:
 
-> Her Finance profile and Sales-group removal are confirmed. Projects remains available with FIN as required. The individual Salesforce assignment remains after its exception approval expired, and Salesforce accepted a new session. The IAM and Salesforce owners must remove that remaining access under the approved requirement and verify assignment, target behavior, and relevant sessions while preserving Projects access.
+> Her Finance profile and Sales-group removal are confirmed. Projects has FIN and an active account; actual Projects entry is not supplied. The individual Salesforce assignment remains after its exception approval expired, and Salesforce accepted a new session. The IAM and application owners must remove the remaining Salesforce access, preserve the approved Projects access, and verify the relevant account, sign-in, permission, and session outcomes.
 
 An acceptable Jordan handoff:
 

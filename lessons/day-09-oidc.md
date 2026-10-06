@@ -33,6 +33,8 @@ An access token is not a substitute for an ID token merely because it contains r
 
 Northbridge Expense is a fictional web application with a server-side **backend**: application software running on its servers, rather than in Maya's browser. The backend processes sign-in responses and can protect its client credentials. This is a **confidential client**. A **client** is the application participating in the OAuth/OIDC exchange; it is not Maya's user account.
 
+Day 2 called the browser an HTTP client because it makes web requests. Here, **OIDC client** identifies Expense's role in the sign-in protocol. The browser carries messages for that flow, but Expense's backend performs the code exchange and validates the ID token. Always name which exchange the word *client* refers to. See [OIDC's client role](https://openid.net/specs/openid-connect-core-1_0.html#Terminology).
+
 The example uses Authorization Code with PKCE and configured backend client authentication. It does not use a browser-only application or a mobile client as a second architecture.
 
 | Participant | Responsibility in this example |

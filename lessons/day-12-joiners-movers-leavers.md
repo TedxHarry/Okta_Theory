@@ -95,7 +95,7 @@ M1 to M3 show that the source, profile, and Sales rule processed the intended ch
 
 Do not change correct Finance data back to Sales or weaken the rule. Address the remaining individual assignment under the approved removal requirement, then verify the resulting Okta assignment, the applicable Salesforce account-management action, target access, and relevant sessions. Salesforce's connector behavior must be checked; do not substitute the Projects SCIM contract for it.
 
-M5 is a successful retained-access update. Deactivating all of Maya's accounts would violate the requirement to keep her working in Projects. A department update also does not prove that any specific project permission was added or removed.
+M5 confirms the department update and an active Projects account. It supplies no Projects sign-in or permission result, so actual entry remains unverified. Deactivating all of Maya's accounts would violate the requirement to keep her working in Projects. A department update also does not prove that any specific project permission was added or removed.
 
 No corrective Salesforce follow-up is supplied here. The ticket remains unresolved at M6, with a demonstrated cause and a supported next action.
 

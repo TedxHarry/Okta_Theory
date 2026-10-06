@@ -76,6 +76,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | Expression | A formula used to calculate an output from inputs. |
 | Profile source | The effective system controlling a user's profile. |
 | Source association | The link between an Okta user and their record in a source integration. |
+| Import scope | The set of records an integration is configured to include in import processing. |
 | Source priority | The configured order of applicable profile sources. |
 | Attribute source | The designated source for one field, which may differ from the profile source. |
 | Import / matching | Bringing external records into Okta for processing / comparing records to identify a candidate association; comparison alone does not prove ownership. |
@@ -139,6 +140,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | IdP / SP | Identity provider issuing identity information / service provider validating it to decide application access. |
 | Assertion | Statements about a subject and authentication, with conditions governing their use. |
 | ACS | Assertion Consumer Service: the SP endpoint receiving the SAML response. |
+| Endpoint | An address for a particular operation, such as receiving a SAML response or exchanging an authorization code. |
 | Entity ID / audience | Participant identifier / the intended recipient identity expressed in assertion conditions. |
 | NameID | A subject identifier interpreted under the application's configured identity-matching rule. |
 | Metadata | Connection information such as identifiers, endpoints, and certificates. |
@@ -155,6 +157,7 @@ Use these short reminders alongside the examples. The linked lessons explain the
 | OAuth 2.0 | A framework for authorizing access to protected resources, such as APIs. |
 | OIDC | OpenID Connect: an identity layer on OAuth 2.0 defining user-authentication information and its validation. |
 | Confidential client | An application able to protect its client credentials, such as Expense's server-side backend. |
+| OIDC client | The application requesting and validating user-authentication information; Expense in Day 9. This protocol role differs from the browser's role as an HTTP client. |
 | Client ID | Public identifier for the application's registration; not a credential. |
 | Authorization code | Temporary, single-use value exchanged for tokens under the exchange requirements. |
 | Callback / redirect URI | The application's registered location for receiving the browser's return. |

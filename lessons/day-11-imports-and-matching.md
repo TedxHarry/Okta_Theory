@@ -130,7 +130,7 @@ Selected fields from that page's two user objects are:
 
 Priya is not shown. That does not establish her absence: the next link explicitly indicates another page. A **cursor** marks a position in the result sequence. It is **opaque**, meaning the caller uses the service's value without interpreting or constructing it. Follow the supplied next link rather than inventing a page number. Check query and endpoint scope as well as pagination before making a completeness claim. See [Okta API pagination](https://developer.okta.com/docs/reference/core-okta-api/#pagination).
 
-This reads Okta users; it is not Projects' SCIM list response and does not enumerate Projects accounts. Neither JSON excerpt supplies association evidence.
+This reads Okta users; it is not Projects' SCIM list response and does not enumerate Projects accounts. This JSON excerpt does not supply association evidence.
 
 In a separate attempt, the same read receives HTTP 403 Forbidden, with an investigator's supplied finding that the caller lacks the required permission. That is a failed read, not an empty result. Request an appropriately authorized read through the responsible administrator; do not infer “no users” or treat the failed request as a reason to create a duplicate. A bare 403 without that finding would require more investigation of the rejection.
 
