@@ -14,6 +14,8 @@ Enabling a capability for the organization and connecting that capability to Dan
 
 Recall Day 6: an accepted password result does not establish that all sign-in requirements have been met. Now follow the additional proof the company requires.
 
+Your goal is to separate an authenticator being available, Daniel enrolling it, and an accepted result for the current attempt.
+
 ## Why a password may not be enough
 
 A password is something Daniel knows. Someone else who obtains it might try to use it. Northbridge can require another kind of evidence, such as proof involving a registered device Daniel possesses.
@@ -33,6 +35,8 @@ A **factor type** describes the kind of evidence:
 Count the kinds of evidence, not the screens. Asking for two passwords is still asking for knowledge twice. Two prompts do not automatically establish two factors. Conversely, a supported authenticator interaction may establish more than one factor, such as device possession together with biometric verification.
 
 MFA and authorization remain different. Stronger authentication does not grant Daniel an Expense approval role or create his application account.
+
+Keep the three terms connected: Okta Verify is the **authenticator**; Push is one **method** it supports; a successfully validated registered-device interaction can supply **possession** evidence. The authenticator names the means, the method names how it is used, and the factor type names the kind of proof. [Okta's Verify reference](https://help.okta.com/oie/en-us/content/topics/identity-engine/authenticators/configure-okta-verify.htm) describes its supported methods.
 
 ## Separate availability, enrollment, and use
 

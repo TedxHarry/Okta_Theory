@@ -12,6 +12,8 @@ Alex finds a successful Okta SSO event for the same attempt. Day 2 explains why 
 
 For this case, Salesforce is assigned to Maya, and her intended Salesforce account exists and is active. These are supplied facts for this incident; they do not retroactively resolve Day 1's incomplete ticket.
 
+Your goal is to distinguish delivering a SAML response from the application accepting it, then compare the rejected field with the connection's approved value.
+
 ## The application needs trustworthy identity information
 
 Salesforce needs to know which user is arriving and whether it can trust the authentication behind that identity. In a federated sign-in, it can rely on information from Okta under a configured trust relationship.
@@ -78,6 +80,8 @@ An **entity ID** identifies a SAML participant. Even when it looks like a web ad
 
 The ACS URL is a destination. The SP entity ID identifies the intended application. Confusing them can produce a message delivered to the right endpoint but addressed to the wrong audience.
 
+**Audience** answers “which service may use this assertion?” **NameID** identifies the user described by it, under the connection's chosen matching rule. These answer different questions from the ACS URL's “where is the response delivered?”
+
 Northbridge uses these fictional teaching values for its production Salesforce connection. They are not real Salesforce endpoint formats to copy:
 
 | Meaning | Expected value |
@@ -88,7 +92,7 @@ Northbridge uses these fictional teaching values for its production Salesforce c
 | User identification choice | NameID must match the intended Salesforce username. |
 | Maya's approved Salesforce username | `maya.rao@northbridge.example` |
 
-Other deployments may use a configured Federation ID instead of username matching. Inspect the selected identity rule; an email-looking value is not automatically the right application identifier.
+Other deployments may use a configured Federation ID instead of username matching. Here, **Federation ID** means a separate user identifier the application can use to match a federated sign-in. Inspect the selected identity rule; an email-looking value is not automatically the right application identifier.
 
 ## Read a small piece of XML
 

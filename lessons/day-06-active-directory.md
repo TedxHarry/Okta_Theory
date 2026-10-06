@@ -14,11 +14,13 @@ Jordan now reports:
 
 The import and the sign-in attempted different operations. To investigate, follow each path separately.
 
+Your goal is to explain why reading Jordan's directory record does not prove his password was accepted, and to distinguish no response from an explicit rejection.
+
 ## Locate the directory, the server, and the agent
 
 Northbridge uses **Active Directory Domain Services**, often shortened here to AD, for its employee directory. It holds objects such as users, groups, and computers. A user object contains information about a directory account; a group represents a collection used for access or administration.
 
-An AD **domain** is a directory and administration boundary containing these objects. A **domain controller**, or **DC**, is a server running the directory service. It can respond to directory queries and validate domain credentials. A domain can have more than one domain controller.
+An AD **domain** is a directory and administration boundary containing these objects. A **domain controller**, or **DC**, is a server running the directory service. It can respond to directory queries and validate domain credentials. **Credentials** are the information used to prove identity; on this password path, they include the submitted account name and password. A domain can have more than one domain controller.
 
 An **organizational unit**, or **OU**, is a container inside a domain that helps organize objects and delegate administration. An OU is not a group: placing a user inside an OU does not make that user a member of a same-named group.
 
@@ -116,6 +118,8 @@ The following synthetic evidence is a plain-language investigation summary, not 
 Before reading on, locate the first demonstrated failure. Did AD reject Jordan's password?
 
 The demonstrated failure is the unsuccessful agent-to-DC connection attempt. The packet does not show AD rejecting the password. It does not establish that the password was correct either: no credential result was obtained.
+
+A **timeout** means the operation did not obtain the expected result within its allowed wait. Compare “I did not receive an answer” with “I received an answer saying no.” They lead to different investigations even when Jordan sees a sign-in failure in both cases.
 
 The earlier import shows that its own data operation completed. It does not prove the later path was healthy. Likewise, the handling agent received a request from Okta, but that does not prove it could reach the domain controller.
 

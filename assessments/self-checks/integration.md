@@ -42,12 +42,22 @@ The supplied create reached the target through an authorized connector. The next
 
 A good handoff distinguishes observed facts from proposed actions. “All provisioning works because SSO succeeded” would cross both a protocol boundary and an application boundary.
 
+## Task 6: Jordan's remaining authentication requirement
+
+The AD credential result for E-1 establishes password acceptance. The earlier import establishes a different data operation; it cannot supply that authentication result. Enrollment establishes the account/device registration, while an issued challenge establishes that Push was requested.
+
+The first unverified requirement is an accepted Push response. A notification that did not reach the device and a delivered notification that Jordan denied are two possible explanations. Request the selected-device delivery evidence and challenge response/outcome for E-1 to distinguish them. Neither explanation is established by the supplied packet.
+
+No evidence supports changing a working password or a federation setting as the correction. After the required authentication evidence is accepted, application-side acceptance, account state and permissions still need their own evidence. Packet B concerns Maya's different attempt and cannot fill those gaps. Revisit Day 6's operation distinction and Day 7's enrollment/challenge distinction if your answer treats import or enrollment as a completed sign-in.
+
 ## Assess your reasoning
 
 For each criterion, mark **independent**, **with guidance**, or **needs review**. Independent means you explained it before the debrief; with guidance means a reference helped; needs review means the distinction remains unclear.
 
 | Criterion | Evidence of understanding | Revisit |
 |---|---|---|
+| AD operation | Uses the current credential result, rather than import success, as password evidence. | Day 6 |
+| Authenticator evidence | Separates enrollment, challenge issuance and an accepted response. | Day 7 |
 | Protocol purpose | Separates SAML/OIDC sign-in from SCIM account management. | Days 8 to 10 |
 | Message route | Separates browser delivery from backend exchanges. | Days 2 and 9 |
 | Validation | Does not equate readable claims or issuance with target acceptance. | Days 8 to 9 |

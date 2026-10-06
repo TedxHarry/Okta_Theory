@@ -10,6 +10,8 @@ Maya has an approved Northbridge Projects assignment in Okta. The support ticket
 
 An assignment establishes a relationship in Okta. A separate account-management operation must reach Projects and be accepted. The target may reject it, or an account may already exist and need careful identification.
 
+Your goal is to read an account-management request and response, identify which target record they concern, and state the outcome without confusing it with sign-in.
+
 ## Follow the account-management path
 
 **SCIM**, System for Cross-domain Identity Management, standardizes exchanges for managing identity resources. Here Okta is the SCIM client sending requests, and Projects is the service provider receiving them. A **resource** is an object managed through the interface, such as a user account.
@@ -39,6 +41,8 @@ An **integration contract** describes supported operations, expected fields, and
 
 The department codes are Projects requirements, not universal SCIM rules. The enterprise extension is a standard place for organizational attributes; this application's accepted values are its own contract. A long schema identifier names the data definition. It is not an address to visit.
 
+**Wire representation** means the fields and values actually sent in the request. Here the app profile calls the field `departmentCode`, while the request calls it `department` inside the enterprise extension. Compare both the value and its named location; a correct app-profile value alone is not proof of a correct request.
+
 Create and ordinary profile updates use POST and PUT in this example. The chosen connector uses PATCH for deactivation. Actual Okta integrations differ: custom integrations created through the App Integration Wizard use PUT for user updates, including deactivation. Read the relevant connector contract rather than assuming every update is PATCH. See [Okta's SCIM operations reference](https://developer.okta.com/docs/api/openapi/okta-scim/guides/scim-20).
 
 ## Read a create operation
@@ -63,6 +67,8 @@ The request goes to `/scim/v2/Users` using POST. Its content type is `applicatio
 
 Read the familiar information inside the structure: Maya's user name, the requested active state, and Sales represented as SAL. No `id` is supplied because Projects assigns it.
 
+The `schemas` list names the definitions used by this resource. The long enterprise identifier appears again as a field name whose nested object holds `department`. You need to locate that object and read SAL; you do not need to memorize the identifier. The JSON Boolean `true` requests an enabled target state under the stated contract; it is not the same field as an Okta user's account status.
+
 Projects returns HTTP **201 Created**, content type `application/scim+json`, and a Location header pointing to `https://projects.northbridge.example/scim/v2/Users/prj-1042`. Its response body is:
 
 ```json
@@ -81,6 +87,8 @@ Projects returns HTTP **201 Created**, content type `application/scim+json`, and
 ```
 
 The target reports creation of prj-1042. A subsequent read of that same resource confirms Maya's user name, SAL, and active state. Together these support creation and the checked target state. They do not demonstrate an actual sign-in or project permissions.
+
+Here `Location` identifies the created resource; the `201` response is not Day 2's `302` browser redirect. A later read is a separate GET request for that resource. Interpret the header with its response status and operation. See [SCIM resource creation](https://www.rfc-editor.org/rfc/rfc7644.html#section-3.3).
 
 SCIM's `id` is the provider's resource identifier. It is not interchangeable with a person's email, Okta object ID, or employee number. A connector association connects the appropriate records; similar-looking identifiers do not create that relationship by themselves. See [SCIM's core schema](https://www.rfc-editor.org/rfc/rfc7643.html).
 

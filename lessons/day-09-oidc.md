@@ -12,11 +12,15 @@ The application uses **OpenID Connect**, or **OIDC**. As with SAML, the applicat
 
 Start by locating the stage that failed. A rejected return address is not the same problem as an application rejecting a token it has already received.
 
+Your goal is to follow one journey: browser returns code → backend exchanges code → application validates identity information and decides access. Place each new term on that journey rather than memorizing it in isolation.
+
 ## OAuth and OIDC answer related questions
 
 **OAuth 2.0** is a framework for authorizing access to protected resources, such as APIs. A client can obtain an access token to present to an intended resource service. That is different from a standard statement establishing who signed in to the client application.
 
 OIDC adds an identity layer to OAuth 2.0. It defines an **ID token** and rules the client uses to validate authentication information about the user.
+
+A **token** is a data value issued for a defined purpose. Its name and the receiving system's checks matter: an ID token carries identity claims for the client; an access token is presented to its intended resource service. That service, often an API, is called the **resource server**.
 
 | Question | Relevant concept |
 |---|---|
@@ -27,7 +31,7 @@ An access token is not a substitute for an ID token merely because it contains r
 
 ## Fix the client type before tracing the flow
 
-Northbridge Expense is a fictional web application with a server-side backend. The backend processes sign-in responses and can protect its client credentials. This is a **confidential client**. A **client** is the application participating in the OAuth/OIDC exchange; it is not Maya's user account.
+Northbridge Expense is a fictional web application with a server-side **backend**: application software running on its servers, rather than in Maya's browser. The backend processes sign-in responses and can protect its client credentials. This is a **confidential client**. A **client** is the application participating in the OAuth/OIDC exchange; it is not Maya's user account.
 
 The example uses Authorization Code with PKCE and configured backend client authentication. It does not use a browser-only application or a mobile client as a second architecture.
 
@@ -94,6 +98,16 @@ This helps prevent an intercepted or injected code from being redeemed without t
 The request's `S256` names the method that derives the challenge using SHA-256, a one-way cryptographic calculation, and a URL-safe encoding. The authorization request carries that derived challenge, while the backend retains the verifier for the later exchange. See the [PKCE specification](https://www.rfc-editor.org/rfc/rfc7636.html#section-4.2).
 
 You do not need to calculate the challenge to investigate the flow. Recognize that a code arriving at the callback is only an intermediate step; the exchange has its own requirements and outcome.
+
+The three transaction checks attach to different messages:
+
+| Check in this example | Where it is checked | Relationship it checks |
+|---|---|---|
+| State | Expense checks the browser's returned response. | Does it correspond to the transaction Expense started? |
+| PKCE | Okta checks the verifier during code exchange. | Does the verifier match the challenge associated with this code? |
+| Nonce | Expense checks the returned ID token. | Does its nonce match the value sent for this authentication request? |
+
+Passing one does not substitute for the others or for the remaining ID token checks. See the [OIDC code-flow definition](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) and the PKCE reference above.
 
 ## Three artifacts, three purposes
 

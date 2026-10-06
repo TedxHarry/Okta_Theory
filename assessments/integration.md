@@ -72,7 +72,22 @@ A colleague suggests using Maya's Expense ID token to authorize the Projects con
 
 ## Give a useful handoff
 
-**Task 5:** Write a short handoff for each application's owner: demonstrated outcome, first proven failure if any, next evidence or action, and what would confirm resolution. For every application, state whether the supplied evidence establishes the intended account's existence and actual entry.
+**Task 5:** Using Packets A–C, write a short handoff for each application's owner: demonstrated outcome, first proven failure if any, next evidence or action, and what would confirm resolution. For every application, state whether the supplied evidence establishes the intended account's existence and actual entry.
+
+## Packet E: Password accepted, another requirement unresolved
+
+This is an independent Expense attempt E-1 for Jordan, who is still employed. Do not carry Maya's successful Packet B outcome into it.
+
+| Evidence | Observation |
+|---|---|
+| Earlier directory operation | Jordan's selected AD data was imported and associated with his correct Okta user. |
+| Password result for E-1 | AD accepted his credentials through the handling agent. |
+| Applicable authentication requirement | Accepted password evidence plus accepted Okta Verify Push; no prior verification is reused. |
+| Enrollment | Completed for Jordan's Northbridge account and the selected device. |
+| Push result | Challenge issued; no accepted response recorded in the supplied evidence. |
+| Expense outcome | No application-side acceptance or account-state evidence supplied. |
+
+**Task 6:** Which observation establishes password acceptance, and why is the import insufficient for that claim? Distinguish enrollment from successful Push. Name the first unverified requirement, two possible explanations, and evidence that would separate them. Does this packet justify a password reset, a SAML/OIDC configuration change, or a claim that Expense access succeeded?
 
 Use the [debrief and rubric](self-checks/integration.md) after attempting all tasks. Record one corrected distinction in [your notebook](../notebook/guide.md).
 
