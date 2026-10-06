@@ -10,6 +10,8 @@ Maya's move to Finance has taken effect. Jordan's employment has ended. Alex rec
 
 Both concern a change in someone's relationship with Northbridge. Neither can be resolved by checking only one profile field or one green event.
 
+By the end, trace an approved employment change across the affected systems and distinguish completed outcomes from access that still needs attention.
+
 **Joiner, mover, and leaver**, often shortened to **JML**, describes the identity and access changes associated with starting work, changing responsibilities, and leaving. The business event defines the intended outcome; configured systems must carry it through to the relevant accounts and access paths.
 
 ## Name the state and its system
@@ -24,6 +26,8 @@ Both concern a change in someone's relationship with Northbridge. Neither can be
 | An application accepts a session | An observed access result in that application. |
 
 A department or employment field is profile data. It does not become an account-lifecycle action merely because its value changes. Northbridge's configured Workday-driven lifecycle processing must interpret the relevant event, act on the correct identity, and produce verifiable results.
+
+The **effective point** is when the approved business change takes effect. An event's arrival and the completion of downstream changes are separate observations. A future start recorded today does not by itself authorize access today; a departure event arriving on time does not prove every target finished removing access.
 
 ## Recognize the relevant Okta account states
 

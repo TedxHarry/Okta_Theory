@@ -12,6 +12,8 @@ An existing session and an acceptable authentication result for this application
 
 Daniel remains an active Finance manager. His Expense assignment and existing application account are confirmed for this lesson. Missing assignment and missing provisioning are not the demonstrated problems.
 
+By the end, explain an authentication challenge using the applied rule and current evidence, and verify Okta and application session outcomes separately.
+
 ## Give each policy a specific job
 
 A **policy** groups requirements. A **rule** states when particular conditions apply and what decision or authentication requirement follows.
@@ -81,6 +83,8 @@ Do not diagnose P-1 using P-3's evidence: P-1 correctly selected its rule. Conve
 
 The **System Log** records Okta-side events. Its outcome belongs to a particular action. An authentication success, session creation, and app SSO outcome answer different questions.
 
+An **event** is one recorded occurrence. A **transaction** groups events belonging to an operation, such as a request to Okta. A user session can span several operations. Two events may therefore have different event identifiers but the same transaction identifier; later operations may use a different transaction while relating to the same session.
+
 Start with the person, application instance, relevant sequence, and observed behavior. Then connect related records using identifiers where available:
 
 | Field or evidence | Use |
@@ -114,7 +118,7 @@ A nearby success for Maya, another app, or an earlier Daniel attempt is not a su
 
 ## Explain why two sessions matter
 
-After P-2, the browser can interact with two services:
+After P-2, the browser can interact with two services. The two browser labels below represent the same browser making separate requests to Okta and Expense, using each service's session information:
 
 ```mermaid
 flowchart LR

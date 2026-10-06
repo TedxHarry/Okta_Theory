@@ -54,7 +54,7 @@ Revisit **Leaver: verify each outcome**. Recognizing the separate unresolved ses
 
 An acceptable Maya handoff:
 
-> Her Finance profile and Sales-group removal are confirmed. Projects remains available with FIN as required. An expired individual Salesforce assignment remains, and Salesforce accepted a new session. The IAM and Salesforce owners must remove that remaining access under the approved requirement and verify assignment, target behavior, and relevant sessions while preserving Projects access.
+> Her Finance profile and Sales-group removal are confirmed. Projects remains available with FIN as required. The individual Salesforce assignment remains after its exception approval expired, and Salesforce accepted a new session. The IAM and Salesforce owners must remove that remaining access under the approved requirement and verify assignment, target behavior, and relevant sessions while preserving Projects access.
 
 An acceptable Jordan handoff:
 

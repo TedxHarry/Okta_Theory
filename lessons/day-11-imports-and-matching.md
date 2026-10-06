@@ -12,6 +12,8 @@ The name is a starting point, not a decision. Linking the wrong account could di
 
 Alex first establishes which person the existing account represents, which integration discovered it, and which association already exists.
 
+By the end, explain when an existing account can be linked with confidence and when incomplete or conflicting evidence leaves the decision open.
+
 ## Separate the stages
 
 An **import** reads records or changes from a connected system into Okta for processing. **Discovery** means the record was found within that operation's scope. **Matching** compares it with existing Okta identities. **Confirmation** accepts the proposed match or new-user outcome through the configured process.
@@ -106,6 +108,8 @@ The correction requires investigating the mistaken match and its impact, then re
 
 Count differences help locate a problem but do not identify individual ownership. “100 imported” does not prove the 100 expected people were correctly matched.
 
+For example, 99 expected employees plus one unexpected account still total 100. Compare the actual identities and associations, not just the totals.
+
 ## Read the whole result, not just its first page
 
 Alex receives a synthetic read-only Okta management API result for `GET /api/v1/users?limit=2`. This is an evidence excerpt, not a request to run. The fictional host represents the checked Okta organization.
@@ -124,7 +128,7 @@ Selected fields from that page's two user objects are:
 ]
 ```
 
-Priya is not shown. That does not establish her absence: the next link explicitly indicates another page. A **cursor** marks a position in the result sequence; treat it as an opaque value supplied by the service. Follow the supplied next link rather than inventing a page number. Check query and endpoint scope as well as pagination before making a completeness claim. See [Okta API pagination](https://developer.okta.com/docs/reference/core-okta-api/#pagination).
+Priya is not shown. That does not establish her absence: the next link explicitly indicates another page. A **cursor** marks a position in the result sequence. It is **opaque**, meaning the caller uses the service's value without interpreting or constructing it. Follow the supplied next link rather than inventing a page number. Check query and endpoint scope as well as pagination before making a completeness claim. See [Okta API pagination](https://developer.okta.com/docs/reference/core-okta-api/#pagination).
 
 This reads Okta users; it is not Projects' SCIM list response and does not enumerate Projects accounts. Neither JSON excerpt supplies association evidence.
 

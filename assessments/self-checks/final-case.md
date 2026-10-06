@@ -76,6 +76,17 @@ Only the Projects account-state issue has new confirming evidence. The observed 
 
 </details>
 
+### Variation 4: The authentication requirement is not yet satisfied
+
+Replace C1: Daniel has the required enrollment and a valid Okta session, but the applied app rule requires fresh possession proof. A challenge is issued with no accepted response. C2 to C5 have not occurred in this changed attempt. Is the original SAML audience diagnosis established for this attempt?
+
+<details>
+<summary>Compare the reasoning</summary>
+
+No. The current attempt has not yet satisfied the supplied authentication requirement, and no SAML response or target validation result is supplied. Enrollment and challenge issuance do not establish accepted proof. Investigate challenge delivery, the response, and the correlated result without inventing a password failure or policy defect. After authentication succeeds, obtain the new SAML and application evidence; success at that earlier boundary would not prove that the audience is correct or that Salesforce entry works. Revisit Days 7, 8, and 13 if you carried the original audience finding into this changed attempt.
+
+</details>
+
 ## Build a reusable final record
 
 Keep three pieces in [your notebook](../../notebook/guide.md):

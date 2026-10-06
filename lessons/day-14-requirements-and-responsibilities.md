@@ -10,6 +10,8 @@ The Finance team asks Alex: “Give Finance users access by default, except some
 
 That sentence is not yet an access rule. It does not name the application instance, explain the exceptions, distinguish entry from approval permissions, or say when access must end. Automating it now would turn unanswered questions into access decisions.
 
+By the end, turn an ambiguous access request into approved outcomes, named responsibilities, and evidence that would demonstrate the design works.
+
 ## Turn the request into observable outcomes
 
 A **requirement** states the intended outcome and constraints. A **design** describes how the systems will achieve it. “Use a group rule” is a design choice; “eligible Finance employees can submit their own expenses” is an outcome.
@@ -67,6 +69,8 @@ Reconcile existing assignments before applying the model. An old direct Expense 
 The Finance owner decides who may approve expenses. An Okta administrator's ability to assign an application does not grant authority to invent that business decision. Likewise, Daniel's Expense approver role does not make him an Okta administrator.
 
 **Least privilege** means granting the administrative permissions and scope needed for a defined responsibility, rather than broad authority for convenience. A standard role is a starting point to compare with the task, not a substitute for checking its permissions and limits.
+
+Here, **scope** means which resources or users the permission covers. Permission to manage Expense does not imply permission to manage Projects. A shared policy can affect both, so the administrator's authority must cover the actual change and its resource scope.
 
 | Responsibility | Standard-role direction to evaluate |
 |---|---|
