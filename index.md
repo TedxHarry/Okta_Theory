@@ -13,13 +13,13 @@ An **Okta tenant**, also called an **organization** or **org**, is a separate Ok
 
 ## How to use it
 
-Each day has three parts:
+Each day has three parts for your first reading:
 
 - **Lesson**: the day's concepts, worked through one realistic situation at a time.
 - **Exercises**: reasoning questions to attempt on your own.
 - **Self-check**: model answers to compare against after you try the exercises.
 
-Work the days in order. Later days build on earlier ones.
+Work the days in order. Later days build on earlier ones. When you return to revise, use the [Revision Guide](revision/index.md). Each day has a separate recap with short concept explanations, a familiar example, and questions to check your understanding.
 
 “Day” identifies a lesson's place in the sequence; work at your own pace. No prior Okta administration or programming is assumed. Read the supplied message examples as evidence; you do not need to run them.
 

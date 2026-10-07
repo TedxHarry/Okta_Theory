@@ -102,3 +102,4 @@ In your notebook, record one successful request that did not complete the busine
 
 [Return to the exercises](../exercises/day-02.md) · [Return to Day 2](../lessons/day-02-requests-and-evidence.md)
 
+[Revise Day 2](../revision/day-02.md): revisit the concepts, example, and questions without rereading the full lesson.

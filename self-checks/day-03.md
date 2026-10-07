@@ -91,3 +91,4 @@ In your notebook, keep the four-layer flow and mark where each value was observe
 
 [Return to the exercises](../exercises/day-03.md) · [Return to Day 3](../lessons/day-03-profiles-and-mappings.md)
 
+[Revise Day 3](../revision/day-03.md): revisit the concepts, example, and questions without rereading the full lesson.

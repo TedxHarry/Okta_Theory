@@ -71,3 +71,5 @@ Revisit Day 1's Daniel example and **Keep the evidence tied to the question** if
 Explain available → enrolled → required for this attempt → accepted result, then name the remaining application checks. If any arrow depends on an assumption, identify it. That prepares you to examine the sign-in information an application receives in Day 8.
 
 [Return to Day 7](../lessons/day-07-authenticators-enrollment-mfa.md) · [Course home](../index.md)
+
+[Revise Day 7](../revision/day-07.md): revisit the concepts, example, and questions without rereading the full lesson.

@@ -1,0 +1,43 @@
+---
+title: "Day 14: Requirements and responsibilities"
+parent: Revision Guide
+nav_order: 14
+---
+
+# Day 14 revision: Requirements and responsibilities
+
+Before turning “give Finance access” into a group rule, make the request precise enough to check. You need to know who should receive which capability, who approves exceptions, and when access should end.
+
+## The concepts to keep with you
+
+**Requirement and design.** A requirement states the approved outcome. A design explains how the system will deliver it. “Finance employees may submit expenses” is an outcome; a rule combining department and worker type is one part of its implementation.
+
+**Business approval and technical authority.** The person authorized to approve access is not necessarily the administrator authorized to configure it. A sponsor's approval does not grant the sponsor an Okta administrative role, and an administrator's technical ability does not supply missing business approval.
+
+**Least privilege.** Give administrators the permissions and resource scope needed for their responsibility. Read-only visibility, help-desk recovery, application management, and organization administration are different capabilities. Check the role's actual permissions rather than guessing from its name, especially for group rules or shared policies.
+
+**Exceptions.** An exception needs a defined person or population, capability, owner, approval, and end condition. Recording an expiry date does not automatically implement removal. Someone or something must act on that condition and verify the result.
+
+**Acceptance evidence.** Check an eligible user, an ineligible user, and a change that should end access. One successful sign-in tests only part of the requirement. Existing direct assignments and application permissions can leave unintended access in place.
+
+**Rollback.** Restoring configuration does not necessarily undo created accounts, changed permissions, or active sessions. Identify those effects separately when planning a correction.
+
+## Make the Expense request concrete
+
+Northbridge's approved normal population is Finance employees. Submission access does not automatically confer approval authority; Daniel's approval capability is a separate decision. Executives receive no unstated extra capability.
+
+Contractors need the defined sponsor and Expense-owner exception approval. Priya's Okta-managed profile remains distinct from Workday-led employees. The normal Finance-and-Employee rule is not, by itself, a complete employment-state or departure control.
+
+Expense's account process belongs to the application owner in this model. Do not invent SCIM support because another application has it. Likewise, Microsoft 365 awareness in this course includes the documented Office 365 SWA and WS-Federation methods, with WS-Federation recommended in that guidance. Do not relabel that connector OIDC or assume its provisioning is SCIM; Entra identity, licensing, and permissions need their own consideration.
+
+## Keep recovery deliberate
+
+For Priya's lost-phone situation, verify the caller through the approved process, use an authorized recovery action, and confirm enrollment and sign-in afterward. Access approval alone does not establish the caller's identity. A password reset also does not repair an unrelated protocol mismatch. Administrative recovery needs a protected route of its own.
+
+## Check your understanding
+
+- What must be settled before implementing a contractor exception?
+- Why does a successful eligible-user test leave important requirements untested?
+- What might remain changed after a configuration rollback?
+
+[Full lesson](../lessons/day-14-requirements-and-responsibilities.md) · [Exercises](../exercises/day-14.md) · [Answers](../self-checks/day-14.md) · [All recaps](index.md)

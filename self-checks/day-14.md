@@ -74,3 +74,5 @@ The successful employee case does not establish the other cases. Under this vari
 The supplied facts do not establish any of those target outcomes. A rejected integration credential concerns the service connection; Maya's password reset does not correct that evidence. Identify the caller, endpoint, exact rejection and credential owner. Different evidence may support different hypotheses, but an answer must preserve the approved eligibility and distinguish unknown outcomes from confirmed failures.
 
 [Return to Day 14](../lessons/day-14-requirements-and-responsibilities.md) · [Course home](../index.md)
+
+[Revise Day 14](../revision/day-14.md): revisit the concepts, example, and questions without rereading the full lesson.

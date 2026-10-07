@@ -272,3 +272,4 @@ In [your notebook](../notebook/guide.md), write Maya's request sequence. For eac
 
 [Previous: Day 1](day-01-people-identities-access.md) · [Course home](../index.md)
 
+[Revise Day 2](../revision/day-02.md): revisit the concepts, example, and questions without rereading the full lesson.

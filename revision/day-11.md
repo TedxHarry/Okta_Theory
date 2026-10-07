@@ -1,0 +1,43 @@
+---
+title: "Day 11: Imports and matching"
+parent: Revision Guide
+nav_order: 11
+---
+
+# Day 11 revision: Imports and matching
+
+Finding a record that looks like Maya is the start of a decision. Before connecting it to her Okta user, establish that it really belongs to her. A confident-looking match can still connect the wrong people.
+
+## The concepts to keep with you
+
+**Discovery and matching.** Discovery finds records within the configured scope. Matching compares identifying information to propose a relationship. A displayed proposal is not yet a confirmed association, and a matching name alone is weak evidence.
+
+**Confirmation and association.** Confirmation accepts the proposed relationship through the applicable process. The resulting association links the records. Account activation and successful sign-in remain separate outcomes.
+
+**Identifiers.** A field such as employee number can be useful for matching, but an exact comparison only proves that the values agree. Duplicated, reused, or incorrect identifiers still need investigation. A missing match does not automatically mean a new person or account should be created.
+
+**Import direction and profile ownership.** Reading records from an application does not automatically make it a profile source. Projects remains a downstream account-management target in Northbridge's design, even when the lesson's configured inbound discovery reads its records.
+
+**Reconciliation.** Reconciliation compares expected identities and account states with what you actually find. Equal totals are not enough. One hundred discovered accounts might still contain the wrong people or incorrect access states.
+
+**Pagination.** An API can return only part of a collection. Follow the supplied next-page link to continue the read. A person absent from page one is not proven absent from the complete result. A denied read, such as `403`, is also not an empty collection.
+
+## Work through Maya's candidates
+
+Two records look like Maya. The evidence confirms that candidate A, with employee number `NB-1042`, belongs to her; candidate B belongs to another person. That supports the proposed choice, but the pending proposal still needs confirmation before you describe it as linked.
+
+After association is confirmed, a Projects record showing `SAL` and `active: true` tells you its observed account state. It does not establish that Maya can sign in.
+
+In the separate duplicate-identifier packet, ownership is unresolved. Keep it unresolved while obtaining evidence. Choosing the first result would turn uncertainty into an identity mistake.
+
+An accidental association can also change which source rules apply. For example, linking Priya to an AD record deserves an impact review; changing global source priority is not a substitute for correcting the relationship.
+
+Just-in-time creation is another distinct process. It occurs during a supported, configured sign-in path, rather than being the same operation as this import and matching review.
+
+## Check your understanding
+
+- What changes between a proposed match and a confirmed association?
+- Why do matching employee numbers still need trustworthy ownership evidence?
+- What can you conclude if Priya is absent from a single API page?
+
+[Full lesson](../lessons/day-11-imports-and-matching.md) · [Exercises](../exercises/day-11.md) · [Answers](../self-checks/day-11.md) · [All recaps](index.md)

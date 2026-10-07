@@ -173,3 +173,5 @@ In [your notebook](../notebook/guide.md), record Daniel's availability, enrollme
 [Day 8](day-08-saml.md) follows the identity information an application receives through SAML after the relevant Okta checks.
 
 [Previous: Day 6](day-06-active-directory.md) · [Course home](../index.md)
+
+[Revise Day 7](../revision/day-07.md): revisit the concepts, example, and questions without rereading the full lesson.

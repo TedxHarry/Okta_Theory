@@ -57,3 +57,5 @@ Use the [final skills checklist](assessments/self-checks/final-case.md) to ident
 Keep three reusable explanations in [your notebook](notebook/guide.md): Northbridge's architecture, one evidence-based investigation, and one access-decision record. Being able to explain these and respond to changed evidence is the course outcome. Live configuration and recovery require separate practical experience.
 
 [Course home](index.md)
+
+For a later review, choose a day in the [Revision Guide](revision/index.md). Each recap explains the key concepts and connects them to the day's example.

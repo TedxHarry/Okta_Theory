@@ -64,3 +64,5 @@ No. Determine which service issued the prompt and correlate the actual request, 
 </details>
 
 [Return to Day 13](../lessons/day-13-policies-and-sessions.md) · [Course home](../index.md)
+
+[Revise Day 13](../revision/day-13.md): revisit the concepts, example, and questions without rereading the full lesson.

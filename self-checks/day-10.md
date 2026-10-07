@@ -64,3 +64,5 @@ No. The current evidence no longer shows the full-name conversion defect. Compar
 </details>
 
 [Integration checkpoint](../assessments/integration.md) · [Return to Day 10](../lessons/day-10-scim.md) · [Course home](../index.md)
+
+[Revise Day 10](../revision/day-10.md): revisit the concepts, example, and questions without rereading the full lesson.

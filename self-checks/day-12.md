@@ -76,3 +76,5 @@ The technical assignment path remains the same, but continued access is no longe
 </details>
 
 [Return to Day 12](../lessons/day-12-joiners-movers-leavers.md) · [Course home](../index.md)
+
+[Revise Day 12](../revision/day-12.md): revisit the concepts, example, and questions without rereading the full lesson.

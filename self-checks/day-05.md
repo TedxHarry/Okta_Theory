@@ -69,3 +69,5 @@ Revisit **Group membership has an owner too** and Day 1's five distinct access s
 If you can predict the population but cannot explain where the input came from, revisit Day 4. If you can explain membership but assume the application account exists, revisit Day 1. If you rely on a successful unrelated event, revisit Day 2. If the wrong value appears between systems, revisit Day 3.
 
 [Return to Day 5](../lessons/day-05-groups-and-assignments.md) · [Foundation checkpoint](../assessments/foundation.md)
+
+[Revise Day 5](../revision/day-05.md): revisit the concepts, example, and questions without rereading the full lesson.

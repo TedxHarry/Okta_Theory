@@ -66,3 +66,5 @@ No. The configured comparison is employeeNumber, not email. Investigate the emai
 </details>
 
 [Return to Day 11](../lessons/day-11-imports-and-matching.md) · [Course home](../index.md)
+
+[Revise Day 11](../revision/day-11.md): revisit the concepts, example, and questions without rereading the full lesson.

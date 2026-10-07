@@ -1,0 +1,39 @@
+---
+title: "Day 5: Groups and assignments"
+parent: Revision Guide
+nav_order: 5
+---
+
+# Day 5 revision: Groups and assignments
+
+A group called “Sales Employees” sounds clear, but its name does not enforce anything. Look at how people enter the group and what access that membership actually gives them.
+
+## The concepts to keep with you
+
+**Group.** A group collects users so they can be managed together. Membership may come from a rule, a manual decision, or an external source. Find the membership owner before trying to change it.
+
+**Group rule.** A rule evaluates conditions to determine membership. Northbridge's normal Sales rule checks the Okta profile for both `department = Sales` and `workerType = Employee`. The word **AND** matters: both must be true. Using OR would admit people who meet only one condition.
+
+**Rule state and user state.** An active rule is enabled to operate. That is different from a user having an Active status. Neither observation replaces checking the user's actual membership and any applicable exclusion.
+
+**Application assignment.** Assignment establishes a user's relationship to an application in Okta. It may come through a group or directly. It remains separate from creating a target account, completing sign-in, and receiving permissions inside the target.
+
+**Multiple assignment paths.** A user can retain an assignment through another group or a direct assignment after leaving one group. To understand removal, inspect every remaining path and its approval.
+
+**Group Push.** Group Push manages supported downstream group objects and memberships. It serves a different purpose from application assignment. Use separate groups for assignment and Group Push as taught in the course; do not assume the Salesforce example has Group Push configured.
+
+## Walk through the people
+
+Maya is a Sales employee, so she meets the normal rule. Priya is a Sales contractor, so she fails the employee condition. Daniel is a Finance employee, so he fails the Sales condition. An OR rule would include all three for different reasons.
+
+If Priya nevertheless has a direct application assignment, that does not prove the rule included her. It tells you to inspect a separate access path and its approval. Do not change her worker type just to make the normal rule include her.
+
+Later, when Maya moves to Finance, losing Sales-group membership does not by itself prove she lost Salesforce assignment. A direct assignment may remain. Follow membership to assignment and then to the target outcome rather than stopping at the first change.
+
+## Check your understanding
+
+- Which profile supplies the values for the normal Sales rule?
+- Why might Salesforce assignment remain after Sales-group removal?
+- How is Group Push different from using a group to assign an application?
+
+[Full lesson](../lessons/day-05-groups-and-assignments.md) · [Exercises](../exercises/day-05.md) · [Answers](../self-checks/day-05.md) · [All recaps](index.md)

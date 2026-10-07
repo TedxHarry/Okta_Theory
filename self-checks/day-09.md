@@ -64,3 +64,5 @@ O-1 failed before code issuance because of the redirect mismatch. O-3 reached to
 </details>
 
 [Return to Day 9](../lessons/day-09-oidc.md) · [Course home](../index.md)
+
+[Revise Day 9](../revision/day-09.md): revisit the concepts, example, and questions without rereading the full lesson.

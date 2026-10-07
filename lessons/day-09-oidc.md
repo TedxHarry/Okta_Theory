@@ -211,3 +211,5 @@ In [your notebook](../notebook/guide.md), draw the browser and backend as separa
 [Day 10](day-10-scim.md) returns to account management through SCIM.
 
 [Previous: Day 8](day-08-saml.md) · [Course home](../index.md)
+
+[Revise Day 9](../revision/day-09.md): revisit the concepts, example, and questions without rereading the full lesson.

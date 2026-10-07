@@ -190,3 +190,5 @@ Try the [exercises](../exercises/day-10.md), then the [answers](../self-checks/d
 [Day 11](day-11-imports-and-matching.md) follows discovered accounts into matching and association decisions.
 
 [Previous: Day 9](day-09-oidc.md) · [Course home](../index.md)
+
+[Revise Day 10](../revision/day-10.md): revisit the concepts, example, and questions without rereading the full lesson.

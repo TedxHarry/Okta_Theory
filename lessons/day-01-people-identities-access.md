@@ -250,3 +250,4 @@ In [your notebook](../notebook/guide.md), record the five separate statements ab
 
 [Course home](../index.md) · [Northbridge reference](../reference/northbridge-company.md)
 
+[Revise Day 1](../revision/day-01.md): revisit the concepts, example, and questions without rereading the full lesson.

@@ -271,3 +271,4 @@ In [your notebook](../notebook/guide.md), draw the four data layers and label ea
 
 [Previous: Day 2](day-02-requests-and-evidence.md) · [Course home](../index.md)
 
+[Revise Day 3](../revision/day-03.md): revisit the concepts, example, and questions without rereading the full lesson.

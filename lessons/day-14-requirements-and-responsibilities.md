@@ -146,3 +146,5 @@ Try the [exercises](../exercises/day-14.md), then the [answers](../self-checks/d
 [Day 15](day-15-integrated-case.md) brings the connected Northbridge investigations together in the final case.
 
 [Previous: Day 13](day-13-policies-and-sessions.md) · [Course home](../index.md)
+
+[Revise Day 14](../revision/day-14.md): revisit the concepts, example, and questions without rereading the full lesson.

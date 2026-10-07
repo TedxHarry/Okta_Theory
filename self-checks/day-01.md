@@ -95,3 +95,4 @@ If you can explain these without relying on copied definitions, you have the dis
 
 [Return to the exercises](../exercises/day-01.md) · [Return to the lesson](../lessons/day-01-people-identities-access.md)
 
+[Revise Day 1](../revision/day-01.md): revisit the concepts, example, and questions without rereading the full lesson.
