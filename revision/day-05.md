@@ -36,4 +36,17 @@ Later, when Maya moves to Finance, losing Sales-group membership does not by its
 - Why might Salesforce assignment remain after Sales-group removal?
 - How is Group Push different from using a group to assign an application?
 
-[Full lesson](../lessons/day-05-groups-and-assignments.md) · [Exercises](../exercises/day-05.md) · [Answers](../self-checks/day-05.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. The rule reads the Okta user profile. A different value in Workday or an app user profile is not the rule's current input.
+
+2. Another group or a direct assignment may still provide access. Check all paths and their approval before claiming assignment removal.
+
+3. Group Push manages supported groups and memberships in the target. Group-based assignment establishes application assignment in Okta. These responsibilities use separate groups in the taught design.
+
+</details>
+
+[Full lesson](../lessons/day-05-groups-and-assignments.md) · [Exercises](../exercises/day-05.md) · [Lesson exercise answers](../self-checks/day-05.md) · [All recaps](index.md)
+
+[Previous recap: Day 4](day-04.md) · [Next recap: Day 6](day-06.md)

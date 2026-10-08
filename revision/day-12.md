@@ -14,9 +14,9 @@ A lifecycle change is complete only when the required outcomes have been checked
 
 **Effective point, event receipt, and completion.** The business change becomes effective at an agreed time. Systems may receive and process it later. Track these separately so a received event does not hide an unfinished downstream change.
 
-**Okta lifecycle status.** Status describes the Okta user's state. `STAGED` is an early state; `PROVISIONED` means pending user action in this lifecycle context, not that an application account was created. `ACTIVE` does not guarantee application access. `RECOVERY`, `PASSWORD_EXPIRED`, and `LOCKED_OUT` describe other user conditions that need their own interpretation.
+**Okta lifecycle status.** Status describes the Okta user's state. `STAGED` means created before activation is initiated or awaiting administrative action; `PROVISIONED` means pending user action in this lifecycle context, not that an application account was created. `ACTIVE` does not guarantee application access. `RECOVERY` means password recovery, `PASSWORD_EXPIRED` means the password has expired, and `LOCKED_OUT` means a lockout condition was reached. None is proof of a target application's state.
 
-**Suspension, deactivation, and deletion.** Suspension retains assignments and groups and does not itself perform the taught SCIM deactivation. Completed Okta deactivation removes application assignments and invokes configured deprovisioning, while group memberships are retained. Downstream work may be asynchronous or fail. Deletion is a separate, irreversible operation, not a routine fix for incomplete deprovisioning.
+**Suspension, deactivation, and deletion.** Suspension (`SUSPENDED`) blocks Okta access while retaining assignments and groups and does not itself perform the taught SCIM deactivation. Completed Okta deactivation (`DEPROVISIONED`) removes application assignments and invokes configured deprovisioning, while group memberships are retained. Downstream work may be asynchronous or fail. Deletion is a separate, irreversible operation, not a routine fix for incomplete deprovisioning.
 
 **Account state and session state.** A disabled account and an already established application session are separate things to inspect. Here, notice and flag continuing access. Day 13 explains the session mechanisms in more detail.
 
@@ -40,4 +40,17 @@ Those are two outstanding target issues. Blocking a fresh Okta sign-in does not 
 - What remained wrong after Maya left the Sales group?
 - If Projects is corrected, what still needs checking for Jordan?
 
-[Full lesson](../lessons/day-12-joiners-movers-leavers.md) · [Exercises](../exercises/day-12.md) · [Answers](../self-checks/day-12.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. Receipt starts processing; downstream changes can be delayed or fail. Verify the required outcomes at the approved effective point and record unfinished work.
+
+2. A direct Salesforce assignment remained after its approval ended, and a new session demonstrated continued access. The group removal did not remove every path.
+
+3. Check and end the continuing Expense access through its authorized process, then verify the result. A corrected Projects account does not close the separate Expense issue.
+
+</details>
+
+[Full lesson](../lessons/day-12-joiners-movers-leavers.md) · [Exercises](../exercises/day-12.md) · [Lesson exercise answers](../self-checks/day-12.md) · [All recaps](index.md)
+
+[Previous recap: Day 11](day-11.md) · [Next recap: Day 13](day-13.md)

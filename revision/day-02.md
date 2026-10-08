@@ -10,9 +10,9 @@ When someone says “Okta worked, but the app failed,” slow the story down. Wh
 
 ## The concepts to keep with you
 
-**Request and response.** A client asks a server to do something, and the server returns a response. In a browser journey, the browser is the client. Other software can also send requests, such as an account-management service calling an API.
+**Request and response.** A client asks a server to do something, and the server returns a response. In a browser journey, the browser is the client. Other software can also send requests, such as an account-management service calling an API, an interface through which software requests operations or data.
 
-**URL.** The scheme, host, path, and query help you identify where a request is going and what information accompanies it. HTTPS protects communication in transit. It does not prove that the user is entitled to access the destination.
+**URL.** The scheme names the communication method, such as HTTPS; the host names the destination; the path identifies a resource or operation; and the query carries parameters after a question mark. HTTPS protects communication in transit. It does not prove that the user is entitled to access the destination.
 
 **HTTP methods and status codes.** `GET` generally retrieves a resource; `POST` submits information for processing. Read the endpoint and body to understand the actual operation. A `200` response can simply deliver a sign-in form. A `302` with a `Location` header directs the browser elsewhere. A `403` tells you the request was refused, but you still need evidence of the reason.
 
@@ -36,4 +36,17 @@ Build your explanation around the last confirmed successful step and the next ob
 - What does the Okta success event establish in Maya's sequence, and what remains unknown?
 - What would you compare before joining two log records into one story?
 
-[Full lesson](../lessons/day-02-requests-and-evidence.md) · [Exercises](../exercises/day-02.md) · [Answers](../self-checks/day-02.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. A 200 response says that request succeeded. If it delivered a sign-in form, authentication may still be ahead of the user.
+
+2. The event supports the reported Okta SSO step for that attempt. Expense's later refusal still needs investigation; the event does not identify why Expense rejected the information.
+
+3. Compare the person, application instance, attempt, timestamps and time zones, and available transaction identifiers. A shared display name alone is not enough.
+
+</details>
+
+[Full lesson](../lessons/day-02-requests-and-evidence.md) · [Exercises](../exercises/day-02.md) · [Lesson exercise answers](../self-checks/day-02.md) · [All recaps](index.md)
+
+[Previous recap: Day 1](day-01.md) · [Next recap: Day 3](day-03.md)

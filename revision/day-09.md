@@ -18,11 +18,11 @@ Keep one picture in mind: the browser brings a code back to Expense, and Expense
 
 **Request parameters.** `client_id` identifies the client and is not a secret. `response_type=code` requests this flow. `scope=openid` requests OIDC behavior; requesting `profile` does not guarantee every conceivable profile claim. The redirect URI must match an approved registration.
 
-**State, PKCE, and nonce.** State helps the client connect the browser response to the attempt it started. PKCE binds code exchange to a verifier whose derived challenge was sent earlier. Nonce connects the ID token to the client's authentication request. These checks have different jobs and do not replace each other or the backend's client authentication.
+**State, PKCE, and nonce.** State helps the client connect the browser response to the attempt it started. PKCE, Proof Key for Code Exchange, uses a secret random verifier kept by Expense. Expense sends a derived challenge first, then supplies the verifier during code exchange so Okta can check the relationship. Nonce connects the ID token to the client's authentication request. These checks have different jobs and do not replace each other or the backend's client authentication.
 
 **ID token and access token.** The ID token provides authentication information for the client. The access token is for authorized access to a resource. Neither should be substituted casually for the other.
 
-**Claims and validation.** Claims are statements in a token, such as issuer (`iss`), subject (`sub`), and audience (`aud`). A subject is interpreted within its issuer. Decoding a JWT exposes its contents; it does not establish the signature, expected issuer and audience, validity, or other required checks.
+**Claims and validation.** Claims are statements in a token, such as issuer (`iss`), subject (`sub`), and audience (`aud`). A subject is interpreted within its issuer. A JSON Web Token (JWT) is a format for representing claims. Decoding one exposes its contents; it does not establish the signature, expected issuer and audience, validity, or other required checks.
 
 ## Follow the actual boundary
 
@@ -38,4 +38,17 @@ In the successful packet, the exchange, validation, and application entry are co
 - Why are state, PKCE, and nonce complementary?
 - Why would token debugging be premature for the rejected callback request?
 
-[Full lesson](../lessons/day-09-oidc.md) · [Exercises](../exercises/day-09.md) · [Answers](../self-checks/day-09.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. The browser carries the authorization request and returned code. Expense's backend exchanges the code using its client authentication and PKCE verifier, then validates the ID token.
+
+2. State connects the browser response to the attempt, PKCE binds code exchange to the verifier, and nonce connects the ID token to the authentication request. Each checks a different relationship.
+
+3. The callback mismatch stops the request before code or token issuance. First correct the request against the approved registration; there is no issued token from this attempt to debug.
+
+</details>
+
+[Full lesson](../lessons/day-09-oidc.md) · [Exercises](../exercises/day-09.md) · [Lesson exercise answers](../self-checks/day-09.md) · [All recaps](index.md)
+
+[Previous recap: Day 8](day-08.md) · [Next recap: Day 10](day-10.md)

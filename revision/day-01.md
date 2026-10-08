@@ -10,7 +10,7 @@ Think back to Maya. She can sign in to Okta, but that alone does not tell us whe
 
 ## The concepts to keep with you
 
-**Identity and account.** Maya is a person. Her identity information describes her, such as her name and department. An account is a record in a particular system through which she may receive access. Her Workday record, Okta user, AD account, and Salesforce account are separate records about the same person.
+**Identity and account.** Maya is a person. Her identity information describes her, such as her name and department. An account is a record in a particular system through which she may receive access. A Workday record, Okta user, Active Directory (AD) account, and Salesforce account would each be a separate record about her. Finding one does not prove the others exist.
 
 **Directory, profile, and attribute.** A directory stores and organizes identity records. Okta's Universal Directory is its directory layer. A profile holds information about a user; each named piece, such as `department`, is an attribute. A correct department in Workday does not prove another system holds the same value.
 
@@ -20,7 +20,7 @@ Think back to Maya. She can sign in to Okta, but that alone does not tell us whe
 
 **Single sign-on, or SSO.** SSO lets connected applications use a trusted sign-in relationship. It helps the user move into an application without treating every application as a completely separate sign-in. The target still has to accept the information and apply its own access rules.
 
-**Provisioning and deprovisioning.** Provisioning manages application accounts, including creating or updating them. Deprovisioning removes or disables access through the supported account-management process. These are separate from SSO. Also, a connector's account-management capability does not mean it uses SCIM.
+**Provisioning and deprovisioning.** Provisioning manages application accounts, including creating or updating them. Deprovisioning removes or disables access through the supported account-management process. These are separate from SSO. The connection's supported account-management method must be checked separately.
 
 ## Put the pieces back together
 
@@ -36,4 +36,17 @@ When you see a tile or an “Active” status, ask which of those five statement
 - What would you inspect when Daniel can enter an app but cannot approve an item?
 - How is “we have not checked the account” different from “our scoped search found no match”?
 
-[Full lesson](../lessons/day-01-people-identities-access.md) · [Exercises](../exercises/day-01.md) · [Answers](../self-checks/day-01.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. Successful authentication establishes who signed in to Okta. Maya still needs the appropriate assignment, target account, accepted application sign-in, and permissions for her work.
+
+2. Check Daniel's approved role and the application's permission for that action. Entry has already succeeded, so a password reset would not address the demonstrated denial.
+
+3. An unchecked account is unknown. A search with no match is an observed result within its stated instance and identifier scope; it does not prove the account is absent everywhere.
+
+</details>
+
+[Full lesson](../lessons/day-01-people-identities-access.md) · [Exercises](../exercises/day-01.md) · [Lesson exercise answers](../self-checks/day-01.md) · [All recaps](index.md)
+
+[Next recap: Day 2](day-02.md)

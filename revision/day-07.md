@@ -38,4 +38,17 @@ Also remember that a FastPass attempt does not establish that an AD password was
 - Why do two prompts not necessarily mean two factor types?
 - What can you conclude when the required proof is accepted, and what remains separate?
 
-[Full lesson](../lessons/day-07-authenticators-enrollment-mfa.md) · [Exercises](../exercises/day-07.md) · [Answers](../self-checks/day-07.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. Enrollment registers the authenticator. You still need accepted proof from the current attempt that satisfies the applicable requirement.
+
+2. Prompts are interactions, while factors are types of evidence. Two knowledge prompts do not become two factor types just because there are two screens.
+
+3. You can say the stated authentication requirement was met. Application entry and permissions still require their own evidence.
+
+</details>
+
+[Full lesson](../lessons/day-07-authenticators-enrollment-mfa.md) · [Exercises](../exercises/day-07.md) · [Lesson exercise answers](../self-checks/day-07.md) · [All recaps](index.md)
+
+[Previous recap: Day 6](day-06.md) · [Next recap: Day 8](day-08.md)

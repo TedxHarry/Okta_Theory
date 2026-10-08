@@ -40,6 +40,19 @@ You now have several ways to explain an access problem. The skill is choosing th
 - What evidence would close each target issue rather than merely show that a correction was attempted?
 - Can you explain one case as expected state, observed state, supported conclusion, next check, and verification?
 
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. Jordan's departure case demonstrates continuing access after its approved end. Projects remains active, and Expense serves a new protected response. These current outcomes need priority over the archived sign-in incident.
+
+2. For Jordan, verify the corrected Projects account state and the end of Expense protected access separately. For other cases, verify the approved outcome at the affected boundary, such as the corrected department and report or a newly accepted SAML attempt.
+
+3. For Maya: expected department FIN; observed fixed mapping sends SAL and Projects stores it; the mapping defect is supported. Check its shared impact, correct it, and verify the target value and report. Successful entry does not close the reporting problem.
+
+</details>
+
 Your notebook's architecture explanation, incident investigation, and access decision should now tell a connected story. If one part still feels uncertain, use the relevant recap and lesson to revisit that boundary.
 
-[Full lesson](../lessons/day-15-integrated-case.md) · [Exercises](../exercises/day-15.md) · [Answers](../self-checks/day-15.md) · [All recaps](index.md)
+[Full lesson](../lessons/day-15-integrated-case.md) · [Exercises](../exercises/day-15.md) · [Lesson exercise answers](../self-checks/day-15.md) · [All recaps](index.md)
+
+[Previous recap: Day 14](day-14.md)

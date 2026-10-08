@@ -36,4 +36,17 @@ Keep ownership and formatting separate. Workday can own Daniel's department whil
 - What does a correct preview prove, and what does it leave unverified?
 - Why would changing Workday's `Finance` value to `FIN` be the wrong response to this target-format requirement?
 
-[Full lesson](../lessons/day-03-profiles-and-mappings.md) · [Exercises](../exercises/day-03.md) · [Answers](../self-checks/day-03.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. The app user profile lives in Okta. The actual Projects account is a separate destination record.
+
+2. The preview confirms the calculation for selected input. It does not confirm that the value was stored, sent, accepted, or retained at the destination.
+
+3. Finance is the approved business value. The outbound transformation should express it as FIN for Projects without changing the source's meaning or format for every other consumer.
+
+</details>
+
+[Full lesson](../lessons/day-03-profiles-and-mappings.md) · [Exercises](../exercises/day-03.md) · [Lesson exercise answers](../self-checks/day-03.md) · [All recaps](index.md)
+
+[Previous recap: Day 2](day-02.md) · [Next recap: Day 4](day-04.md)

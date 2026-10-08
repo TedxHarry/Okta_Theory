@@ -38,4 +38,17 @@ For deactivation, the example's `204` response has no body. A later read showing
 - Why do the uniqueness conflict and invalid-value response need different investigations?
 - What remains unproved after a confirmed `active: false` result?
 
-[Full lesson](../lessons/day-10-scim.md) · [Exercises](../exercises/day-10.md) · [Answers](../self-checks/day-10.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. It identifies the same linked target resource for later operations. Updating that resource is different from creating another account with similar attributes.
+
+2. The uniqueness conflict needs lookup and ownership evidence. The invalid-value response identifies a value that violates the target's contract and needs a mapping correction.
+
+3. Existing-session termination remains unproved. Confirmed account deactivation also says nothing about the person's account state in another application.
+
+</details>
+
+[Full lesson](../lessons/day-10-scim.md) · [Exercises](../exercises/day-10.md) · [Lesson exercise answers](../self-checks/day-10.md) · [All recaps](index.md)
+
+[Previous recap: Day 9](day-09.md) · [Next recap: Day 11](day-11.md)

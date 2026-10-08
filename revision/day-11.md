@@ -40,4 +40,17 @@ Just-in-time creation is another distinct process. It occurs during a supported,
 - Why do matching employee numbers still need trustworthy ownership evidence?
 - What can you conclude if Priya is absent from a single API page?
 
-[Full lesson](../lessons/day-11-imports-and-matching.md) · [Exercises](../exercises/day-11.md) · [Answers](../self-checks/day-11.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. A proposal is a candidate relationship. After the applicable confirmation and association succeed, the records are linked. Neither stage proves successful sign-in.
+
+2. Values can be duplicated, reused, or entered incorrectly. Exact equality is a comparison result, so trustworthy person and account evidence still matters.
+
+3. Only that she is absent from that returned page. Follow the supplied next-page links and preserve the search scope before drawing a collection-wide conclusion.
+
+</details>
+
+[Full lesson](../lessons/day-11-imports-and-matching.md) · [Exercises](../exercises/day-11.md) · [Lesson exercise answers](../self-checks/day-11.md) · [All recaps](index.md)
+
+[Previous recap: Day 10](day-10.md) · [Next recap: Day 12](day-12.md)

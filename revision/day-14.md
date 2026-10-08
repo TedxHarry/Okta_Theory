@@ -28,7 +28,7 @@ Northbridge's approved normal population is Finance employees. Submission access
 
 Contractors need the defined sponsor and Expense-owner exception approval. Priya's Okta-managed profile remains distinct from Workday-led employees. The normal Finance-and-Employee rule is not, by itself, a complete employment-state or departure control.
 
-Expense's account process belongs to the application owner in this model. Do not invent SCIM support because another application has it. Likewise, Microsoft 365 awareness in this course includes the documented Office 365 SWA and WS-Federation methods, with WS-Federation recommended in that guidance. Do not relabel that connector OIDC or assume its provisioning is SCIM; Entra identity, licensing, and permissions need their own consideration.
+Expense's account process belongs to the application owner in this model. Do not invent SCIM support because another application has it. Likewise, Microsoft 365 awareness in this course includes the documented Office 365 methods: Secure Web Authentication (SWA), which uses stored application credentials, and WS-Federation, which exchanges identity information for federated sign-in. That guidance recommends WS-Federation when possible. Do not relabel that connector OIDC or assume its provisioning is SCIM; Entra identity, licensing, and permissions need their own consideration.
 
 ## Keep recovery deliberate
 
@@ -40,4 +40,17 @@ For Priya's lost-phone situation, verify the caller through the approved process
 - Why does a successful eligible-user test leave important requirements untested?
 - What might remain changed after a configuration rollback?
 
-[Full lesson](../lessons/day-14-requirements-and-responsibilities.md) · [Exercises](../exercises/day-14.md) · [Answers](../self-checks/day-14.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. Settle the person, permitted capability, sponsor and application-owner approval, responsible owner, end condition, and removal process. Do not alter contractor classification just to fit the normal employee rule.
+
+2. You still need evidence that an ineligible user is excluded and that a move or departure removes the intended access. Existing exceptions and application permissions need attention too.
+
+3. Accounts, permissions, and sessions can survive the configuration change. Identify and verify those effects separately instead of assuming rollback reverses them.
+
+</details>
+
+[Full lesson](../lessons/day-14-requirements-and-responsibilities.md) · [Exercises](../exercises/day-14.md) · [Lesson exercise answers](../self-checks/day-14.md) · [All recaps](index.md)
+
+[Previous recap: Day 13](day-13.md) · [Next recap: Day 15](day-15.md)

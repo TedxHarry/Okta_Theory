@@ -38,4 +38,17 @@ Finally, accepted SAML does not automatically create an account. Just-in-time cr
 - Why does visible XML or a signature element not prove validation succeeded?
 - What distinguishes the audience failure from an application permission denial after entry?
 
-[Full lesson](../lessons/day-08-saml.md) · [Exercises](../exercises/day-08.md) · [Answers](../self-checks/day-08.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. ACS is where the response is delivered. Audience names its intended recipient. NameID identifies the subject for the configured account-matching approach.
+
+2. Readable XML shows supplied content, and a signature element shows a signature was supplied. The recipient must still verify the signature and all other applicable trust and validity checks.
+
+3. The audience failure rejects the SAML message before accepted entry. A denied action after confirmed entry concerns application authorization. Investigate the boundary actually shown.
+
+</details>
+
+[Full lesson](../lessons/day-08-saml.md) · [Exercises](../exercises/day-08.md) · [Lesson exercise answers](../self-checks/day-08.md) · [All recaps](index.md)
+
+[Previous recap: Day 7](day-07.md) · [Next recap: Day 9](day-09.md)

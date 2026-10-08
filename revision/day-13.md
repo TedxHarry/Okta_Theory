@@ -32,7 +32,7 @@ In a separate rule-order packet, an earlier broad rule matches before the intend
 
 ## Revisit logout
 
-The session example confirms that Okta session `K13` can no longer be reused, while Expense session `ELOCAL13` still receives a new protected response. The app owner's evidence supports the separate local-session explanation in this case.
+The session example confirms that Okta session `K-13` can no longer be reused, while Expense session `E-LOCAL-13` still receives a new protected response. The app owner's evidence supports the separate local-session explanation in this case.
 
 That explains a possible mechanism for lingering access, but it does not retroactively prove Jordan's exact cause in Day 12. Also, prompt-free re-entry can create a new app session through a still-valid Okta session. Check identifiers and events before declaring logout failed.
 
@@ -42,4 +42,17 @@ That explains a possible mechanism for lingering access, but it does not retroac
 - Why might a restrictive rule never be reached?
 - What evidence distinguishes a surviving app session from a newly created one?
 
-[Full lesson](../lessons/day-13-policies-and-sessions.md) · [Exercises](../exercises/day-13.md) · [Answers](../self-checks/day-13.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. The application's requirement may demand proof that the existing session does not supply, or proof that is more recent. Enrollment alone establishes neither.
+
+2. An earlier matching rule can select the outcome first. Read the actual policy association and rule order rather than assuming the strictest rule wins.
+
+3. Compare the application's session identifiers and creation or termination evidence with the Okta attempt. A new app session can be created without another prompt when a suitable Okta session remains valid.
+
+</details>
+
+[Full lesson](../lessons/day-13-policies-and-sessions.md) · [Exercises](../exercises/day-13.md) · [Lesson exercise answers](../self-checks/day-13.md) · [All recaps](index.md)
+
+[Previous recap: Day 12](day-12.md) · [Next recap: Day 14](day-14.md)

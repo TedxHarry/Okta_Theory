@@ -40,4 +40,17 @@ Profile ownership also does not tell you who validates a password. That is a sep
 - How can AD own work email while Workday leads an employee's profile?
 - What should you inspect before deciding which department value to correct?
 
-[Full lesson](../lessons/day-04-sources-and-ownership.md) · [Exercises](../exercises/day-04.md) · [Answers](../self-checks/day-04.md) · [All recaps](index.md)
+<details markdown="1">
+<summary>Compare your reasoning</summary>
+
+1. Priya has no Workday source association and is outside employee import scope. A source's priority only matters where that source applies to the user.
+
+2. The profile can inherit Workday ownership while work email has an explicit AD attribute source. Those are separate ownership decisions.
+
+3. Check the approved business value, the user's actual source associations, profile-source priority, field-specific ownership, and mapping direction before choosing a correction.
+
+</details>
+
+[Full lesson](../lessons/day-04-sources-and-ownership.md) · [Exercises](../exercises/day-04.md) · [Lesson exercise answers](../self-checks/day-04.md) · [All recaps](index.md)
+
+[Previous recap: Day 3](day-03.md) · [Next recap: Day 5](day-05.md)
