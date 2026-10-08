@@ -30,6 +30,10 @@ If Priya nevertheless has a direct application assignment, that does not prove t
 
 Later, when Maya moves to Finance, losing Sales-group membership does not by itself prove she lost Salesforce assignment. A direct assignment may remain. Follow membership to assignment and then to the target outcome rather than stopping at the first change.
 
+## When a request reaches you
+
+When membership exists but assignment is absent, inspect the actual group-to-application relationship. A direct exception can hide that defect and later survive removal from the normal group.
+
 ## Check your understanding
 
 - Which profile supplies the values for the normal Sales rule?

@@ -173,6 +173,14 @@ Some applications can separately support **just-in-time provisioning**, or **JIT
 
 After a response is accepted, the application establishes its own sign-in/session outcome and applies its permissions. SAML acceptance does not automatically give Maya every Salesforce action. If she enters the correct account but an action is denied, investigate the relevant application authorization requirement, as with Daniel on Day 1.
 
+## Compare the two sides of the connection
+
+The application integration's Sign On settings describe the Okta side of the SAML connection. Compare them with the intended application's configuration and the actual message. Check the production or test instance before comparing the issuer, audience, ACS, and user identifier. A saved setting is not proof that a captured response contains that value.
+
+A signing-certificate change needs coordination too. The certificate identifies a public key the application can use to verify signatures; it is not the user's password. Generating a new certificate does not by itself establish that the application trusts it. Inspect the active signing choice, the application's trusted certificate, and the supported transition process before activation. See [signing-certificate settings](https://help.okta.com/oie/en-us/Content/Topics/Apps/manage-signing-certificates.htm).
+
+After a change, verify a fresh response and target acceptance. Do not use an old application session as proof that the new signing relationship works. The [connection-maintenance situation](../requests/connection-maintenance.md) develops this comparison after Day 14.
+
 ## Before moving on
 
 Can you explain:

@@ -96,6 +96,21 @@ Keep three pieces in [your notebook](../../notebook/guide.md):
 2. One complete incident entry with evidence, limits, next action, ownership, verification, and remaining unknowns.
 3. One access-decision record defining population, permissions, exceptions, removal, administrative authority, and recovery considerations.
 
-These records show what you can explain from supplied evidence. They do not replace supervised operational experience or establish competence to deploy or recover a live tenant. Keep untested implementation questions explicit when applying the reasoning to another environment.
+Keep untested assumptions explicit when applying the reasoning to another environment. Confirm its ownership, capabilities, and evidence rather than carrying Northbridge's configuration across unchanged.
+
+## Review the action, not just the diagnosis
+
+For your proposed action, mark each point as explained independently, explained with a reference, or still unclear. Revisit the specific missing explanation before trying a changed situation.
+
+| Point | What your response should establish |
+|---|---|
+| Explain | Describes the relationship and approved outcome without relying on a product label as the explanation. |
+| Locate | Names the record, setting, or event needed next and explains how its result would change the conclusion. |
+| Decide | Chooses a justified action or escalation with the necessary owner and approval. |
+| Consider impact | Identifies other affected users, applications, assignment paths, or sessions. |
+| Verify | Supplies evidence of the intended outcome and keeps unresolved checks assigned to an owner. |
+
+Try the [independent requests](../../requests/index.md) without opening their reasoning first. Explain both the correction and what would make you keep the request open.
+
 
 [Case evidence](../final-case.md) · [Day 15](../../lessons/day-15-integrated-case.md) · [Course home](../../index.md)

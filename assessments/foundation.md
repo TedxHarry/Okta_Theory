@@ -66,4 +66,11 @@ Starting from A, suppose Maya later has an approved move to Finance. Workday and
 
 Use the [debrief and rubric](self-checks/foundation.md) to assess your reasoning. Keep the corrected flow in [your notebook](../notebook/guide.md).
 
+## Explain the proposed action
+
+Before opening the debrief, choose Packet B or C and write a short handoff. Name the user and application record you would inspect, the setting or approval that matters, who else a change could affect, and what evidence would establish the requested result. Separate a proposed correction from a correction already verified.
+
+After the debrief, try [the missing-application request](../requests/missing-application.md) with a different person and application.
+
+
 [Return to Day 5](../lessons/day-05-groups-and-assignments.md) · [Course home](../index.md)

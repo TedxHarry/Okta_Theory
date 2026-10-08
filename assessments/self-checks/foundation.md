@@ -81,4 +81,16 @@ The current preview no longer demonstrates the constant-value mapping defect. In
 
 </details>
 
+## Review the action, not just the diagnosis
+
+For your proposed action, mark each point as explained independently, explained with a reference, or still unclear. Revisit the specific missing explanation before trying a changed situation.
+
+| Point | What your response should establish |
+|---|---|
+| Record selection | Names the intended identity, source association, group, and application instance instead of relying on display names. |
+| Action | Corrects the demonstrated mapping in B or obtains the missing exception decision in C. Does not treat an unknown as a confirmed failure. |
+| Shared effect | Checks other users of a shared mapping or assignment before proposing its replacement. |
+| Verification | Distinguishes stored profile, membership, assignment, target account, and accepted access. Leaves uninspected outcomes open. |
+
+
 [Checkpoint](../foundation.md) · [Day 5](../../lessons/day-05-groups-and-assignments.md) · [Course home](../../index.md)

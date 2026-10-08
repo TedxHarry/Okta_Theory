@@ -221,6 +221,14 @@ His manager title is relevant business information, but it does not prove that t
 
 This is why the exact symptom matters more than the broad phrase "access issue."
 
+## Start with the right record
+
+When Maya says “my account is active,” ask which account she means. The People area in the Okta Admin Console helps you inspect her Okta user. The application integration holds her assignment information. The Salesforce owner checks the Salesforce account. These views describe different records.
+
+Start with the approved identifier and intended application instance, not just a familiar display name. Record what each check establishes before moving to the next. If the Okta user exists but application assignment has not been checked, write exactly that. “User exists; assignment unknown” gives the next person a useful starting point.
+
+Before proposing any change, agree on the intended outcome. Does Maya need to enter Salesforce, see a particular set of records, or perform an action? Those requests can require different investigations. Adding an account would be premature if the real issue is a permission on an existing account.
+
 ## Tell Maya's story
 
 Explain this in your own words before moving on:

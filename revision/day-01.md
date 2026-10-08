@@ -30,6 +30,10 @@ The Day 1 search found no account matching her approved identifier **in the chec
 
 When you see a tile or an “Active” status, ask which of those five statements it actually supports. Avoid turning one observation into a claim about the whole journey.
 
+## When a request reaches you
+
+Start with the intended person and application instance. The user record, assignment, and target account answer different questions. Agree on the requested capability before proposing a change.
+
 ## Check your understanding
 
 - Why could Maya authenticate successfully but still lack usable Salesforce access?

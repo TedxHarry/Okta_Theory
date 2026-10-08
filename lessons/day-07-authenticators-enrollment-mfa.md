@@ -154,6 +154,14 @@ For Northbridge, an AD password attempt still follows Day 6's delegated path. A 
 
 Do not reset every authenticator because the ticket says MFA. A reset changes enrollment state and may require setup again; it does not explain the original failure. Use the supplied evidence to choose the next investigation. Recovery and administrative responsibilities are developed later.
 
+## Read the enrollment before choosing a reset
+
+The user's authenticator information answers which enrollments are associated with that identity. The organization's authenticator configuration answers which methods are available. Inspect both before interpreting a report that “Verify is installed but does not work.” An installation may belong to another organization or lack the needed enrollment.
+
+For an issued Push with no accepted response, first establish what the user experienced and read the attempt's outcome. A notification failure, an expired request, and an unavailable old phone call for different next checks. Removing an enrollment does not explain which of those happened.
+
+If replacement is necessary, follow the approved identity-verification and recovery process with the required authority. The completion evidence is a replacement enrollment and a permitted subsequent sign-in, not merely a completed reset action. Keep the detailed [replacement-phone situation](../requests/recovery-and-account-state.md) for after Day 14, when recovery responsibilities have been introduced.
+
 ## Before moving on
 
 Can you explain:

@@ -149,6 +149,16 @@ For S-13, the appropriate next decision depends on the requirement. If only the 
 
 This also explains the investigation required for Jordan in Day 12. A separate application session is a possible reason access can persist, but Daniel's evidence does not prove Jordan's root cause. Correlate Jordan's actual account and session records, confirm the removal requirement, and verify his outcome independently.
 
+## Predict who a rule change will affect
+
+Before changing an authentication rule, identify the policy, its application associations, rule order, conditions, and required proof. Write down an eligible user, an excluded user, and an existing-session situation. Predict the selected rule and expected challenge for each before evaluating evidence.
+
+A group condition answers who may match; the requirement answers what proof they must provide. Moving a broad rule above a narrower rule can change which requirement is reached. Reducing a freshness requirement changes how recent the accepted proof must be; it does not create missing enrollment or grant an application permission.
+
+For Daniel's P-1, an expected challenge is not a reason to weaken the rule. In P-3, the supplied matching-rule evidence does establish an ordering problem. After an approved correction, inspect fresh attempts from the affected populations and confirm that other applications sharing the policy retain their intended behavior.
+
+Practice selecting evidence and explaining the resulting action in [the report-access request](../requests/department-and-reporting.md) after Day 14.
+
 ## Before moving on
 
 Can you explain why P-1 is an expected challenge but P-3 is a demonstrated configuration problem? Can you identify which service owns each session, distinguish an event from a transaction, and state what a successful Okta-side result still leaves for the application to verify?

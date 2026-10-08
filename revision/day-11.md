@@ -34,6 +34,10 @@ An accidental association can also change which source rules apply. For example,
 
 Just-in-time creation is another distinct process. It occurs during a supported, configured sign-in path, rather than being the same operation as this import and matching review.
 
+## When a request reaches you
+
+An unexpected import-removal count deserves investigation before processing continues. Check source scope and business changes. Import safeguards have specific coverage and do not protect every group-rule or assignment change.
+
 ## Check your understanding
 
 - What changes between a proposed match and a confirmed association?

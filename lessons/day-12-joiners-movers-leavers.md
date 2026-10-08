@@ -134,6 +134,16 @@ Deleting the Okta record would not demonstrate that a failed target operation or
 
 For a later return to work, re-evaluate current employment, matching, assignments, and activation requirements. Do not assume reactivation should restore every old exception or that retained group membership represents a new approval.
 
+## Choose the action for the state you actually found
+
+Read the user's current status, source relationship, and approved business event before choosing a lifecycle action. An activation problem, lockout, temporary suspension, and effective departure are not interchangeable reasons to change the account.
+
+Unlocking addresses a lockout condition; it does not establish a new password or restore withdrawn employment approval. Password recovery concerns the password. Replacing an authenticator concerns its enrollment. Suspending Okta access is not a substitute for verifying a required departure across target applications and sessions.
+
+For a sourced identity, also check whether the authoritative lifecycle process would repeat or reverse a manual action. If Jordan is still departed, a historical successful sign-in is no reason to reactivate him. If Maya is transferring, preserve the account and access that the new role still requires while ending the obsolete paths.
+
+Write a separate outcome for each target. “Okta deactivated; Projects correction verified; Expense session outcome awaiting owner” is an honest handoff. “User disabled, ticket closed” would hide unfinished work.
+
 ## Before moving on
 
 Can you distinguish employment data, Okta status, target status, and session observations? Explain why Maya's correct group removal did not end her individual assignment, why Jordan's completed Okta deactivation did not close every target ticket, and what evidence would establish the required corrections.

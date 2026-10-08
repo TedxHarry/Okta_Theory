@@ -252,6 +252,14 @@ These details are useful when a later incident concerns connectivity or an API r
 
 </details>
 
+## Choose a search that answers the question
+
+The System Log records events in Okta. In the Reports area, use the reported time and time zone to set a search window, then identify the person and intended application. Expand an event to inspect its actor, target, outcome, and related identifiers. A display message is a starting point, not the whole record.
+
+If you search only for failures, you can miss the successful steps immediately before the problem. If the search returns nothing, check the time window, filters, and available evidence before concluding that no attempt occurred. The application may also hold the only record of its own rejection.
+
+For Maya's Expense attempt, collect the Okta event and request the application's result for the same attempt. A useful handoff says: “Okta reports this SSO event at this time; Expense returns this refusal; application validation details are still needed.” It gives the receiving owner a precise question. See [System Log search and filters](https://help.okta.com/oie/en-us/content/topics/reports/syslog-filters.htm).
+
 ## Before moving on
 
 Explain these in your own words:

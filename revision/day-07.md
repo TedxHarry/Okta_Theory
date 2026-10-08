@@ -32,6 +32,10 @@ In the third, the supplied evidence confirms the required password and Push proo
 
 Also remember that a FastPass attempt does not establish that an AD password was checked. Follow the method actually used, rather than borrowing evidence from another sign-in path.
 
+## When a request reaches you
+
+Inspect the enrolled organization and method before resetting anything. Replacement requires the approved recovery checks, a new enrollment, and a permitted sign-in. An issued challenge alone does not establish successful proof.
+
 ## Check your understanding
 
 - What is missing between “enrolled” and “successfully authenticated”?

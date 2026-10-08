@@ -76,4 +76,16 @@ Creation and the checked account state are now supported, so the uniqueness inve
 
 </details>
 
+## Review the action, not just the diagnosis
+
+For your proposed action, mark each point as explained independently, explained with a reference, or still unclear. Revisit the specific missing explanation before trying a changed situation.
+
+| Point | What your response should establish |
+|---|---|
+| Boundary | Chooses the SAML, OIDC, authenticator, or SCIM evidence relevant to the supplied failure. |
+| Action | Connects the proposed correction to that evidence, with no unrelated resets or account creation. |
+| Owner and effect | Identifies the application or directory owner needed for the next check and considers other users of the connection. |
+| Verification | Requires a new relevant attempt or target read. A saved setting, issued challenge, or connection test does not settle later outcomes. |
+
+
 [Checkpoint](../integration.md) · [Day 10](../../lessons/day-10-scim.md) · [Course home](../../index.md)

@@ -32,6 +32,10 @@ Daniel's `400` response identifies an invalid department value: the request send
 
 For deactivation, the example's `204` response has no body. A later read showing `active: false` verifies the retained resource's state. Keep session termination as a separate check. Also, removing one assignment path may leave another, so it need not produce deactivation at all.
 
+## When a request reaches you
+
+Read the supported and enabled provisioning operation, its linked target, and its result. A successful connection test does not prove the failed account update completed. Check uncertain create outcomes before retrying.
+
 ## Check your understanding
 
 - What does the target resource ID help you preserve across updates?

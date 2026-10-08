@@ -32,6 +32,10 @@ In the first lesson packet, the request uses an old callback instead of the regi
 
 In the successful packet, the exchange, validation, and application entry are confirmed. Approval permissions and provisioning are still separate. An accepted sign-in does not prove that a new account was created by this flow.
 
+## When a request reaches you
+
+Compare the actual request with the approved client registration. Fix an obsolete callback request rather than casually adding it. An exchange failure needs backend evidence; preserve secrets when collecting it.
+
 ## Check your understanding
 
 - Which part travels through the browser, and which exchange happens at the backend?

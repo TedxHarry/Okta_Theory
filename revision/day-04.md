@@ -34,6 +34,10 @@ Check the user's source associations, the effective source, any field-specific s
 
 Profile ownership also does not tell you who validates a password. That is a separate sign-in path.
 
+## When a request reaches you
+
+If a corrected value returns to its old state, inspect the field owner and intervening writes before editing again. A shared source-priority change can affect other associated users.
+
 ## Check your understanding
 
 - Why does Workday's first position not make Priya Workday-managed?

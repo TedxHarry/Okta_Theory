@@ -38,3 +38,5 @@ Use [your notebook](notebook/guide.md) to explain each situation in your own wor
 - [Cheat sheets](reference/cheat-sheets.md) for quick reminders.
 - [Northbridge Services](reference/northbridge-company.md), the fictional company used throughout.
 - [Glossary](reference/glossary.md) for terms in plain language.
+
+[Working through requests](requests/index.md) follows missing access, changed departments, recovery, and connection maintenance. Each situation names the lessons to read first and keeps the reasoning hidden until you choose your checks.

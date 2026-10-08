@@ -34,6 +34,10 @@ Expense's account process belongs to the application owner in this model. Do not
 
 For Priya's lost-phone situation, verify the caller through the approved process, use an authorized recovery action, and confirm enrollment and sign-in afterward. Access approval alone does not establish the caller's identity. A password reset also does not repair an unrelated protocol mismatch. Administrative recovery needs a protected route of its own.
 
+## When a request reaches you
+
+Name the owner of each business decision, configuration change, target permission, and remaining check. Recovering configuration does not automatically undo accounts, permissions, or sessions.
+
 ## Check your understanding
 
 - What must be settled before implementing a contractor exception?

@@ -34,6 +34,10 @@ You now have several ways to explain an access problem. The skill is choosing th
 
 **Jordan's archived AD incident.** This evidence comes from before departure. The DC rejected the credential, but the exact reason is unresolved. Keep the historical investigation separate from his current removal requirements; it does not authorize restoring access.
 
+## When a request reaches you
+
+A closure note connects the expected outcome, observed discrepancy, justified action, and verified result. Name the owner of anything still unresolved instead of hiding it behind a general success statement.
+
 ## Check your understanding
 
 - Which current case demonstrates continuing access after departure, and why does it deserve priority?

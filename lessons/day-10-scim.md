@@ -171,6 +171,16 @@ Projects returns HTTP **204 No Content**: success without a response body. A sub
 
 SCIM defines deletion, but Okta's documented outbound SCIM user deprovisioning sets active to false rather than issuing DELETE. Supported and enabled behavior matters. Do not assume that removing a group membership always generated this operation: another assignment path may remain.
 
+## Check the enabled operation before retrying
+
+The integration's provisioning settings describe the supported and enabled operations. Read them alongside its service-connection status, mappings, assignment, and linked target ID. SSO settings do not establish that the provisioning connection can update an account.
+
+When an update fails, separate three questions: was the intended operation generated, did the target accept it, and does the target now hold the intended state? A failed connection check points toward the connection; an accepted connection check does not prove every later account operation is authorized or valid.
+
+Do not repeatedly retry C-2's create conflict. First resolve the resource's ownership and the lookup discrepancy. For C-3's invalid department, review the mapping's effect on other assigned users before verifying a corrected update to the known account. If a timeout leaves the outcome uncertain, inspect the destination before submitting another create.
+
+Record the operation, target identifier, sanitized response, correction, and verification. Keep an unresolved target result open even if Okta no longer displays the original task.
+
 ## Tell the investigation story
 
 For each ticket, connect the approved requirement, assignment, prepared value, transmitted operation, response, and checked target record. Name what is missing instead of treating the last visible green status as the whole outcome.

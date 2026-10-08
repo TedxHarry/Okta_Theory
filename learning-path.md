@@ -54,8 +54,10 @@ Use the [company reference](reference/northbridge-company.md) for people and sys
 
 Use the [final skills checklist](assessments/self-checks/final-case.md) to identify what you can explain independently and what still needs a reference. Reattempt the changed-condition questions after revisiting any weak area. A different packet may require a different conclusion even when the symptom sounds familiar.
 
-Keep three reusable explanations in [your notebook](notebook/guide.md): Northbridge's architecture, one evidence-based investigation, and one access-decision record. Being able to explain these and respond to changed evidence is the course outcome. Live configuration and recovery require separate practical experience.
+Keep three reusable explanations in [your notebook](notebook/guide.md): Northbridge's architecture, one evidence-based investigation, and one access-decision record. When the evidence changes, explain which part of your conclusion changes with it.
 
 [Course home](index.md)
 
 For a later review, choose a day in the [Revision Guide](revision/index.md). Each recap explains the key concepts and connects them to the day's example.
+
+[Working through requests](requests/index.md) follows missing access, changed departments, recovery, and connection maintenance. Each situation names the lessons to read first and keeps the reasoning hidden until you choose your checks.

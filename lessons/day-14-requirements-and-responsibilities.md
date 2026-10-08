@@ -133,6 +133,14 @@ The connector has separately documented [provisioning, deprovisioning, and licen
 
 For a Microsoft 365 requirement, name the tenant, population, source ownership, sign-in connection, account-management model, licensing responsibility, and removal evidence. Detailed deployment is beyond this architectural comparison.
 
+## Agree on who finishes each part
+
+For the Expense requirement, the Finance owner confirms the business capability, the sponsor and Expense owner decide contractor exceptions, the authorized Okta operator manages the relevant configuration, and the Expense owner handles the target account and permissions. A ticket should name the owner of each unresolved result rather than assigning the whole problem vaguely to “identity.”
+
+Before a shared change, record the affected population, expected result, checks for unintended access, and a supported way to recover if the result is wrong. Keep configuration recovery separate from the cleanup of accounts, permissions, and sessions that may already have changed.
+
+Then work through [the replacement-phone request](../requests/recovery-and-account-state.md) and [connection maintenance](../requests/connection-maintenance.md). In each, decide what can be concluded before choosing an action. Both situations need coordination, but they involve different credentials, owners, and verification evidence.
+
 ## Record the decision clearly
 
 A compact decision record for R-14 should connect the approved population and permissions to source ownership, normal and exception assignment paths, target-account handling, authentication requirements, administrative responsibility, acceptance evidence, and recovery.

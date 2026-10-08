@@ -241,6 +241,14 @@ For Daniel's HR department, Northbridge has chosen Workday as the controlling so
 
 The existence of a mapping does not, by itself, settle competing source ownership or authorize a manual edit. Those questions become especially important when Workday, AD, and Okta-managed users coexist. Day 4 examines that decision explicitly.
 
+## Read when a mapping applies
+
+In Profile Editor, inspect both the mapping direction and its application behavior. Where supported, a field can be mapped for creation only or for creation and updates. A correct expression alone does not tell you whether an existing user's changed value will be recalculated.
+
+Suppose a separate Projects example has the correct Finance-to-FIN expression, but the department mapping is configured for creation only. An existing user's old app-profile value can remain. Compare that behavior with the business requirement before changing it. Review other assigned users, decide how existing records will receive the correction, then verify the app user profile and target separately.
+
+Creation-only does not mean the field is guaranteed absent from every later request. Okta's Profile Push documentation describes sending the full app user profile during a profile update, including stored values for fields whose mappings are creation-only. Recalculating a field and transmitting a stored field are different steps. See [Profile Push behavior](https://help.okta.com/oie/en-us/content/topics/users-groups-profiles/usgp-about-selective-profile-push.htm).
+
 ## Tell Daniel's story
 
 Explain the complete flow in ordinary language:

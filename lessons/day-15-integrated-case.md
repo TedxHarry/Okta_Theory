@@ -43,11 +43,19 @@ Alongside the tickets, explain how employee data reaches Okta, how contractor id
 
 After your attempt, read the [answers](../self-checks/day-15.md) and use the [final debrief and skills checklist](../assessments/self-checks/final-case.md). Revise any conclusion that exceeded the evidence, then try the changed-condition questions without copying the model reasoning.
 
+## Close the request without hiding an unknown
+
+Use five short statements: what was expected, what was observed, what explains the demonstrated discrepancy, what was changed or handed off, and what was verified. Include the relevant person, application instance, and attempt or effective point. An explanation should remain understandable to someone who did not watch the investigation.
+
+For Jordan, a completed Projects correction cannot close Expense's remaining access. Name the Expense owner and the exact outstanding check. For Priya, an approval question needs a business decision; a username conflict needs identity and resource evidence. Do not merge them into “contractor issue.”
+
+Try the unfamiliar situations in [Working through requests](../requests/index.md). First choose your checks without opening the reasoning. Afterward, compare whether your action followed from the supplied evidence, whether you considered other affected users, and whether your verification actually tested the requested outcome.
+
 ## Keep the explanations you can reuse
 
 Consolidate [your notebook](../notebook/guide.md) into an architecture explanation, an investigation record, and an access-decision record. Mark uncertainties clearly and name the next evidence you would need.
 
-This case assesses explanation and investigation from supplied evidence. It does not demonstrate live configuration, deployment, or recovery competence. You should be able to describe a supported next action without claiming to have carried it out.
+Distinguish a proposed next action from an action already performed. Record the outcome as verified only when the supplied evidence supports it.
 
 The [optional extension reference](../reference/optional-extensions.md) introduces terms you may encounter beyond these investigations. It is not required to answer the case.
 

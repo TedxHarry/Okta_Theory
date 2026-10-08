@@ -30,6 +30,10 @@ Now change the evidence: suppose the preview and app user profile both show `FIN
 
 Keep ownership and formatting separate. Workday can own Daniel's department while the outbound mapping determines how Projects receives that department.
 
+## When a request reaches you
+
+Check when the mapping applies, as well as its expression. Creation-only behavior can leave an existing app-profile value unchanged; that stored value may still appear in later full-profile pushes. Verify recalculation and delivery separately.
+
 ## Check your understanding
 
 - Where does an app user profile live?

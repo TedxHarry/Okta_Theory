@@ -140,6 +140,14 @@ An import discovers accounts through a read operation. **Just-in-time provisioni
 
 Successful federation alone does not guarantee either behavior. Northbridge's Projects matching packet uses import and confirmation; it does not assume JIT. JIT also does not eliminate the need for identity matching, ownership, and later access-removal decisions.
 
+## Treat an unexpected removal count as evidence
+
+An import safeguard can stop covered imports when proposed unassignments reach a configured threshold. Its scope and eligibility matter: it is not a universal barrier against every access change. In particular, a changed attribute affecting a group rule is not the same as a covered imported-group membership removal. See [import safeguard coverage](https://help.okta.com/oie/en-us/content/topics/users-groups-profiles/usgp-import-safeguard.htm).
+
+Suppose an import reports an unexpected rise in removals after its selected directory scope changes. Compare the intended population, the changed scope, source availability, and affected records before treating those removals as departures. Ask the source owner to confirm the business changes. Do not disable the safeguard merely to finish the import.
+
+Once the cause is established, review the corrected import results and the remaining associations and assignments. A count returning to normal does not prove that the right identities were preserved. For an unfamiliar matching and assignment situation, try [the missing-application request](../requests/missing-application.md) after the foundation checkpoint.
+
 ## Before moving on
 
 Can you explain why a discovered record is not yet a verified association, why an exact comparison can use bad data, and why M-3 must remain unresolved? Can you distinguish an app association from profile ownership and an incomplete read from confirmed absence?

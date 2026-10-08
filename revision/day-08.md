@@ -32,6 +32,10 @@ A separate packet has an outdated NameID. Investigate the application's actual m
 
 Finally, accepted SAML does not automatically create an account. Just-in-time creation needs its own supported configuration. Successful entry also leaves application permissions to check.
 
+## When a request reaches you
+
+Compare the saved connection with the actual SAML message and target trust. A newly generated signing certificate is not automatically trusted by the application. Verify a coordinated transition with a fresh SAML attempt.
+
 ## Check your understanding
 
 - How do ACS, audience, and NameID serve different purposes?

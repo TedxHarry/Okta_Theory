@@ -30,6 +30,10 @@ That sequence places the first observed failure at Expense. It does not yet iden
 
 Build your explanation around the last confirmed successful step and the next observed failure. Then request evidence from that boundary. This is more useful than collecting unrelated success and failure messages.
 
+## When a request reaches you
+
+Choose a log window and time zone, then correlate the person and application. Keep successful preceding steps in view. An empty filtered search does not prove that no attempt occurred.
+
 ## Check your understanding
 
 - Why does receiving a page with status `200` not prove authentication succeeded?

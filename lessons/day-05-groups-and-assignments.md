@@ -170,6 +170,14 @@ The name alone does not establish the owner. Nor does membership in an Okta grou
 
 **Group Push** is a separate capability for creating or maintaining groups and memberships in supported target applications. Assigning Salesforce to a group answers who receives the application assignment. It does not automatically create that group inside Salesforce. Where Group Push is used, Okta requires separate groups for application assignment and Group Push; this lesson does not assume Northbridge's Salesforce integration has Group Push configured.
 
+## Follow a missing application from the user to the assignment
+
+Start with the intended application instance and the user's assignment list. Then inspect the group and its membership mechanism. The Groups area helps answer who is actually a member; the application integration's assignments show whether that group provides this application.
+
+Consider this separate observation: Maya has Sales and Employee in her Okta profile, the rule is enabled, but the expected group membership is absent. The condition appears to match, yet membership is not established. Check exclusions and processing evidence before adding her manually. A direct assignment may make a tile appear while leaving the normal membership problem unresolved.
+
+If an urgent exception is approved, record its owner and removal condition separately. After correcting the normal path, review whether the exception is still needed. Verify membership and assignment first, then check the target account and intended application use. A visible tile is a useful observation, not the complete acceptance test.
+
 ## Tell the access story
 
 Explain Maya's flow from Workday-owned attributes to the Okta profile, the two-condition rule, group membership, and Salesforce assignment. Name the point where the packet stops proving the outcome.

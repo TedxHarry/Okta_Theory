@@ -192,6 +192,14 @@ These observations support successful application entry for O-2. They do not est
 
 Both involve trusted identity information and application-side validation. Their messages and validation rules are not interchangeable. Neither protocol alone proves account creation or complete application authorization.
 
+## Read the registration as an agreement
+
+Compare Expense's integration registration with the request its backend actually creates. Keep the client identifier, allowed sign-in redirect URI, intended grant, and configured client-authentication method together. The application owner maintains the corresponding application-side values.
+
+In O-1, the approved callback is already known. Adding the obsolete callback to make the request pass would expand the registration without resolving why Expense is using the wrong address. Correct the application request against the approved configuration, then follow a new attempt through code return, backend exchange, validation, and entry.
+
+If the code is returned but the exchange fails, the next evidence comes from that exchange. Its client-authentication result and PKCE check matter there; an earlier browser redirect cannot prove either. Request the error and relevant identifiers without copying client secrets or complete usable tokens into a ticket. If one registration serves several deployments, identify them before changing shared settings.
+
 ## Before moving on
 
 Can you explain:

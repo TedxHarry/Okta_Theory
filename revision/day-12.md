@@ -34,6 +34,10 @@ Jordan's Okta deactivation and AD disablement are confirmed. Projects returned a
 
 Those are two outstanding target issues. Blocking a fresh Okta sign-in does not close either one. Verify the Projects correction and the Expense access outcome separately; do not reactivate Jordan or delete accounts merely to make the workflow easier.
 
+## When a request reaches you
+
+Choose activation, unlocking, password recovery, authenticator replacement, suspension, or deactivation according to the actual state and approved event. Keep a separate verified outcome for every affected target.
+
 ## Check your understanding
 
 - Why is receiving the HR event insufficient evidence of lifecycle completion?

@@ -168,6 +168,14 @@ flowchart LR
 
 That differs from Northbridge's Workday-led profile flow. Import and authentication remain distinct in both architectures. Neither a source-priority decision nor a successful import replaces authentication evidence.
 
+## Hand the directory team a specific question
+
+For J-1, identify the configured AD integration, the agent involved, the selected domain controller, and the time of the failed request. The directory integration's status and agent information help locate the path. The directory and network owners may need to provide evidence that is unavailable in Okta.
+
+Compare the extent of the failure. One affected user can suggest a different investigation from several users failing through the same agent, but neither pattern proves the cause. Pair the pattern with the actual timeout or returned credential result.
+
+A useful escalation says: “This delegated request through this agent did not obtain a DC result; please check the corresponding reachability and service evidence.” It avoids asking for an unexplained password reset. After the path is repaired, obtain a new credential-validation result and continue through the remaining sign-in requirements. An agent showing available is not a substitute for that user's successful attempt.
+
 ## Before moving on
 
 Can you explain:

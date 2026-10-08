@@ -19,3 +19,5 @@ Supporting material used throughout the course: the fictional company, who owns 
 | Recognize topics beyond the assessed course | [Optional extensions](optional-extensions.md) |
 
 Follow the [learning path](../learning-path.md) for first explanations. These references support the lessons; the optional extensions are not prerequisites for the final case.
+
+[Working through requests](../requests/index.md) follows missing access, changed departments, recovery, and connection maintenance. Each situation names the lessons to read first and keeps the reasoning hidden until you choose your checks.

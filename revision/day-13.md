@@ -36,6 +36,10 @@ The session example confirms that Okta session `K-13` can no longer be reused, w
 
 That explains a possible mechanism for lingering access, but it does not retroactively prove Jordan's exact cause in Day 12. Also, prompt-free re-entry can create a new app session through a still-valid Okta session. Check identifiers and events before declaring logout failed.
 
+## When a request reaches you
+
+Predict the matching rule and required proof for an eligible user, an excluded user, and an existing session. Verify shared applications after an approved policy change instead of testing only the original reporter.
+
 ## Check your understanding
 
 - Why can an enrolled user with an Okta session still need another challenge?

@@ -32,6 +32,10 @@ When a later packet confirms the route is repaired and AD accepts the credential
 
 Priya has no AD account in Northbridge's contractor model. Do not put her into Jordan's delegated path just because both use Okta.
 
+## When a request reaches you
+
+Give the directory owner the identity, time, agent, domain controller, and observed result. A repaired route needs a fresh credential-validation result; agent availability alone does not close the user's request.
+
 ## Check your understanding
 
 - What does an import prove that a delegated-authentication result does not, and vice versa?

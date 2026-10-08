@@ -195,6 +195,14 @@ Those facts answer separate questions:
 
 The password validator checks a credential. It does not thereby become the owner of HR department data. Likewise, a successful profile update does not establish that the password path is healthy. Day 6 follows that path in detail.
 
+## Investigate a value that comes back
+
+Imagine Alex changes an employee's department in Okta and later sees the old value again. Before repeating the edit, inspect the user's source associations, the field's owner, and the intervening source update. A later authoritative write is a possible explanation, but the timing and event evidence must establish it.
+
+Use the user's profile and the integration's sourcing and mapping settings together. The user view shows the observed value; the configuration explains which source is meant to supply it. Neither view alone reconstructs every write.
+
+If Workday contains an incorrect approved employee record, the HR owner handles that correction. If Workday is correct but the incoming mapping is wrong, investigate the mapping instead. Reordering sources for one person's discrepancy can change ownership for other associated users. Priya's approved Okta-managed maintenance follows her own source model, not a workaround for the employee model.
+
 ## Tell Maya's and Priya's stories
 
 Explain why Maya's Workday association and source order matter before interpreting her department. Then explain why AD can supply her work email without becoming her overall profile source.

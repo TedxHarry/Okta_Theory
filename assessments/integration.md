@@ -91,4 +91,11 @@ This is an independent Expense attempt E-1 for Jordan, who is still employed. Do
 
 Use the [debrief and rubric](self-checks/integration.md) after attempting all tasks. Record one corrected distinction in [your notebook](../notebook/guide.md).
 
+## Explain the proposed action
+
+Choose one failed attempt. Identify the connection setting or operation you would inspect, the owner of the next evidence, and the outcome needed after a correction. Explain why one tempting action, such as resetting a password or retrying a create, is not justified by this packet.
+
+Use [Reading records and settings](../requests/reading-records-and-settings.md) if you need to connect the question to a configuration view. Keep later policy and recovery questions open until their lessons.
+
+
 [Day 10](../lessons/day-10-scim.md) · [Course home](../index.md)
